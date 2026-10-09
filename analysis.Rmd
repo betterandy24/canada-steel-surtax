@@ -3,10 +3,10 @@ title: "How Tariffs Reshape Supply Chains: Canada's 2024 Surtax on Chinese Steel
 author: "Xiang Zheng"
 date: "`r Sys.Date()`"
 output:
+  github_document: default
   pdf_document:
     fig_width: 7
     fig_height: 4
-  github_document: default
 geometry: margin=1in
 fontsize: 11pt
 ---
@@ -27,7 +27,8 @@ evidence on their own:
 
 - The cleanest estimate uses only the four months before the 2025 U.S.-Canada tariff
   dispute. It is about -1.9 points and not statistically significant at the 5% level
-  (p = 0.086).
+  (p = 0.086). Ending the window in January 2025, before early U.S. tariff threats, gives a
+  similar estimate (about -1.6 points, p = 0.19).
 - The more precise estimate (about -3.1 points) uses a longer window that overlaps with the
   tariff dispute.
 - In the China-only time series, adding a linear trend reduces the estimate to about -1.1
@@ -470,11 +471,15 @@ imports_hs |>
 
 # Check: unlisted codes inside headings 7206-7229
 imports_hs |>
-  filter(group == "Not on list", str_sub(hs6, 1, 4) >= "7206") |>
-  distinct(hs6, .keep_all = TRUE) |>
-  transmute(hs6, description = str_trunc(str_remove(Commodity, "^\\d{4}\\.\\d{2} - "), 60)) |>
-  arrange(hs6) |>
-  knitr::kable(caption = "Chapter 72 codes in headings 7206-7229 that are not on the surtax list")
+  filter(group == "Not on list", str_sub(hs6, 1, 4) >= "7206",
+         month <= as.Date("2024-07-01")) |>
+  group_by(hs6) |>
+  summarise(
+    world_value_m = sum(value[country == "World"]) / 1e6,
+    china_value_m = sum(value[country == "China"]) / 1e6
+  ) |>
+  knitr::kable(digits = 1,
+               caption = "Unlisted codes in headings 7206-7229, imports Jan 2023 - Jul 2024 (C$ millions)")
 ```
 
 Before the surtax, China supplied 6.0% of listed products and 4.7% of unlisted products.
@@ -555,7 +560,9 @@ goods on February 1, 2025 and paused them two days later, and on February 10 it 
 three post-surtax months and gives an estimate of
 `r round(100 * did_results$estimate[1], 1)` percentage points (95% CI
 `r round(100 * did_results$lower[1], 1)` to `r round(100 * did_results$upper[1], 1)`;
-p = `r signif(did_results$p_value[1], 2)`).
+p = `r signif(did_results$p_value[1], 2)`). This is close to the main estimate, so
+February 2025 does not drive the result. With only three post-surtax months, however, it
+is even less precise.
 
 ## 12. Limitations
 

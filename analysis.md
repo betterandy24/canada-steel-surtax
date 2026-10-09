@@ -15,7 +15,9 @@ estimates are not strong evidence on their own:
 
 - The cleanest estimate uses only the four months before the 2025
   U.S.-Canada tariff dispute. It is about -1.9 points and not
-  statistically significant at the 5% level (p = 0.086).
+  statistically significant at the 5% level (p = 0.086). Ending the
+  window in January 2025, before early U.S. tariff threats, gives a
+  similar estimate (about -1.6 points, p = 0.19).
 - The more precise estimate (about -3.1 points) uses a longer window
   that overlaps with the tariff dispute.
 - In the China-only time series, adding a linear trend reduces the
@@ -563,24 +565,29 @@ Product groups before the surtax (Jan 2023 - Jul 2024)
 ``` r
 # Check: unlisted codes inside headings 7206-7229
 imports_hs |>
-  filter(group == "Not on list", str_sub(hs6, 1, 4) >= "7206") |>
-  distinct(hs6, .keep_all = TRUE) |>
-  transmute(hs6, description = str_trunc(str_remove(Commodity, "^\\d{4}\\.\\d{2} - "), 60)) |>
-  arrange(hs6) |>
-  knitr::kable(caption = "Chapter 72 codes in headings 7206-7229 that are not on the surtax list")
+  filter(group == "Not on list", str_sub(hs6, 1, 4) >= "7206",
+         month <= as.Date("2024-07-01")) |>
+  group_by(hs6) |>
+  summarise(
+    world_value_m = sum(value[country == "World"]) / 1e6,
+    china_value_m = sum(value[country == "China"]) / 1e6
+  ) |>
+  knitr::kable(digits = 1,
+               caption = "Unlisted codes in headings 7206-7229, imports Jan 2023 - Jul 2024 (C$ millions)")
 ```
 
-| hs6     | description                                                 |
-|:--------|:------------------------------------------------------------|
-| 7214.10 | Bars & rods, iron or non-alloy steel forged                 |
-| 7216.61 | Angles, shapes & sect,i/nas,nfw than cf or cfi, obtained …  |
-| 7216.69 | Angles, shapes and sections, i/nas, nfw than cold formed …  |
-| 7216.91 | Angles, shapes and sections, i/nas, cf or cold finished f…  |
-| 7220.11 | Flat rolled products,stainless steel,hot rolled, \< 600 mm… |
-| 7228.10 | Bars and rods of high speed steel, nes                      |
-| 7228.80 | Bars & rods, hollow drill, alloy or non-alloy steel         |
+| hs6     | world_value_m | china_value_m |
+|:--------|--------------:|--------------:|
+| 7214.10 |          15.8 |           0.5 |
+| 7216.61 |          38.1 |           3.4 |
+| 7216.69 |           3.9 |           0.1 |
+| 7216.91 |          21.6 |           7.4 |
+| 7220.11 |          16.8 |           1.6 |
+| 7228.10 |          11.6 |           0.9 |
+| 7228.80 |          29.9 |           2.5 |
 
-Chapter 72 codes in headings 7206-7229 that are not on the surtax list
+Unlisted codes in headings 7206-7229, imports Jan 2023 - Jul 2024 (C\$
+millions)
 
 Before the surtax, China supplied 6.0% of listed products and 4.7% of
 unlisted products. The unlisted group is much smaller (about C\$1.6
@@ -674,7 +681,9 @@ tariffs on Canadian goods on February 1, 2025 and paused them two days
 later, and on February 10 it announced 25% tariffs on steel imports
 starting in March. Ending the window in January 2025 leaves three
 post-surtax months and gives an estimate of -1.6 percentage points (95%
-CI -4.1 to 0.9; p = 0.19).
+CI -4.1 to 0.9; p = 0.19). This is close to the main estimate, so
+February 2025 does not drive the result. With only three post-surtax
+months, however, it is even less precise.
 
 ## 12. Limitations
 
