@@ -1,0 +1,142 @@
+---
+title: "Canada's 2024 Surtax on Chinese Steel: Did Import Sources Shift?"
+author: "Xiang Zheng, University of Toronto"
+date: "October 2026"
+output:
+  pdf_document:
+    fig_width: 6.5
+    fig_height: 2.3
+geometry: margin=0.75in
+fontsize: 10pt
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
+library(tidyverse)
+
+read_cimt <- function(file, country_name) {
+  read_csv(file, skip = 1, show_col_types = FALSE) |>
+    filter(str_detect(Period, "^\\d{4}-\\d{2}-\\d{2}$")) |>
+    mutate(country = country_name)
+}
+
+imports <- map2_dfr(c("total.csv", "china.csv"), c("World", "China"), read_cimt) |>
+  rename(value = `Value ($)`) |>
+  mutate(month = as.Date(Period), hs6 = str_sub(Commodity, 1, 7))
+
+covered_hs6 <- c(
+  "7206.10","7206.90","7207.11","7207.12","7207.19","7207.20","7208.10","7208.25",
+  "7208.26","7208.27","7208.36","7208.37","7208.38","7208.39","7208.40","7208.51",
+  "7208.52","7208.53","7208.54","7208.90","7209.15","7209.16","7209.17","7209.18",
+  "7209.25","7209.26","7209.27","7209.28","7209.90","7210.11","7210.12","7210.20",
+  "7210.30","7210.41","7210.49","7210.50","7210.61","7210.69","7210.70","7210.90",
+  "7211.13","7211.14","7211.19","7211.23","7211.29","7211.90","7212.10","7212.20",
+  "7212.30","7212.40","7212.50","7212.60","7213.10","7213.20","7213.91","7213.99",
+  "7214.20","7214.30","7214.91","7214.99","7215.10","7215.50","7215.90","7216.10",
+  "7216.21","7216.22","7216.31","7216.32","7216.33","7216.40","7216.50","7216.99",
+  "7217.10","7217.20","7217.30","7217.90","7218.10","7218.91","7218.99","7219.11",
+  "7219.12","7219.13","7219.14","7219.21","7219.22","7219.23","7219.24","7219.31",
+  "7219.32","7219.33","7219.34","7219.35","7219.90","7220.12","7220.20","7220.90",
+  "7221.00","7222.11","7222.19","7222.20","7222.30","7222.40","7223.00","7224.10",
+  "7224.90","7225.11","7225.19","7225.30","7225.40","7225.50","7225.91","7225.92",
+  "7225.99","7226.11","7226.19","7226.20","7226.91","7226.92","7226.99","7227.10",
+  "7227.20","7227.90","7228.20","7228.30","7228.40","7228.50","7228.60","7228.70",
+  "7229.20","7229.90"
+)
+
+# China's overall share, before vs surtax-only period
+overall <- imports |>
+  group_by(country, month) |>
+  summarise(value = sum(value), .groups = "drop") |>
+  pivot_wider(names_from = country, values_from = value) |>
+  mutate(share = China / World)
+
+pre_share  <- mean(overall$share[overall$month <= as.Date("2024-07-01")])
+post_share <- mean(overall$share[overall$month >= as.Date("2024-11-01") &
+                                 overall$month <= as.Date("2025-02-01")])
+
+# Difference-in-differences data
+did_data <- imports |>
+  mutate(group = if_else(hs6 %in% covered_hs6, "On surtax list", "Not on list")) |>
+  group_by(country, group, month) |>
+  summarise(value = sum(value), .groups = "drop") |>
+  pivot_wider(names_from = country, values_from = value, values_fill = 0) |>
+  mutate(china_share = China / World)
+
+did_reg <- did_data |>
+  filter(!(month >= as.Date("2024-08-01") & month <= as.Date("2024-10-01"))) |>
+  mutate(covered = as.integer(group == "On surtax list"),
+         post    = as.integer(month >= as.Date("2024-11-01")),
+         month_f = factor(month))
+
+did_fit <- function(end) {
+  m <- lm(china_share ~ covered + covered:post + month_f,
+          data = filter(did_reg, month <= as.Date(end)))
+  c(est = unname(coef(m)["covered:post"]),
+    lo  = confint(m)["covered:post", 1],
+    hi  = confint(m)["covered:post", 2],
+    p   = summary(m)$coefficients["covered:post", 4])
+}
+main <- did_fit("2025-02-01")
+long <- did_fit("2025-06-01")
+
+pp  <- function(x) sprintf("%.1f", 100 * x)
+pct <- function(x) sprintf("%.1f%%", 100 * x)
+```
+
+**Question.** On October 22, 2024, Canada imposed a 25% surtax on listed steel and
+aluminum products from China. The offshoring model predicts that raising the trade cost of one supplier shifts
+sourcing to others. Did China's share of Canada's steel imports fall, and was the fall
+caused by the surtax rather than by seasonality, prices, trends or the 2025 U.S.-Canada
+tariff dispute?
+
+**Data and method.** I used monthly Statistics Canada import data for 167 six-digit steel
+products (HS chapter 72), January 2023 to August 2026. I matched products to the
+Department of Finance's surtax list: 130 products are on the list and 37 are not. The
+main design is a **difference-in-differences** comparison. It compares China's share of
+listed products with its share of unlisted products, before and after the surtax, with
+month fixed effects. Supporting checks compare the same winter months one year apart,
+repeat the comparison in tonnes to rule out price effects, and estimate a time-series
+regression with and without a linear trend, with a bootstrap confidence interval.
+
+```{r did-plot}
+did_data |>
+  filter(month <= as.Date("2025-06-01")) |>
+  ggplot(aes(x = month, y = china_share, colour = group)) +
+  geom_line(linewidth = 0.8) +
+  geom_vline(xintercept = as.Date(c("2024-08-26", "2024-10-22")), linetype = "dashed") +
+  annotate("text", x = as.Date("2024-08-20"), y = Inf, label = "Announced",
+           angle = 90, hjust = 1.1, vjust = -0.4, size = 2.8) +
+  annotate("text", x = as.Date("2024-10-16"), y = Inf, label = "In effect",
+           angle = 90, hjust = 1.1, vjust = -0.4, size = 2.8) +
+  scale_y_continuous(labels = scales::percent) +
+  labs(title = "China's share of Canada's steel imports, by surtax coverage",
+       x = NULL, y = "Share of import value", colour = NULL) +
+  theme_minimal(base_size = 9) +
+  theme(legend.position = "bottom")
+```
+
+**Findings.**
+
+- **China's share fell.** China's share of Canada's steel imports fell from
+  `r pct(pre_share)` before the surtax to `r pct(post_share)` in the four months after it
+  took effect. The decline was not seasonal and also appears in tonnes.
+- **The fall was mainly in listed products.** Before August 2024 the two groups moved
+  roughly in parallel. After the surtax, China's share of listed products fell to about
+  2-3%, while its share of unlisted products returned to its earlier range.
+- **Estimated effect: about 2 percentage points.** In the main window, which ends before
+  the U.S.-Canada tariff dispute, the estimate is `r pp(main["est"])` points (95% CI
+  `r pp(main["lo"])` to `r pp(main["hi"])`, p = `r sprintf("%.3f", main["p"])`). A longer
+  window through June 2025 gives `r pp(long["est"])` points (p
+  `r ifelse(long["p"] < 0.001, "< 0.001", paste("=", sprintf("%.3f", long["p"])))`), but it
+  overlaps with the tariff dispute.
+- **Diversion is unclear.** Japan's and South Korea's shares rose after the surtax, but both
+  were already rising beforehand.
+
+**Main limitation.** Only four months separate the surtax from the 2025 tariff dispute.
+The cleanest estimate is therefore imprecise and not significant at the 5% level. The
+China-only time-series estimate also shrinks to about -1.1 points once a linear trend is
+added. Separating the surtax from overlapping trends and policies was the hardest part of
+the analysis.
+
+*Full report and R code: https://github.com/betterandy24/canada-steel-surtax*

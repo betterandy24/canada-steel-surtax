@@ -1,0 +1,881 @@
+﻿Imports
+Period,Commodity,Province,Country,State,Value ($),Quantity,Unit of measure
+2023-06-01,"7202.21 - Ferro-silicon, containing by weight more than 55% of silicon",Canada,"Viet Nam",N/A,51633,19,Weight in metric tonne
+2024-01-01,"7208.51 - Flat rolled prod, i/nas, not in coil, hr,>=600mm wide, >10mm thk, nes",Canada,"Viet Nam",N/A,1042,0,Weight in metric tonne
+2024-03-01,"7202.21 - Ferro-silicon, containing by weight more than 55% of silicon",Canada,"Viet Nam",N/A,56055,10,Weight in metric tonne
+2024-02-01,"7205.29 - Powders, iron or steel, other than alloy",Canada,"Viet Nam",N/A,8691,2,Weight in metric tonne
+2023-04-01,"7210.61 - Flat rolled prod, i/nas, plated or coat w aluminium-zinc alloys,>=600mm wide",Canada,"Viet Nam",N/A,366249,297,Weight in metric tonne
+2023-01-01,"7210.49 - Flat rolled prod, i/nas, plated or coated with zinc,>= 600 mm wide, nes",Canada,"Viet Nam",N/A,1272722,1049,Weight in metric tonne
+2024-11-01,"7210.49 - Flat rolled prod, i/nas, plated or coated with zinc,>= 600 mm wide, nes",Canada,"Viet Nam",N/A,226,0,Weight in metric tonne
+2024-10-01,"7210.61 - Flat rolled prod, i/nas, plated or coat w aluminium-zinc alloys,>=600mm wide",Canada,"Viet Nam",N/A,889391,281,Weight in metric tonne
+2025-11-01,"7210.61 - Flat rolled prod, i/nas, plated or coat w aluminium-zinc alloys,>=600mm wide",Canada,"Viet Nam",N/A,25843,7,Weight in metric tonne
+2025-07-01,"7210.70 - Flat rolled prod, i/nas, painted, varnished or plast coated, >= 600 mm wide",Canada,"Viet Nam",N/A,19619,5,Weight in metric tonne
+2025-08-01,"7211.14 - Flat rolled prod,iron/non-alloy steel,hot rolled, < 600 mm wide,thick >= 4.75 mm",Canada,"Viet Nam",N/A,172,0,Weight in metric tonne
+2024-08-01,"7212.40 - Flat rolled prod, i/nas, <600mm wide, painted, varnished or coated with plast",Canada,"Viet Nam",N/A,152594,68,Weight in metric tonne
+2025-05-01,"7212.30 - Flat rolled prod, i/nas, <600mm wide, o/w plated or coated with zinc",Canada,"Viet Nam",N/A,3888,1,Weight in metric tonne
+2025-10-01,"7211.14 - Flat rolled prod,iron/non-alloy steel,hot rolled, < 600 mm wide,thick >= 4.75 mm",Canada,"Viet Nam",N/A,88,0,Weight in metric tonne
+2024-12-01,"7212.40 - Flat rolled prod, i/nas, <600mm wide, painted, varnished or coated with plast",Canada,"Viet Nam",N/A,17849,10,Weight in metric tonne
+2025-04-01,"7212.40 - Flat rolled prod, i/nas, <600mm wide, painted, varnished or coated with plast",Canada,"Viet Nam",N/A,41047,28,Weight in metric tonne
+2023-05-01,"7212.40 - Flat rolled prod, i/nas, <600mm wide, painted, varnished or coated with plast",Canada,"Viet Nam",N/A,47108,24,Weight in metric tonne
+2026-07-01,"7212.40 - Flat rolled prod, i/nas, <600mm wide, painted, varnished or coated with plast",Canada,"Viet Nam",N/A,1043247,633,Weight in metric tonne
+2025-07-01,"7212.50 - Flat rolled prod, i/nas, < 600 mm wide, otherwise plated/coated, nes",Canada,"Viet Nam",N/A,10978,2,Weight in metric tonne
+2023-05-01,"7213.91 - Bars/rods, i/nas,hr, in irreg wnd coils of circ cross section, <14mm in dia",Canada,"Viet Nam",N/A,8805377,9408,Weight in metric tonne
+2023-06-01,"7214.10 - Bars & rods, iron or non-alloy steel forged",Canada,"Viet Nam",N/A,14,0,Weight in metric tonne
+2025-10-01,"7214.20 - Bars and rods, i/nas, hr, hd or he, cont indent, ribs, etc, prod during rp, nes",Canada,"Viet Nam",N/A,969,1,Weight in metric tonne
+2024-03-01,"7215.90 - Bars & rods, iron/non-alloy steel, nes",Canada,"Viet Nam",N/A,1815,0,Weight in metric tonne
+2025-09-01,"7215.90 - Bars & rods, iron/non-alloy steel, nes",Canada,"Viet Nam",N/A,19637,7,Weight in metric tonne
+2026-07-01,"7215.90 - Bars & rods, iron/non-alloy steel, nes",Canada,"Viet Nam",N/A,10819,5,Weight in metric tonne
+2025-07-01,"7216.40 - Sections, L or T, i/nas, nfw than hot rolled, drawn or extruded, hght>=80mm",Canada,"Viet Nam",N/A,40477,26,Weight in metric tonne
+2026-06-01,"7216.40 - Sections, L or T, i/nas, nfw than hot rolled, drawn or extruded, hght>=80mm",Canada,"Viet Nam",N/A,9895,11,Weight in metric tonne
+2025-07-01,"7216.61 - Angles, shapes & sect,i/nas,nfw than cf or cfi, obtained from flat rolled prod",Canada,"Viet Nam",N/A,1397,0,Weight in metric tonne
+2025-11-01,"7216.91 - Angles, shapes and sections, i/nas, cf or cold finished from flat rolled prod",Canada,"Viet Nam",N/A,826,0,Weight in metric tonne
+2026-04-01,"7216.91 - Angles, shapes and sections, i/nas, cf or cold finished from flat rolled prod",Canada,"Viet Nam",N/A,230,0,Weight in metric tonne
+2026-05-01,"7216.91 - Angles, shapes and sections, i/nas, cf or cold finished from flat rolled prod",Canada,"Viet Nam",N/A,299,0,Weight in metric tonne
+2026-07-01,"7216.91 - Angles, shapes and sections, i/nas, cf or cold finished from flat rolled prod",Canada,"Viet Nam",N/A,30,0,Weight in metric tonne
+2023-08-01,"7217.10 - Wire, iron or non-alloy steel, polished or not, but not plated or coated",Canada,"Viet Nam",N/A,286,0,Weight in metric tonne
+2024-03-01,"7217.10 - Wire, iron or non-alloy steel, polished or not, but not plated or coated",Canada,"Viet Nam",N/A,46093,19,Weight in metric tonne
+2024-05-01,"7216.99 - Angles, shapes and sections, i/nas, cold formed or cold finished, nes",Canada,"Viet Nam",N/A,4928,1,Weight in metric tonne
+2023-10-01,"7215.50 - Bars & rods, iron or non-alloy steel, nfw than cold formed or finished, nes",Canada,"Viet Nam",N/A,293,0,Weight in metric tonne
+2024-09-01,"7216.91 - Angles, shapes and sections, i/nas, cf or cold finished from flat rolled prod",Canada,"Viet Nam",N/A,1420,0,Weight in metric tonne
+2025-05-01,"7217.10 - Wire, iron or non-alloy steel, polished or not, but not plated or coated",Canada,"Viet Nam",N/A,97449,80,Weight in metric tonne
+2025-08-01,"7217.10 - Wire, iron or non-alloy steel, polished or not, but not plated or coated",Canada,"Viet Nam",N/A,61895,53,Weight in metric tonne
+2026-04-01,"7217.10 - Wire, iron or non-alloy steel, polished or not, but not plated or coated",Canada,"Viet Nam",N/A,689,0,Weight in metric tonne
+2025-03-01,"7217.20 - Wire, iron or non-alloy steel, plated or coated with zinc",Canada,"Viet Nam",N/A,60453,53,Weight in metric tonne
+2025-12-01,"7217.20 - Wire, iron or non-alloy steel, plated or coated with zinc",Canada,"Viet Nam",N/A,60494,53,Weight in metric tonne
+2023-08-01,"7217.90 - Wire, iron or non-alloy steel, nes",Canada,"Viet Nam",N/A,83223,15,Weight in metric tonne
+2023-10-01,"7217.90 - Wire, iron or non-alloy steel, nes",Canada,"Viet Nam",N/A,765706,431,Weight in metric tonne
+2024-07-01,"7217.90 - Wire, iron or non-alloy steel, nes",Canada,"Viet Nam",N/A,663104,370,Weight in metric tonne
+2026-04-01,"7217.90 - Wire, iron or non-alloy steel, nes",Canada,"Viet Nam",N/A,60,0,Weight in metric tonne
+2026-06-01,"7217.90 - Wire, iron or non-alloy steel, nes",Canada,"Viet Nam",N/A,482,0,Weight in metric tonne
+2025-11-01,"7219.31 - Flat rolled prod, stain steel, cold roll, >= 600 mm wide, thick 4.75 mm or more",Canada,"Viet Nam",N/A,11628,1,Weight in metric tonne
+2025-07-01,"7217.90 - Wire, iron or non-alloy steel, nes",Canada,"Viet Nam",N/A,272612,141,Weight in metric tonne
+2023-01-01,"7217.90 - Wire, iron or non-alloy steel, nes",Canada,"Viet Nam",N/A,22204,21,Weight in metric tonne
+2023-01-01,"7219.22 - Flat rolled prod, stainless steel, hr, nic,>=600mm wide,>=4.75mm thick<=10mm",Canada,"Viet Nam",N/A,185,0,Weight in metric tonne
+2023-09-01,"7219.31 - Flat rolled prod, stain steel, cold roll, >= 600 mm wide, thick 4.75 mm or more",Canada,"Viet Nam",N/A,10217,1,Weight in metric tonne
+2024-11-01,"7217.90 - Wire, iron or non-alloy steel, nes",Canada,"Viet Nam",N/A,546935,313,Weight in metric tonne
+2026-06-01,"7219.32 - Flat rolled prod, stainless steel, cr, >=600mm wide,>=3mm thick <4.75mm",Canada,"Viet Nam",N/A,125596,43,Weight in metric tonne
+2024-01-01,"7219.33 - Flat rolled prod, stainless steel, cr, >=600mm wide, >1mm thick <3mm",Canada,"Viet Nam",N/A,5780,1,Weight in metric tonne
+2025-11-01,"7219.33 - Flat rolled prod, stainless steel, cr, >=600mm wide, >1mm thick <3mm",Canada,"Viet Nam",N/A,1413492,445,Weight in metric tonne
+2026-03-01,"7219.33 - Flat rolled prod, stainless steel, cr, >=600mm wide, >1mm thick <3mm",Canada,"Viet Nam",N/A,1564586,548,Weight in metric tonne
+2023-08-01,"7219.34 - Flat rolled prod, stainless steel, cr, >=600mm wide,>=0.5mm thick<=1mm",Canada,"Viet Nam",N/A,68984,21,Weight in metric tonne
+2025-05-01,"7219.34 - Flat rolled prod, stainless steel, cr, >=600mm wide,>=0.5mm thick<=1mm",Canada,"Viet Nam",N/A,302574,87,Weight in metric tonne
+2025-10-01,"7219.34 - Flat rolled prod, stainless steel, cr, >=600mm wide,>=0.5mm thick<=1mm",Canada,"Viet Nam",N/A,316404,107,Weight in metric tonne
+2023-09-01,"7219.90 - Flat rolled products, of stainless steel, of a width of 600 mm or more, nes",Canada,"Viet Nam",N/A,454,0,Weight in metric tonne
+2026-01-01,"7219.90 - Flat rolled products, of stainless steel, of a width of 600 mm or more, nes",Canada,"Viet Nam",N/A,23808,6,Weight in metric tonne
+2026-05-01,"7219.90 - Flat rolled products, of stainless steel, of a width of 600 mm or more, nes",Canada,"Viet Nam",N/A,86318,22,Weight in metric tonne
+2026-03-01,"7220.12 - Flat rolled products, stainless steel, hot rolled, < 600 mm wide,thick < 4.75 mm",Canada,"Viet Nam",N/A,152238,18,Weight in metric tonne
+2023-03-01,"7220.20 - Flat rolled prod, stainless steel, <600mm wide, cold rolled or reduced",Canada,"Viet Nam",N/A,41972,5,Weight in metric tonne
+2023-10-01,"7220.20 - Flat rolled prod, stainless steel, <600mm wide, cold rolled or reduced",Canada,"Viet Nam",N/A,42428,2,Weight in metric tonne
+2024-08-01,"7219.90 - Flat rolled products, of stainless steel, of a width of 600 mm or more, nes",Canada,"Viet Nam",N/A,664,0,Weight in metric tonne
+2024-07-01,"7219.90 - Flat rolled products, of stainless steel, of a width of 600 mm or more, nes",Canada,"Viet Nam",N/A,127658,56,Weight in metric tonne
+2024-07-01,"7220.20 - Flat rolled prod, stainless steel, <600mm wide, cold rolled or reduced",Canada,"Viet Nam",N/A,91317,26,Weight in metric tonne
+2025-04-01,"7220.20 - Flat rolled prod, stainless steel, <600mm wide, cold rolled or reduced",Canada,"Viet Nam",N/A,134381,38,Weight in metric tonne
+2025-05-01,"7220.20 - Flat rolled prod, stainless steel, <600mm wide, cold rolled or reduced",Canada,"Viet Nam",N/A,27962,5,Weight in metric tonne
+2026-03-01,"7220.20 - Flat rolled prod, stainless steel, <600mm wide, cold rolled or reduced",Canada,"Viet Nam",N/A,222637,31,Weight in metric tonne
+2026-08-01,"7220.20 - Flat rolled prod, stainless steel, <600mm wide, cold rolled or reduced",Canada,"Viet Nam",N/A,12523,2,Weight in metric tonne
+2024-08-01,"7220.90 - Flat rolled products, stainless steel, of a width of less than 600mm, nes",Canada,"Viet Nam",N/A,794,0,Weight in metric tonne
+2024-01-01,"7222.19 - Bars & rods, stainless steel, nfw than hot rolled, hot drawn or extruded, nes",Canada,"Viet Nam",N/A,7884,1,Weight in metric tonne
+2024-10-01,"7222.20 - Bars & rods, stainless steel, nfw than cold formed or cold finished",Canada,"Viet Nam",N/A,317,0,Weight in metric tonne
+2025-08-01,"7222.20 - Bars & rods, stainless steel, nfw than cold formed or cold finished",Canada,"Viet Nam",N/A,170,0,Weight in metric tonne
+2026-03-01,"7222.20 - Bars & rods, stainless steel, nfw than cold formed or cold finished",Canada,"Viet Nam",N/A,27,0,Weight in metric tonne
+2023-02-01,"7222.40 - Angles, shapes and sections, stainless steel",Canada,"Viet Nam",N/A,1688,0,Weight in metric tonne
+2024-01-01,"7222.40 - Angles, shapes and sections, stainless steel",Canada,"Viet Nam",N/A,2084,0,Weight in metric tonne
+2024-03-01,"7222.40 - Angles, shapes and sections, stainless steel",Canada,"Viet Nam",N/A,12444,2,Weight in metric tonne
+2025-03-01,"7222.40 - Angles, shapes and sections, stainless steel",Canada,"Viet Nam",N/A,121,0,Weight in metric tonne
+2025-06-01,"7222.40 - Angles, shapes and sections, stainless steel",Canada,"Viet Nam",N/A,6732,0,Weight in metric tonne
+2025-08-01,"7222.40 - Angles, shapes and sections, stainless steel",Canada,"Viet Nam",N/A,986,0,Weight in metric tonne
+2026-06-01,"7222.40 - Angles, shapes and sections, stainless steel",Canada,"Viet Nam",N/A,8751,0,Weight in metric tonne
+2023-05-01,"7223.00 - Wire of stainless steel",Canada,"Viet Nam",N/A,2262,0,Weight in metric tonne
+2024-02-01,"7222.30 - Bars & rods, stainless steel, nes",Canada,"Viet Nam",N/A,146,0,Weight in metric tonne
+2024-01-01,"7223.00 - Wire of stainless steel",Canada,"Viet Nam",N/A,425807,22,Weight in metric tonne
+2025-04-01,"7223.00 - Wire of stainless steel",Canada,"Viet Nam",N/A,463444,62,Weight in metric tonne
+2026-03-01,"7223.00 - Wire of stainless steel",Canada,"Viet Nam",N/A,832565,129,Weight in metric tonne
+2024-04-01,"7228.20 - Bars and rods of silico-manganese steel, nes",Canada,"Viet Nam",N/A,92,0,Weight in metric tonne
+2023-06-01,"7228.50 - Bars & rods, as, o/t stainless, not further worked than cold formed/finished",Canada,"Viet Nam",N/A,1075,0,Weight in metric tonne
+2023-08-01,"7228.50 - Bars & rods, as, o/t stainless, not further worked than cold formed/finished",Canada,"Viet Nam",N/A,1023,0,Weight in metric tonne
+2024-10-01,"7228.50 - Bars & rods, as, o/t stainless, not further worked than cold formed/finished",Canada,"Viet Nam",N/A,499,0,Weight in metric tonne
+2025-11-01,"7228.60 - Bars & rods, alloy steel, o/t stainless, nes",Canada,"Viet Nam",N/A,78,0,Weight in metric tonne
+2025-12-01,"7228.60 - Bars & rods, alloy steel, o/t stainless, nes",Canada,"Viet Nam",N/A,2337,0,Weight in metric tonne
+2026-02-01,"7228.60 - Bars & rods, alloy steel, o/t stainless, nes",Canada,"Viet Nam",N/A,1773,0,Weight in metric tonne
+2023-02-01,"7229.20 - Wire of silico-manganese steel",Canada,"Viet Nam",N/A,1018,0,Weight in metric tonne
+2023-04-01,"7229.20 - Wire of silico-manganese steel",Canada,"Viet Nam",N/A,1506,0,Weight in metric tonne
+2025-01-01,"7229.20 - Wire of silico-manganese steel",Canada,"Viet Nam",N/A,62484,38,Weight in metric tonne
+2025-03-01,"7229.20 - Wire of silico-manganese steel",Canada,"Viet Nam",N/A,185338,114,Weight in metric tonne
+2025-09-01,"7229.20 - Wire of silico-manganese steel",Canada,"Viet Nam",N/A,329766,213,Weight in metric tonne
+2025-11-01,"7229.20 - Wire of silico-manganese steel",Canada,"Viet Nam",N/A,320005,197,Weight in metric tonne
+2026-06-01,"7229.20 - Wire of silico-manganese steel",Canada,"Viet Nam",N/A,322242,213,Weight in metric tonne
+2023-05-01,"7229.90 - Wire of alloy steel, o/t stainless",Canada,"Viet Nam",N/A,11196,0,Weight in metric tonne
+2025-06-01,"7229.90 - Wire of alloy steel, o/t stainless",Canada,"Viet Nam",N/A,30680,10,Weight in metric tonne
+2026-02-01,"7229.90 - Wire of alloy steel, o/t stainless",Canada,"Viet Nam",N/A,891,0,Weight in metric tonne
+2026-06-01,"7229.90 - Wire of alloy steel, o/t stainless",Canada,"Viet Nam",N/A,1971,0,Weight in metric tonne
+2024-05-01,"7229.20 - Wire of silico-manganese steel",Canada,"Viet Nam",N/A,26490,20,Weight in metric tonne
+2024-05-01,"7229.90 - Wire of alloy steel, o/t stainless",Canada,"Viet Nam",N/A,87442,34,Weight in metric tonne
+2023-12-01,"7229.20 - Wire of silico-manganese steel",Canada,"Viet Nam",N/A,160740,95,Weight in metric tonne
+2025-11-01,"7201.20 - Pig iron, non-alloy,containing by weight >0.5% of phosphorus in primary forms",Canada,"Viet Nam",N/A,55525,20,Weight in metric tonne
+2025-11-01,"7210.49 - Flat rolled prod, i/nas, plated or coated with zinc,>= 600 mm wide, nes",Canada,"Viet Nam",N/A,1719737,1434,Weight in metric tonne
+2023-10-01,"7210.49 - Flat rolled prod, i/nas, plated or coated with zinc,>= 600 mm wide, nes",Canada,"Viet Nam",N/A,1299106,877,Weight in metric tonne
+2023-11-01,"7210.49 - Flat rolled prod, i/nas, plated or coated with zinc,>= 600 mm wide, nes",Canada,"Viet Nam",N/A,3897524,3516,Weight in metric tonne
+2025-04-01,"7204.30 - Waste and scrap, of tinned iron or steel",Canada,"Viet Nam",N/A,143,0,Weight in metric tonne
+2024-10-01,"7210.49 - Flat rolled prod, i/nas, plated or coated with zinc,>= 600 mm wide, nes",Canada,"Viet Nam",N/A,2565819,3181,Weight in metric tonne
+2026-05-01,"7205.29 - Powders, iron or steel, other than alloy",Canada,"Viet Nam",N/A,73699,6,Weight in metric tonne
+2026-05-01,"7208.39 - Flat rolled prod, i/nas, in coil, hr, n clad, >= 600 mm wide, thick < 3 mm, nes",Canada,"Viet Nam",N/A,274724,366,Weight in metric tonne
+2026-07-01,"7210.49 - Flat rolled prod, i/nas, plated or coated with zinc,>= 600 mm wide, nes",Canada,"Viet Nam",N/A,988781,945,Weight in metric tonne
+2026-02-01,"7210.70 - Flat rolled prod, i/nas, painted, varnished or plast coated, >= 600 mm wide",Canada,"Viet Nam",N/A,392742,271,Weight in metric tonne
+2026-03-01,"7210.70 - Flat rolled prod, i/nas, painted, varnished or plast coated, >= 600 mm wide",Canada,"Viet Nam",N/A,154648,85,Weight in metric tonne
+2026-06-01,"7211.14 - Flat rolled prod,iron/non-alloy steel,hot rolled, < 600 mm wide,thick >= 4.75 mm",Canada,"Viet Nam",N/A,187,0,Weight in metric tonne
+2024-02-01,"7212.30 - Flat rolled prod, i/nas, <600mm wide, o/w plated or coated with zinc",Canada,"Viet Nam",N/A,931,0,Weight in metric tonne
+2023-04-01,"7212.40 - Flat rolled prod, i/nas, <600mm wide, painted, varnished or coated with plast",Canada,"Viet Nam",N/A,47697,24,Weight in metric tonne
+2023-11-01,"7212.40 - Flat rolled prod, i/nas, <600mm wide, painted, varnished or coated with plast",Canada,"Viet Nam",N/A,4427,1,Weight in metric tonne
+2025-10-01,"7212.40 - Flat rolled prod, i/nas, <600mm wide, painted, varnished or coated with plast",Canada,"Viet Nam",N/A,241908,165,Weight in metric tonne
+2024-08-01,"7210.61 - Flat rolled prod, i/nas, plated or coat w aluminium-zinc alloys,>=600mm wide",Canada,"Viet Nam",N/A,1025227,323,Weight in metric tonne
+2025-01-01,"7210.61 - Flat rolled prod, i/nas, plated or coat w aluminium-zinc alloys,>=600mm wide",Canada,"Viet Nam",N/A,345522,199,Weight in metric tonne
+2025-05-01,"7212.40 - Flat rolled prod, i/nas, <600mm wide, painted, varnished or coated with plast",Canada,"Viet Nam",N/A,383223,251,Weight in metric tonne
+2025-06-01,"7210.70 - Flat rolled prod, i/nas, painted, varnished or plast coated, >= 600 mm wide",Canada,"Viet Nam",N/A,684408,445,Weight in metric tonne
+2024-09-01,"7212.40 - Flat rolled prod, i/nas, <600mm wide, painted, varnished or coated with plast",Canada,"Viet Nam",N/A,39807,27,Weight in metric tonne
+2026-02-01,"7212.40 - Flat rolled prod, i/nas, <600mm wide, painted, varnished or coated with plast",Canada,"Viet Nam",N/A,627934,411,Weight in metric tonne
+2026-06-01,"7212.40 - Flat rolled prod, i/nas, <600mm wide, painted, varnished or coated with plast",Canada,"Viet Nam",N/A,275240,151,Weight in metric tonne
+2026-02-01,"7213.20 - Bars & rods, i/nas, hr, in irreg wound coils, of free cutting steel",Canada,"Viet Nam",N/A,73,0,Weight in metric tonne
+2023-04-01,"7213.91 - Bars/rods, i/nas,hr, in irreg wnd coils of circ cross section, <14mm in dia",Canada,"Viet Nam",N/A,297732,256,Weight in metric tonne
+2025-12-01,"7214.20 - Bars and rods, i/nas, hr, hd or he, cont indent, ribs, etc, prod during rp, nes",Canada,"Viet Nam",N/A,1373,1,Weight in metric tonne
+2023-05-01,"7215.50 - Bars & rods, iron or non-alloy steel, nfw than cold formed or finished, nes",Canada,"Viet Nam",N/A,348,0,Weight in metric tonne
+2024-12-01,"7215.50 - Bars & rods, iron or non-alloy steel, nfw than cold formed or finished, nes",Canada,"Viet Nam",N/A,741,0,Weight in metric tonne
+2025-04-01,"7215.50 - Bars & rods, iron or non-alloy steel, nfw than cold formed or finished, nes",Canada,"Viet Nam",N/A,1007,0,Weight in metric tonne
+2025-09-01,"7215.50 - Bars & rods, iron or non-alloy steel, nfw than cold formed or finished, nes",Canada,"Viet Nam",N/A,788,0,Weight in metric tonne
+2026-01-01,"7215.90 - Bars & rods, iron/non-alloy steel, nes",Canada,"Viet Nam",N/A,903,0,Weight in metric tonne
+2023-04-01,"7216.61 - Angles, shapes & sect,i/nas,nfw than cf or cfi, obtained from flat rolled prod",Canada,"Viet Nam",N/A,121,0,Weight in metric tonne
+2024-08-01,"7216.91 - Angles, shapes and sections, i/nas, cf or cold finished from flat rolled prod",Canada,"Viet Nam",N/A,2841,1,Weight in metric tonne
+2025-02-01,"7216.91 - Angles, shapes and sections, i/nas, cf or cold finished from flat rolled prod",Canada,"Viet Nam",N/A,1848,0,Weight in metric tonne
+2026-06-01,"7216.91 - Angles, shapes and sections, i/nas, cf or cold finished from flat rolled prod",Canada,"Viet Nam",N/A,908,0,Weight in metric tonne
+2025-04-01,"7216.99 - Angles, shapes and sections, i/nas, cold formed or cold finished, nes",Canada,"Viet Nam",N/A,2512,0,Weight in metric tonne
+2023-03-01,"7214.20 - Bars and rods, i/nas, hr, hd or he, cont indent, ribs, etc, prod during rp, nes",Canada,"Viet Nam",N/A,348160,413,Weight in metric tonne
+2024-09-01,"7217.10 - Wire, iron or non-alloy steel, polished or not, but not plated or coated",Canada,"Viet Nam",N/A,98760,38,Weight in metric tonne
+2025-03-01,"7217.10 - Wire, iron or non-alloy steel, polished or not, but not plated or coated",Canada,"Viet Nam",N/A,55756,51,Weight in metric tonne
+2025-11-01,"7217.10 - Wire, iron or non-alloy steel, polished or not, but not plated or coated",Canada,"Viet Nam",N/A,749,0,Weight in metric tonne
+2026-01-01,"7217.10 - Wire, iron or non-alloy steel, polished or not, but not plated or coated",Canada,"Viet Nam",N/A,345,0,Weight in metric tonne
+2026-07-01,"7217.10 - Wire, iron or non-alloy steel, polished or not, but not plated or coated",Canada,"Viet Nam",N/A,1573,0,Weight in metric tonne
+2026-04-01,"7217.20 - Wire, iron or non-alloy steel, plated or coated with zinc",Canada,"Viet Nam",N/A,1380694,1255,Weight in metric tonne
+2023-11-01,"7217.30 - Wire, iron or non-alloy steel, plated or coated with other base metals, nes",Canada,"Viet Nam",N/A,7654,2,Weight in metric tonne
+2023-06-01,"7217.90 - Wire, iron or non-alloy steel, nes",Canada,"Viet Nam",N/A,77959,48,Weight in metric tonne
+2024-02-01,"7217.90 - Wire, iron or non-alloy steel, nes",Canada,"Viet Nam",N/A,256075,165,Weight in metric tonne
+2024-05-01,"7217.90 - Wire, iron or non-alloy steel, nes",Canada,"Viet Nam",N/A,1105486,513,Weight in metric tonne
+2023-07-01,"7219.31 - Flat rolled prod, stain steel, cold roll, >= 600 mm wide, thick 4.75 mm or more",Canada,"Viet Nam",N/A,1778,0,Weight in metric tonne
+2025-10-01,"7217.90 - Wire, iron or non-alloy steel, nes",Canada,"Viet Nam",N/A,108949,67,Weight in metric tonne
+2024-11-01,"7219.21 - Flat rolled prod, stainless steel, hr, nic,>=600mm wide, exceeding 10mm thick",Canada,"Viet Nam",N/A,7549,1,Weight in metric tonne
+2024-10-01,"7219.32 - Flat rolled prod, stainless steel, cr, >=600mm wide,>=3mm thick <4.75mm",Canada,"Viet Nam",N/A,117963,40,Weight in metric tonne
+2023-08-01,"7219.33 - Flat rolled prod, stainless steel, cr, >=600mm wide, >1mm thick <3mm",Canada,"Viet Nam",N/A,201245,61,Weight in metric tonne
+2026-07-01,"7219.33 - Flat rolled prod, stainless steel, cr, >=600mm wide, >1mm thick <3mm",Canada,"Viet Nam",N/A,1177072,281,Weight in metric tonne
+2023-07-01,"7219.34 - Flat rolled prod, stainless steel, cr, >=600mm wide,>=0.5mm thick<=1mm",Canada,"Viet Nam",N/A,290072,83,Weight in metric tonne
+2024-03-01,"7219.34 - Flat rolled prod, stainless steel, cr, >=600mm wide,>=0.5mm thick<=1mm",Canada,"Viet Nam",N/A,323894,146,Weight in metric tonne
+2025-06-01,"7219.34 - Flat rolled prod, stainless steel, cr, >=600mm wide,>=0.5mm thick<=1mm",Canada,"Viet Nam",N/A,546824,186,Weight in metric tonne
+2025-09-01,"7219.34 - Flat rolled prod, stainless steel, cr, >=600mm wide,>=0.5mm thick<=1mm",Canada,"Viet Nam",N/A,293207,95,Weight in metric tonne
+2026-04-01,"7219.34 - Flat rolled prod, stainless steel, cr, >=600mm wide,>=0.5mm thick<=1mm",Canada,"Viet Nam",N/A,109729,35,Weight in metric tonne
+2024-04-01,"7219.35 - Flat rolled prod, stainless steel, cr, >=600mm wide, less than 0.5mm thick",Canada,"Viet Nam",N/A,10868,1,Weight in metric tonne
+2025-12-01,"7219.35 - Flat rolled prod, stainless steel, cr, >=600mm wide, less than 0.5mm thick",Canada,"Viet Nam",N/A,120377,37,Weight in metric tonne
+2026-03-01,"7219.35 - Flat rolled prod, stainless steel, cr, >=600mm wide, less than 0.5mm thick",Canada,"Viet Nam",N/A,83050,29,Weight in metric tonne
+2026-05-01,"7219.35 - Flat rolled prod, stainless steel, cr, >=600mm wide, less than 0.5mm thick",Canada,"Viet Nam",N/A,307426,77,Weight in metric tonne
+2023-10-01,"7219.90 - Flat rolled products, of stainless steel, of a width of 600 mm or more, nes",Canada,"Viet Nam",N/A,338,0,Weight in metric tonne
+2025-11-01,"7219.90 - Flat rolled products, of stainless steel, of a width of 600 mm or more, nes",Canada,"Viet Nam",N/A,63721,17,Weight in metric tonne
+2024-08-01,"7219.35 - Flat rolled prod, stainless steel, cr, >=600mm wide, less than 0.5mm thick",Canada,"Viet Nam",N/A,1584122,496,Weight in metric tonne
+2025-07-01,"7220.20 - Flat rolled prod, stainless steel, <600mm wide, cold rolled or reduced",Canada,"Viet Nam",N/A,34056,4,Weight in metric tonne
+2025-09-01,"7220.20 - Flat rolled prod, stainless steel, <600mm wide, cold rolled or reduced",Canada,"Viet Nam",N/A,35173,5,Weight in metric tonne
+2023-12-01,"7220.90 - Flat rolled products, stainless steel, of a width of less than 600mm, nes",Canada,"Viet Nam",N/A,72357,9,Weight in metric tonne
+2026-03-01,"7220.90 - Flat rolled products, stainless steel, of a width of less than 600mm, nes",Canada,"Viet Nam",N/A,419,0,Weight in metric tonne
+2025-05-01,"7222.20 - Bars & rods, stainless steel, nfw than cold formed or cold finished",Canada,"Viet Nam",N/A,72286,22,Weight in metric tonne
+2025-03-01,"7222.30 - Bars & rods, stainless steel, nes",Canada,"Viet Nam",N/A,9,0,Weight in metric tonne
+2023-07-01,"7222.40 - Angles, shapes and sections, stainless steel",Canada,"Viet Nam",N/A,5729,1,Weight in metric tonne
+2024-11-01,"7222.40 - Angles, shapes and sections, stainless steel",Canada,"Viet Nam",N/A,3132,0,Weight in metric tonne
+2026-01-01,"7222.40 - Angles, shapes and sections, stainless steel",Canada,"Viet Nam",N/A,38804,1,Weight in metric tonne
+2023-03-01,"7223.00 - Wire of stainless steel",Canada,"Viet Nam",N/A,278481,27,Weight in metric tonne
+2023-07-01,"7223.00 - Wire of stainless steel",Canada,"Viet Nam",N/A,381673,50,Weight in metric tonne
+2023-08-01,"7223.00 - Wire of stainless steel",Canada,"Viet Nam",N/A,555618,62,Weight in metric tonne
+2023-01-01,"7222.20 - Bars & rods, stainless steel, nfw than cold formed or cold finished",Canada,"Viet Nam",N/A,182,0,Weight in metric tonne
+2024-03-01,"7223.00 - Wire of stainless steel",Canada,"Viet Nam",N/A,754578,62,Weight in metric tonne
+2024-10-01,"7223.00 - Wire of stainless steel",Canada,"Viet Nam",N/A,242758,41,Weight in metric tonne
+2025-02-01,"7223.00 - Wire of stainless steel",Canada,"Viet Nam",N/A,510743,59,Weight in metric tonne
+2025-09-01,"7223.00 - Wire of stainless steel",Canada,"Viet Nam",N/A,1229348,161,Weight in metric tonne
+2023-07-01,"7226.99 - Flat rolled products, al/s, o/t stainless, < 600 mm wide, nes",Canada,"Viet Nam",N/A,21916,10,Weight in metric tonne
+2023-11-01,"7228.50 - Bars & rods, as, o/t stainless, not further worked than cold formed/finished",Canada,"Viet Nam",N/A,1350,0,Weight in metric tonne
+2023-03-01,"7229.20 - Wire of silico-manganese steel",Canada,"Viet Nam",N/A,4542,0,Weight in metric tonne
+2024-07-01,"7229.20 - Wire of silico-manganese steel",Canada,"Viet Nam",N/A,136425,94,Weight in metric tonne
+2024-09-01,"7229.20 - Wire of silico-manganese steel",Canada,"Viet Nam",N/A,166656,95,Weight in metric tonne
+2025-02-01,"7229.20 - Wire of silico-manganese steel",Canada,"Viet Nam",N/A,182943,117,Weight in metric tonne
+2026-07-01,"7229.20 - Wire of silico-manganese steel",Canada,"Viet Nam",N/A,223372,133,Weight in metric tonne
+2026-08-01,"7229.20 - Wire of silico-manganese steel",Canada,"Viet Nam",N/A,59599,37,Weight in metric tonne
+2023-09-01,"7229.90 - Wire of alloy steel, o/t stainless",Canada,"Viet Nam",N/A,4467,0,Weight in metric tonne
+2023-11-01,"7229.90 - Wire of alloy steel, o/t stainless",Canada,"Viet Nam",N/A,8591,0,Weight in metric tonne
+2025-12-01,"7229.90 - Wire of alloy steel, o/t stainless",Canada,"Viet Nam",N/A,210,0,Weight in metric tonne
+2025-07-01,"7229.90 - Wire of alloy steel, o/t stainless",Canada,"Viet Nam",N/A,8495,3,Weight in metric tonne
+2024-11-01,"7228.50 - Bars & rods, as, o/t stainless, not further worked than cold formed/finished",Canada,"Viet Nam",N/A,1387,0,Weight in metric tonne
+2024-11-01,"7229.90 - Wire of alloy steel, o/t stainless",Canada,"Viet Nam",N/A,4033,0,Weight in metric tonne
+2024-08-01,"7229.20 - Wire of silico-manganese steel",Canada,"Viet Nam",N/A,221281,133,Weight in metric tonne
+2024-10-01,"7229.20 - Wire of silico-manganese steel",Canada,"Viet Nam",N/A,187619,117,Weight in metric tonne
+2023-06-01,"7210.61 - Flat rolled prod, i/nas, plated or coat w aluminium-zinc alloys,>=600mm wide",Canada,"Viet Nam",N/A,1061851,816,Weight in metric tonne
+2023-10-01,"7209.16 - Flat roll prod,i/nas,in coil,cold roll,n clad, >=600mm wide,thick >1mm but < 3mm",Canada,"Viet Nam",N/A,12124,8,Weight in metric tonne
+2024-03-01,"7210.49 - Flat rolled prod, i/nas, plated or coated with zinc,>= 600 mm wide, nes",Canada,"Viet Nam",N/A,3002845,2479,Weight in metric tonne
+2026-06-01,"7202.21 - Ferro-silicon, containing by weight more than 55% of silicon",Canada,"Viet Nam",N/A,10173,4,Weight in metric tonne
+2023-03-01,"7202.80 - Ferro-tungsten and ferro-silico-tungsten",Canada,"Viet Nam",N/A,9349,0,Weight in metric tonne
+2023-12-01,"7205.29 - Powders, iron or steel, other than alloy",Canada,"Viet Nam",N/A,101485,10,Weight in metric tonne
+2024-02-01,"7210.49 - Flat rolled prod, i/nas, plated or coated with zinc,>= 600 mm wide, nes",Canada,"Viet Nam",N/A,1141075,1018,Weight in metric tonne
+2023-05-01,"7207.20 - Semi-finished prod, iron or non-alloy steel,cont by weight 0.25% or more carbon",Canada,"Viet Nam",N/A,10265,0,Weight in metric tonne
+2026-04-01,"7210.49 - Flat rolled prod, i/nas, plated or coated with zinc,>= 600 mm wide, nes",Canada,"Viet Nam",N/A,228978,192,Weight in metric tonne
+2025-08-01,"7210.49 - Flat rolled prod, i/nas, plated or coated with zinc,>= 600 mm wide, nes",Canada,"Viet Nam",N/A,115992,101,Weight in metric tonne
+2023-07-01,"7210.61 - Flat rolled prod, i/nas, plated or coat w aluminium-zinc alloys,>=600mm wide",Canada,"Viet Nam",N/A,36524,21,Weight in metric tonne
+2026-01-01,"7210.61 - Flat rolled prod, i/nas, plated or coat w aluminium-zinc alloys,>=600mm wide",Canada,"Viet Nam",N/A,69595,21,Weight in metric tonne
+2026-04-01,"7210.61 - Flat rolled prod, i/nas, plated or coat w aluminium-zinc alloys,>=600mm wide",Canada,"Viet Nam",N/A,253,0,Weight in metric tonne
+2025-09-01,"7210.70 - Flat rolled prod, i/nas, painted, varnished or plast coated, >= 600 mm wide",Canada,"Viet Nam",N/A,1173876,865,Weight in metric tonne
+2023-02-01,"7212.40 - Flat rolled prod, i/nas, <600mm wide, painted, varnished or coated with plast",Canada,"Viet Nam",N/A,91846,106,Weight in metric tonne
+2023-08-01,"7212.40 - Flat rolled prod, i/nas, <600mm wide, painted, varnished or coated with plast",Canada,"Viet Nam",N/A,240992,57,Weight in metric tonne
+2024-06-01,"7212.40 - Flat rolled prod, i/nas, <600mm wide, painted, varnished or coated with plast",Canada,"Viet Nam",N/A,7610,2,Weight in metric tonne
+2024-07-01,"7212.40 - Flat rolled prod, i/nas, <600mm wide, painted, varnished or coated with plast",Canada,"Viet Nam",N/A,4262,1,Weight in metric tonne
+2024-10-01,"7212.40 - Flat rolled prod, i/nas, <600mm wide, painted, varnished or coated with plast",Canada,"Viet Nam",N/A,178030,121,Weight in metric tonne
+2025-03-01,"7212.40 - Flat rolled prod, i/nas, <600mm wide, painted, varnished or coated with plast",Canada,"Viet Nam",N/A,121911,82,Weight in metric tonne
+2025-09-01,"7212.40 - Flat rolled prod, i/nas, <600mm wide, painted, varnished or coated with plast",Canada,"Viet Nam",N/A,212733,143,Weight in metric tonne
+2025-05-01,"7210.70 - Flat rolled prod, i/nas, painted, varnished or plast coated, >= 600 mm wide",Canada,"Viet Nam",N/A,1828676,1136,Weight in metric tonne
+2026-05-01,"7212.40 - Flat rolled prod, i/nas, <600mm wide, painted, varnished or coated with plast",Canada,"Viet Nam",N/A,84273,48,Weight in metric tonne
+2023-03-01,"7212.50 - Flat rolled prod, i/nas, < 600 mm wide, otherwise plated/coated, nes",Canada,"Viet Nam",N/A,961,0,Weight in metric tonne
+2023-02-01,"7213.91 - Bars/rods, i/nas,hr, in irreg wnd coils of circ cross section, <14mm in dia",Canada,"Viet Nam",N/A,5536998,7008,Weight in metric tonne
+2024-03-01,"7213.91 - Bars/rods, i/nas,hr, in irreg wnd coils of circ cross section, <14mm in dia",Canada,"Viet Nam",N/A,6472514,7348,Weight in metric tonne
+2024-01-01,"7214.20 - Bars and rods, i/nas, hr, hd or he, cont indent, ribs, etc, prod during rp, nes",Canada,"Viet Nam",N/A,1059,1,Weight in metric tonne
+2024-10-01,"7214.20 - Bars and rods, i/nas, hr, hd or he, cont indent, ribs, etc, prod during rp, nes",Canada,"Viet Nam",N/A,1794,1,Weight in metric tonne
+2026-04-01,"7216.21 - Sections, L, i/nas, nfw than hot rolled, drawn or extruded, of a height <80mm",Canada,"Viet Nam",N/A,331778,345,Weight in metric tonne
+2026-03-01,"7216.69 - Angles, shapes and sections, i/nas, nfw than cold formed or cold finished, nes",Canada,"Viet Nam",N/A,99,0,Weight in metric tonne
+2025-08-01,"7216.91 - Angles, shapes and sections, i/nas, cf or cold finished from flat rolled prod",Canada,"Viet Nam",N/A,691,0,Weight in metric tonne
+2025-09-01,"7216.91 - Angles, shapes and sections, i/nas, cf or cold finished from flat rolled prod",Canada,"Viet Nam",N/A,7580,2,Weight in metric tonne
+2026-02-01,"7216.99 - Angles, shapes and sections, i/nas, cold formed or cold finished, nes",Canada,"Viet Nam",N/A,1211,0,Weight in metric tonne
+2023-01-01,"7217.10 - Wire, iron or non-alloy steel, polished or not, but not plated or coated",Canada,"Viet Nam",N/A,97,0,Weight in metric tonne
+2024-09-01,"7215.50 - Bars & rods, iron or non-alloy steel, nfw than cold formed or finished, nes",Canada,"Viet Nam",N/A,136,0,Weight in metric tonne
+2024-12-01,"7217.10 - Wire, iron or non-alloy steel, polished or not, but not plated or coated",Canada,"Viet Nam",N/A,387,0,Weight in metric tonne
+2026-03-01,"7217.10 - Wire, iron or non-alloy steel, polished or not, but not plated or coated",Canada,"Viet Nam",N/A,777,0,Weight in metric tonne
+2026-06-01,"7217.10 - Wire, iron or non-alloy steel, polished or not, but not plated or coated",Canada,"Viet Nam",N/A,78,0,Weight in metric tonne
+2025-04-01,"7217.90 - Wire, iron or non-alloy steel, nes",Canada,"Viet Nam",N/A,559474,293,Weight in metric tonne
+2025-06-01,"7217.90 - Wire, iron or non-alloy steel, nes",Canada,"Viet Nam",N/A,861088,488,Weight in metric tonne
+2026-07-01,"7217.90 - Wire, iron or non-alloy steel, nes",Canada,"Viet Nam",N/A,32707,28,Weight in metric tonne
+2023-12-01,"7218.99 - Semi-finished products, stainless steel, nes",Canada,"Viet Nam",N/A,15153,0,Weight in metric tonne
+2025-01-01,"7218.99 - Semi-finished products, stainless steel, nes",Canada,"Viet Nam",N/A,353,0,Weight in metric tonne
+2025-08-01,"7218.99 - Semi-finished products, stainless steel, nes",Canada,"Viet Nam",N/A,116,0,Weight in metric tonne
+2023-06-01,"7219.14 - Flat rolled prod, stainless steel,hot roll,in coil, >= 600mm wide, thick  < 3mm",Canada,"Viet Nam",N/A,921,0,Weight in metric tonne
+2024-08-01,"7219.32 - Flat rolled prod, stainless steel, cr, >=600mm wide,>=3mm thick <4.75mm",Canada,"Viet Nam",N/A,355,0,Weight in metric tonne
+2025-10-01,"7217.10 - Wire, iron or non-alloy steel, polished or not, but not plated or coated",Canada,"Viet Nam",N/A,1441,0,Weight in metric tonne
+2023-01-01,"7219.14 - Flat rolled prod, stainless steel,hot roll,in coil, >= 600mm wide, thick  < 3mm",Canada,"Viet Nam",N/A,9768,1,Weight in metric tonne
+2023-09-01,"7217.90 - Wire, iron or non-alloy steel, nes",Canada,"Viet Nam",N/A,147900,78,Weight in metric tonne
+2026-05-01,"7219.32 - Flat rolled prod, stainless steel, cr, >=600mm wide,>=3mm thick <4.75mm",Canada,"Viet Nam",N/A,384274,133,Weight in metric tonne
+2023-05-01,"7219.33 - Flat rolled prod, stainless steel, cr, >=600mm wide, >1mm thick <3mm",Canada,"Viet Nam",N/A,198985,50,Weight in metric tonne
+2023-12-01,"7219.33 - Flat rolled prod, stainless steel, cr, >=600mm wide, >1mm thick <3mm",Canada,"Viet Nam",N/A,810,0,Weight in metric tonne
+2024-09-01,"7219.33 - Flat rolled prod, stainless steel, cr, >=600mm wide, >1mm thick <3mm",Canada,"Viet Nam",N/A,35770,8,Weight in metric tonne
+2025-03-01,"7219.33 - Flat rolled prod, stainless steel, cr, >=600mm wide, >1mm thick <3mm",Canada,"Viet Nam",N/A,105913,21,Weight in metric tonne
+2025-10-01,"7219.33 - Flat rolled prod, stainless steel, cr, >=600mm wide, >1mm thick <3mm",Canada,"Viet Nam",N/A,2103921,779,Weight in metric tonne
+2026-02-01,"7219.33 - Flat rolled prod, stainless steel, cr, >=600mm wide, >1mm thick <3mm",Canada,"Viet Nam",N/A,218320,75,Weight in metric tonne
+2026-06-01,"7219.33 - Flat rolled prod, stainless steel, cr, >=600mm wide, >1mm thick <3mm",Canada,"Viet Nam",N/A,794860,244,Weight in metric tonne
+2024-11-01,"7219.34 - Flat rolled prod, stainless steel, cr, >=600mm wide,>=0.5mm thick<=1mm",Canada,"Viet Nam",N/A,123387,42,Weight in metric tonne
+2025-02-01,"7219.34 - Flat rolled prod, stainless steel, cr, >=600mm wide,>=0.5mm thick<=1mm",Canada,"Viet Nam",N/A,281044,82,Weight in metric tonne
+2026-07-01,"7219.34 - Flat rolled prod, stainless steel, cr, >=600mm wide,>=0.5mm thick<=1mm",Canada,"Viet Nam",N/A,667858,190,Weight in metric tonne
+2026-08-01,"7219.34 - Flat rolled prod, stainless steel, cr, >=600mm wide,>=0.5mm thick<=1mm",Canada,"Viet Nam",N/A,428346,107,Weight in metric tonne
+2024-03-01,"7219.35 - Flat rolled prod, stainless steel, cr, >=600mm wide, less than 0.5mm thick",Canada,"Viet Nam",N/A,22671,5,Weight in metric tonne
+2025-07-01,"7219.35 - Flat rolled prod, stainless steel, cr, >=600mm wide, less than 0.5mm thick",Canada,"Viet Nam",N/A,1676675,515,Weight in metric tonne
+2026-02-01,"7219.90 - Flat rolled products, of stainless steel, of a width of 600 mm or more, nes",Canada,"Viet Nam",N/A,31125,8,Weight in metric tonne
+2023-02-01,"7220.12 - Flat rolled products, stainless steel, hot rolled, < 600 mm wide,thick < 4.75 mm",Canada,"Viet Nam",N/A,9383,1,Weight in metric tonne
+2023-08-01,"7220.20 - Flat rolled prod, stainless steel, <600mm wide, cold rolled or reduced",Canada,"Viet Nam",N/A,2058,0,Weight in metric tonne
+2023-11-01,"7220.20 - Flat rolled prod, stainless steel, <600mm wide, cold rolled or reduced",Canada,"Viet Nam",N/A,13211,1,Weight in metric tonne
+2025-01-01,"7219.32 - Flat rolled prod, stainless steel, cr, >=600mm wide,>=3mm thick <4.75mm",Canada,"Viet Nam",N/A,61768,20,Weight in metric tonne
+2024-08-01,"7219.34 - Flat rolled prod, stainless steel, cr, >=600mm wide,>=0.5mm thick<=1mm",Canada,"Viet Nam",N/A,106903,42,Weight in metric tonne
+2024-12-01,"7220.20 - Flat rolled prod, stainless steel, <600mm wide, cold rolled or reduced",Canada,"Viet Nam",N/A,5699,1,Weight in metric tonne
+2025-12-01,"7220.20 - Flat rolled prod, stainless steel, <600mm wide, cold rolled or reduced",Canada,"Viet Nam",N/A,8027,1,Weight in metric tonne
+2026-02-01,"7220.20 - Flat rolled prod, stainless steel, <600mm wide, cold rolled or reduced",Canada,"Viet Nam",N/A,10716,1,Weight in metric tonne
+2025-01-01,"7222.11 - Bars & rods, stainless steel, nfwt hr/hd/extruded, of circular cross-section",Canada,"Viet Nam",N/A,34900,10393,Weight in kilograms
+2025-06-01,"7222.11 - Bars & rods, stainless steel, nfwt hr/hd/extruded, of circular cross-section",Canada,"Viet Nam",N/A,293,0,Weight in kilograms
+2025-04-01,"7222.20 - Bars & rods, stainless steel, nfw than cold formed or cold finished",Canada,"Viet Nam",N/A,4539,1,Weight in metric tonne
+2023-12-01,"7222.40 - Angles, shapes and sections, stainless steel",Canada,"Viet Nam",N/A,330,0,Weight in metric tonne
+2024-06-01,"7222.40 - Angles, shapes and sections, stainless steel",Canada,"Viet Nam",N/A,3405,0,Weight in metric tonne
+2024-09-01,"7222.40 - Angles, shapes and sections, stainless steel",Canada,"Viet Nam",N/A,10974,1,Weight in metric tonne
+2025-09-01,"7222.40 - Angles, shapes and sections, stainless steel",Canada,"Viet Nam",N/A,473,0,Weight in metric tonne
+2024-02-01,"7222.40 - Angles, shapes and sections, stainless steel",Canada,"Viet Nam",N/A,4631,0,Weight in metric tonne
+2023-01-01,"7222.40 - Angles, shapes and sections, stainless steel",Canada,"Viet Nam",N/A,1812,0,Weight in metric tonne
+2023-09-01,"7223.00 - Wire of stainless steel",Canada,"Viet Nam",N/A,9432,1,Weight in metric tonne
+2024-02-01,"7223.00 - Wire of stainless steel",Canada,"Viet Nam",N/A,9803,1,Weight in metric tonne
+2024-06-01,"7223.00 - Wire of stainless steel",Canada,"Viet Nam",N/A,205923,21,Weight in metric tonne
+2024-11-01,"7223.00 - Wire of stainless steel",Canada,"Viet Nam",N/A,840730,100,Weight in metric tonne
+2025-08-01,"7223.00 - Wire of stainless steel",Canada,"Viet Nam",N/A,1029042,185,Weight in metric tonne
+2026-07-01,"7223.00 - Wire of stainless steel",Canada,"Viet Nam",N/A,1800136,296,Weight in metric tonne
+2026-07-01,"7228.20 - Bars and rods of silico-manganese steel, nes",Canada,"Viet Nam",N/A,284,0,Weight in metric tonne
+2023-05-01,"7228.50 - Bars & rods, as, o/t stainless, not further worked than cold formed/finished",Canada,"Viet Nam",N/A,920,0,Weight in metric tonne
+2023-10-01,"7228.50 - Bars & rods, as, o/t stainless, not further worked than cold formed/finished",Canada,"Viet Nam",N/A,585,0,Weight in metric tonne
+2026-03-01,"7228.60 - Bars & rods, alloy steel, o/t stainless, nes",Canada,"Viet Nam",N/A,2501,0,Weight in metric tonne
+2026-05-01,"7228.60 - Bars & rods, alloy steel, o/t stainless, nes",Canada,"Viet Nam",N/A,3739,0,Weight in metric tonne
+2023-07-01,"7229.20 - Wire of silico-manganese steel",Canada,"Viet Nam",N/A,63671,38,Weight in metric tonne
+2023-08-01,"7229.20 - Wire of silico-manganese steel",Canada,"Viet Nam",N/A,153628,85,Weight in metric tonne
+2023-09-01,"7229.20 - Wire of silico-manganese steel",Canada,"Viet Nam",N/A,32931,19,Weight in metric tonne
+2024-02-01,"7229.20 - Wire of silico-manganese steel",Canada,"Viet Nam",N/A,148716,77,Weight in metric tonne
+2025-05-01,"7229.20 - Wire of silico-manganese steel",Canada,"Viet Nam",N/A,467760,290,Weight in metric tonne
+2025-06-01,"7229.20 - Wire of silico-manganese steel",Canada,"Viet Nam",N/A,212332,134,Weight in metric tonne
+2025-12-01,"7229.20 - Wire of silico-manganese steel",Canada,"Viet Nam",N/A,283339,193,Weight in metric tonne
+2026-01-01,"7229.20 - Wire of silico-manganese steel",Canada,"Viet Nam",N/A,360316,230,Weight in metric tonne
+2023-03-01,"7229.90 - Wire of alloy steel, o/t stainless",Canada,"Viet Nam",N/A,15597,1,Weight in metric tonne
+2023-07-01,"7229.90 - Wire of alloy steel, o/t stainless",Canada,"Viet Nam",N/A,3616,0,Weight in metric tonne
+2024-03-01,"7229.90 - Wire of alloy steel, o/t stainless",Canada,"Viet Nam",N/A,1083,0,Weight in metric tonne
+2024-01-01,"7229.90 - Wire of alloy steel, o/t stainless",Canada,"Viet Nam",N/A,84702,32,Weight in metric tonne
+2023-01-01,"7229.90 - Wire of alloy steel, o/t stainless",Canada,"Viet Nam",N/A,4571,0,Weight in metric tonne
+2024-10-01,"7229.90 - Wire of alloy steel, o/t stainless",Canada,"Viet Nam",N/A,103609,38,Weight in metric tonne
+2025-03-01,"7210.49 - Flat rolled prod, i/nas, plated or coated with zinc,>= 600 mm wide, nes",Canada,"Viet Nam",N/A,3305258,3211,Weight in metric tonne
+2023-03-01,"7205.29 - Powders, iron or steel, other than alloy",Canada,"Viet Nam",N/A,1066,0,Weight in metric tonne
+2023-03-01,"7210.49 - Flat rolled prod, i/nas, plated or coated with zinc,>= 600 mm wide, nes",Canada,"Viet Nam",N/A,47271,41,Weight in metric tonne
+2025-02-01,"7210.49 - Flat rolled prod, i/nas, plated or coated with zinc,>= 600 mm wide, nes",Canada,"Viet Nam",N/A,3485000,3246,Weight in metric tonne
+2025-09-01,"7210.49 - Flat rolled prod, i/nas, plated or coated with zinc,>= 600 mm wide, nes",Canada,"Viet Nam",N/A,260536,230,Weight in metric tonne
+2026-05-01,"7208.37 - Flat rolled prod, i/nas, in coil, hr,>=600mm wide,>=4.75mm thk but<=10mm thk,nes",Canada,"Viet Nam",N/A,121920,164,Weight in metric tonne
+2026-05-01,"7210.49 - Flat rolled prod, i/nas, plated or coated with zinc,>= 600 mm wide, nes",Canada,"Viet Nam",N/A,773874,804,Weight in metric tonne
+2023-05-01,"7210.49 - Flat rolled prod, i/nas, plated or coated with zinc,>= 600 mm wide, nes",Canada,"Viet Nam",N/A,2731478,2127,Weight in metric tonne
+2026-04-01,"7209.16 - Flat roll prod,i/nas,in coil,cold roll,n clad, >=600mm wide,thick >1mm but < 3mm",Canada,"Viet Nam",N/A,8,1,Weight in metric tonne
+2023-01-01,"7210.61 - Flat rolled prod, i/nas, plated or coat w aluminium-zinc alloys,>=600mm wide",Canada,"Viet Nam",N/A,317372,241,Weight in metric tonne
+2023-02-01,"7210.49 - Flat rolled prod, i/nas, plated or coated with zinc,>= 600 mm wide, nes",Canada,"Viet Nam",N/A,469751,320,Weight in metric tonne
+2024-02-01,"7210.61 - Flat rolled prod, i/nas, plated or coat w aluminium-zinc alloys,>=600mm wide",Canada,"Viet Nam",N/A,36676,23,Weight in metric tonne
+2024-11-01,"7210.61 - Flat rolled prod, i/nas, plated or coat w aluminium-zinc alloys,>=600mm wide",Canada,"Viet Nam",N/A,597281,185,Weight in metric tonne
+2024-10-01,"7210.70 - Flat rolled prod, i/nas, painted, varnished or plast coated, >= 600 mm wide",Canada,"Viet Nam",N/A,67229,41,Weight in metric tonne
+2025-04-01,"7210.70 - Flat rolled prod, i/nas, painted, varnished or plast coated, >= 600 mm wide",Canada,"Viet Nam",N/A,20095,5,Weight in metric tonne
+2023-11-01,"7212.30 - Flat rolled prod, i/nas, <600mm wide, o/w plated or coated with zinc",Canada,"Viet Nam",N/A,580,0,Weight in metric tonne
+2023-03-01,"7212.40 - Flat rolled prod, i/nas, <600mm wide, painted, varnished or coated with plast",Canada,"Viet Nam",N/A,269579,168,Weight in metric tonne
+2023-10-01,"7212.40 - Flat rolled prod, i/nas, <600mm wide, painted, varnished or coated with plast",Canada,"Viet Nam",N/A,88936,24,Weight in metric tonne
+2024-04-01,"7212.40 - Flat rolled prod, i/nas, <600mm wide, painted, varnished or coated with plast",Canada,"Viet Nam",N/A,60325,6,Weight in metric tonne
+2025-02-01,"7212.40 - Flat rolled prod, i/nas, <600mm wide, painted, varnished or coated with plast",Canada,"Viet Nam",N/A,41254,27,Weight in metric tonne
+2025-10-01,"7210.61 - Flat rolled prod, i/nas, plated or coat w aluminium-zinc alloys,>=600mm wide",Canada,"Viet Nam",N/A,18832,12,Weight in metric tonne
+2025-11-01,"7212.40 - Flat rolled prod, i/nas, <600mm wide, painted, varnished or coated with plast",Canada,"Viet Nam",N/A,39960,27,Weight in metric tonne
+2023-02-01,"7212.50 - Flat rolled prod, i/nas, < 600 mm wide, otherwise plated/coated, nes",Canada,"Viet Nam",N/A,6105,2,Weight in metric tonne
+2024-04-01,"7212.50 - Flat rolled prod, i/nas, < 600 mm wide, otherwise plated/coated, nes",Canada,"Viet Nam",N/A,3834,1,Weight in metric tonne
+2023-01-01,"7213.91 - Bars/rods, i/nas,hr, in irreg wnd coils of circ cross section, <14mm in dia",Canada,"Viet Nam",N/A,6286273,7583,Weight in metric tonne
+2023-06-01,"7213.91 - Bars/rods, i/nas,hr, in irreg wnd coils of circ cross section, <14mm in dia",Canada,"Viet Nam",N/A,6276326,6730,Weight in metric tonne
+2023-11-01,"7213.91 - Bars/rods, i/nas,hr, in irreg wnd coils of circ cross section, <14mm in dia",Canada,"Viet Nam",N/A,6810893,8894,Weight in metric tonne
+2025-04-01,"7214.20 - Bars and rods, i/nas, hr, hd or he, cont indent, ribs, etc, prod during rp, nes",Canada,"Viet Nam",N/A,2006,1,Weight in metric tonne
+2025-01-01,"7215.50 - Bars & rods, iron or non-alloy steel, nfw than cold formed or finished, nes",Canada,"Viet Nam",N/A,389,0,Weight in metric tonne
+2025-06-01,"7215.50 - Bars & rods, iron or non-alloy steel, nfw than cold formed or finished, nes",Canada,"Viet Nam",N/A,234,0,Weight in metric tonne
+2025-11-01,"7215.50 - Bars & rods, iron or non-alloy steel, nfw than cold formed or finished, nes",Canada,"Viet Nam",N/A,4053,0,Weight in metric tonne
+2025-01-01,"7215.90 - Bars & rods, iron/non-alloy steel, nes",Canada,"Viet Nam",N/A,28273,11,Weight in metric tonne
+2025-10-01,"7215.90 - Bars & rods, iron/non-alloy steel, nes",Canada,"Viet Nam",N/A,42667,10,Weight in metric tonne
+2026-02-01,"7215.90 - Bars & rods, iron/non-alloy steel, nes",Canada,"Viet Nam",N/A,6206,2,Weight in metric tonne
+2023-09-01,"7216.99 - Angles, shapes and sections, i/nas, cold formed or cold finished, nes",Canada,"Viet Nam",N/A,301461,222,Weight in metric tonne
+2024-10-01,"7216.99 - Angles, shapes and sections, i/nas, cold formed or cold finished, nes",Canada,"Viet Nam",N/A,19048,5,Weight in metric tonne
+2025-01-01,"7216.99 - Angles, shapes and sections, i/nas, cold formed or cold finished, nes",Canada,"Viet Nam",N/A,34756,6,Weight in metric tonne
+2025-05-01,"7216.99 - Angles, shapes and sections, i/nas, cold formed or cold finished, nes",Canada,"Viet Nam",N/A,9079,1,Weight in metric tonne
+2025-07-01,"7216.99 - Angles, shapes and sections, i/nas, cold formed or cold finished, nes",Canada,"Viet Nam",N/A,7349,1,Weight in metric tonne
+2026-06-01,"7216.99 - Angles, shapes and sections, i/nas, cold formed or cold finished, nes",Canada,"Viet Nam",N/A,137,0,Weight in metric tonne
+2023-07-01,"7217.10 - Wire, iron or non-alloy steel, polished or not, but not plated or coated",Canada,"Viet Nam",N/A,98134,38,Weight in metric tonne
+2025-01-01,"7217.20 - Wire, iron or non-alloy steel, plated or coated with zinc",Canada,"Viet Nam",N/A,29575,27,Weight in metric tonne
+2025-06-01,"7217.20 - Wire, iron or non-alloy steel, plated or coated with zinc",Canada,"Viet Nam",N/A,166198,148,Weight in metric tonne
+2025-08-01,"7217.20 - Wire, iron or non-alloy steel, plated or coated with zinc",Canada,"Viet Nam",N/A,99471,81,Weight in metric tonne
+2026-02-01,"7217.20 - Wire, iron or non-alloy steel, plated or coated with zinc",Canada,"Viet Nam",N/A,65352,53,Weight in metric tonne
+2026-07-01,"7217.20 - Wire, iron or non-alloy steel, plated or coated with zinc",Canada,"Viet Nam",N/A,137951,107,Weight in metric tonne
+2023-04-01,"7217.90 - Wire, iron or non-alloy steel, nes",Canada,"Viet Nam",N/A,191827,116,Weight in metric tonne
+2023-05-01,"7217.90 - Wire, iron or non-alloy steel, nes",Canada,"Viet Nam",N/A,655387,357,Weight in metric tonne
+2023-12-01,"7217.90 - Wire, iron or non-alloy steel, nes",Canada,"Viet Nam",N/A,238637,137,Weight in metric tonne
+2024-06-01,"7217.90 - Wire, iron or non-alloy steel, nes",Canada,"Viet Nam",N/A,342279,195,Weight in metric tonne
+2024-10-01,"7217.90 - Wire, iron or non-alloy steel, nes",Canada,"Viet Nam",N/A,200963,119,Weight in metric tonne
+2026-01-01,"7217.90 - Wire, iron or non-alloy steel, nes",Canada,"Viet Nam",N/A,28691,15,Weight in metric tonne
+2023-04-01,"7219.14 - Flat rolled prod, stainless steel,hot roll,in coil, >= 600mm wide, thick  < 3mm",Canada,"Viet Nam",N/A,9771,1,Weight in metric tonne
+2023-10-01,"7219.31 - Flat rolled prod, stain steel, cold roll, >= 600 mm wide, thick 4.75 mm or more",Canada,"Viet Nam",N/A,7044,1,Weight in metric tonne
+2024-08-01,"7218.10 - Ingots and other primary forms, stainless steel",Canada,"Viet Nam",N/A,9,0,Weight in metric tonne
+2026-04-01,"7219.32 - Flat rolled prod, stainless steel, cr, >=600mm wide,>=3mm thick <4.75mm",Canada,"Viet Nam",N/A,111420,38,Weight in metric tonne
+2026-07-01,"7219.32 - Flat rolled prod, stainless steel, cr, >=600mm wide,>=3mm thick <4.75mm",Canada,"Viet Nam",N/A,406131,110,Weight in metric tonne
+2023-01-01,"7219.33 - Flat rolled prod, stainless steel, cr, >=600mm wide, >1mm thick <3mm",Canada,"Viet Nam",N/A,31980,2,Weight in metric tonne
+2023-03-01,"7219.33 - Flat rolled prod, stainless steel, cr, >=600mm wide, >1mm thick <3mm",Canada,"Viet Nam",N/A,798256,216,Weight in metric tonne
+2023-07-01,"7219.33 - Flat rolled prod, stainless steel, cr, >=600mm wide, >1mm thick <3mm",Canada,"Viet Nam",N/A,713250,207,Weight in metric tonne
+2024-08-01,"7219.33 - Flat rolled prod, stainless steel, cr, >=600mm wide, >1mm thick <3mm",Canada,"Viet Nam",N/A,262945,103,Weight in metric tonne
+2025-07-01,"7219.33 - Flat rolled prod, stainless steel, cr, >=600mm wide, >1mm thick <3mm",Canada,"Viet Nam",N/A,460630,163,Weight in metric tonne
+2026-08-01,"7219.33 - Flat rolled prod, stainless steel, cr, >=600mm wide, >1mm thick <3mm",Canada,"Viet Nam",N/A,496911,112,Weight in metric tonne
+2023-05-01,"7219.35 - Flat rolled prod, stainless steel, cr, >=600mm wide, less than 0.5mm thick",Canada,"Viet Nam",N/A,86092,21,Weight in metric tonne
+2023-09-01,"7219.35 - Flat rolled prod, stainless steel, cr, >=600mm wide, less than 0.5mm thick",Canada,"Viet Nam",N/A,5625,0,Weight in metric tonne
+2025-06-01,"7219.35 - Flat rolled prod, stainless steel, cr, >=600mm wide, less than 0.5mm thick",Canada,"Viet Nam",N/A,218234,60,Weight in metric tonne
+2025-10-01,"7219.35 - Flat rolled prod, stainless steel, cr, >=600mm wide, less than 0.5mm thick",Canada,"Viet Nam",N/A,104658,34,Weight in metric tonne
+2025-11-01,"7219.35 - Flat rolled prod, stainless steel, cr, >=600mm wide, less than 0.5mm thick",Canada,"Viet Nam",N/A,2531690,755,Weight in metric tonne
+2024-05-01,"7219.90 - Flat rolled products, of stainless steel, of a width of 600 mm or more, nes",Canada,"Viet Nam",N/A,37894,4,Weight in metric tonne
+2023-05-01,"7220.20 - Flat rolled prod, stainless steel, <600mm wide, cold rolled or reduced",Canada,"Viet Nam",N/A,62363,5,Weight in metric tonne
+2024-04-01,"7220.20 - Flat rolled prod, stainless steel, <600mm wide, cold rolled or reduced",Canada,"Viet Nam",N/A,4044,0,Weight in metric tonne
+2025-01-01,"7219.34 - Flat rolled prod, stainless steel, cr, >=600mm wide,>=0.5mm thick<=1mm",Canada,"Viet Nam",N/A,733721,205,Weight in metric tonne
+2025-06-01,"7220.20 - Flat rolled prod, stainless steel, <600mm wide, cold rolled or reduced",Canada,"Viet Nam",N/A,37632,8,Weight in metric tonne
+2026-05-01,"7220.20 - Flat rolled prod, stainless steel, <600mm wide, cold rolled or reduced",Canada,"Viet Nam",N/A,51309,7,Weight in metric tonne
+2023-06-01,"7220.90 - Flat rolled products, stainless steel, of a width of less than 600mm, nes",Canada,"Viet Nam",N/A,42294,7,Weight in metric tonne
+2023-10-01,"7220.90 - Flat rolled products, stainless steel, of a width of less than 600mm, nes",Canada,"Viet Nam",N/A,91,0,Weight in metric tonne
+2023-10-01,"7222.11 - Bars & rods, stainless steel, nfwt hr/hd/extruded, of circular cross-section",Canada,"Viet Nam",N/A,47526,5464,Weight in kilograms
+2025-09-01,"7222.19 - Bars & rods, stainless steel, nfw than hot rolled, hot drawn or extruded, nes",Canada,"Viet Nam",N/A,288,0,Weight in metric tonne
+2025-03-01,"7222.20 - Bars & rods, stainless steel, nfw than cold formed or cold finished",Canada,"Viet Nam",N/A,638,0,Weight in metric tonne
+2024-04-01,"7222.30 - Bars & rods, stainless steel, nes",Canada,"Viet Nam",N/A,113,0,Weight in metric tonne
+2025-06-01,"7222.30 - Bars & rods, stainless steel, nes",Canada,"Viet Nam",N/A,382,0,Weight in metric tonne
+2023-04-01,"7222.40 - Angles, shapes and sections, stainless steel",Canada,"Viet Nam",N/A,3970,0,Weight in metric tonne
+2023-05-01,"7222.40 - Angles, shapes and sections, stainless steel",Canada,"Viet Nam",N/A,2746,0,Weight in metric tonne
+2023-08-01,"7222.40 - Angles, shapes and sections, stainless steel",Canada,"Viet Nam",N/A,2192,0,Weight in metric tonne
+2024-07-01,"7222.40 - Angles, shapes and sections, stainless steel",Canada,"Viet Nam",N/A,21810,0,Weight in metric tonne
+2025-01-01,"7222.40 - Angles, shapes and sections, stainless steel",Canada,"Viet Nam",N/A,151,0,Weight in metric tonne
+2025-11-01,"7222.40 - Angles, shapes and sections, stainless steel",Canada,"Viet Nam",N/A,2353,0,Weight in metric tonne
+2026-08-01,"7222.40 - Angles, shapes and sections, stainless steel",Canada,"Viet Nam",N/A,843,0,Weight in metric tonne
+2023-04-01,"7223.00 - Wire of stainless steel",Canada,"Viet Nam",N/A,209459,21,Weight in metric tonne
+2024-02-01,"7220.90 - Flat rolled products, stainless steel, of a width of less than 600mm, nes",Canada,"Viet Nam",N/A,366,0,Weight in metric tonne
+2024-07-01,"7223.00 - Wire of stainless steel",Canada,"Viet Nam",N/A,33163,500,Weight in metric tonne
+2025-05-01,"7223.00 - Wire of stainless steel",Canada,"Viet Nam",N/A,1317361,193,Weight in metric tonne
+2025-12-01,"7223.00 - Wire of stainless steel",Canada,"Viet Nam",N/A,653586,138,Weight in metric tonne
+2026-08-01,"7223.00 - Wire of stainless steel",Canada,"Viet Nam",N/A,1045037,166,Weight in metric tonne
+2026-04-01,"7228.20 - Bars and rods of silico-manganese steel, nes",Canada,"Viet Nam",N/A,143,0,Weight in metric tonne
+2025-01-01,"7228.50 - Bars & rods, as, o/t stainless, not further worked than cold formed/finished",Canada,"Viet Nam",N/A,177,0,Weight in metric tonne
+2025-02-01,"7228.50 - Bars & rods, as, o/t stainless, not further worked than cold formed/finished",Canada,"Viet Nam",N/A,1541,0,Weight in metric tonne
+2025-09-01,"7228.60 - Bars & rods, alloy steel, o/t stainless, nes",Canada,"Viet Nam",N/A,245,0,Weight in metric tonne
+2026-04-01,"7228.60 - Bars & rods, alloy steel, o/t stainless, nes",Canada,"Viet Nam",N/A,5129,1,Weight in metric tonne
+2026-06-01,"7228.60 - Bars & rods, alloy steel, o/t stainless, nes",Canada,"Viet Nam",N/A,3486,0,Weight in metric tonne
+2023-10-01,"7229.20 - Wire of silico-manganese steel",Canada,"Viet Nam",N/A,127425,77,Weight in metric tonne
+2025-04-01,"7229.20 - Wire of silico-manganese steel",Canada,"Viet Nam",N/A,184378,122,Weight in metric tonne
+2026-02-01,"7229.20 - Wire of silico-manganese steel",Canada,"Viet Nam",N/A,339006,208,Weight in metric tonne
+2024-06-01,"7229.90 - Wire of alloy steel, o/t stainless",Canada,"Viet Nam",N/A,8742,2,Weight in metric tonne
+2025-04-01,"7229.90 - Wire of alloy steel, o/t stainless",Canada,"Viet Nam",N/A,5068,0,Weight in metric tonne
+2026-03-01,"7229.90 - Wire of alloy steel, o/t stainless",Canada,"Viet Nam",N/A,2389,0,Weight in metric tonne
+2024-05-01,"7228.60 - Bars & rods, alloy steel, o/t stainless, nes",Canada,"Viet Nam",N/A,288,0,Weight in metric tonne
+2023-01-01,"7229.20 - Wire of silico-manganese steel",Canada,"Viet Nam",N/A,55895,36,Weight in metric tonne
+2024-01-01,"7229.20 - Wire of silico-manganese steel",Canada,"Viet Nam",N/A,59801,39,Weight in metric tonne
+2024-08-01,"7229.90 - Wire of alloy steel, o/t stainless",Canada,"Viet Nam",N/A,3304,0,Weight in metric tonne
+2026-03-01,"7202.11 - Ferro-manganese, containing by weight more than 2% of carbon",Canada,"Viet Nam",N/A,39695,20,Weight in metric tonne
+2023-10-01,"7202.21 - Ferro-silicon, containing by weight more than 55% of silicon",Canada,"Viet Nam",N/A,3028,1,Weight in metric tonne
+2024-07-01,"7202.21 - Ferro-silicon, containing by weight more than 55% of silicon",Canada,"Viet Nam",N/A,80462,32,Weight in metric tonne
+2024-09-01,"7204.49 - Ferrous waste and scrap, iron or steel, nes",Canada,"Viet Nam",N/A,20653,54,Weight in metric tonne
+2026-06-01,"7205.29 - Powders, iron or steel, other than alloy",Canada,"Viet Nam",N/A,22120,2,Weight in metric tonne
+2023-08-01,"7202.41 - Ferro-chromium containing by weight more than 4% of carbon",Canada,"Viet Nam",N/A,40841,17,Weight in metric tonne
+2023-11-01,"7205.29 - Powders, iron or steel, other than alloy",Canada,"Viet Nam",N/A,69,0,Weight in metric tonne
+2026-05-01,"7208.38 - Flat rolled prod, i/nas, in coil, hot rolled,>=600mm wide,3mm>=thk <4.75mm,nes",Canada,"Viet Nam",N/A,333183,455,Weight in metric tonne
+2025-07-01,"7208.51 - Flat rolled prod, i/nas, not in coil, hr,>=600mm wide, >10mm thk, nes",Canada,"Viet Nam",N/A,703,0,Weight in metric tonne
+2023-04-01,"7210.49 - Flat rolled prod, i/nas, plated or coated with zinc,>= 600 mm wide, nes",Canada,"Viet Nam",N/A,1751083,1266,Weight in metric tonne
+2024-04-01,"7209.16 - Flat roll prod,i/nas,in coil,cold roll,n clad, >=600mm wide,thick >1mm but < 3mm",Canada,"Viet Nam",N/A,11,0,Weight in metric tonne
+2026-01-01,"7210.12 - Flat rolled prod, i/nas, plated or coated with tin,>=600mm wide, <0.5mm thk",Canada,"Viet Nam",N/A,65720,19,Weight in metric tonne
+2026-02-01,"7210.49 - Flat rolled prod, i/nas, plated or coated with zinc,>= 600 mm wide, nes",Canada,"Viet Nam",N/A,96860,105,Weight in metric tonne
+2026-08-01,"7210.49 - Flat rolled prod, i/nas, plated or coated with zinc,>= 600 mm wide, nes",Canada,"Viet Nam",N/A,857503,707,Weight in metric tonne
+2025-02-01,"7210.61 - Flat rolled prod, i/nas, plated or coat w aluminium-zinc alloys,>=600mm wide",Canada,"Viet Nam",N/A,51670,20,Weight in metric tonne
+2023-10-01,"7210.70 - Flat rolled prod, i/nas, painted, varnished or plast coated, >= 600 mm wide",Canada,"Viet Nam",N/A,14229,8,Weight in metric tonne
+2025-11-01,"7210.70 - Flat rolled prod, i/nas, painted, varnished or plast coated, >= 600 mm wide",Canada,"Viet Nam",N/A,300935,225,Weight in metric tonne
+2026-01-01,"7210.70 - Flat rolled prod, i/nas, painted, varnished or plast coated, >= 600 mm wide",Canada,"Viet Nam",N/A,953792,648,Weight in metric tonne
+2026-04-01,"7210.70 - Flat rolled prod, i/nas, painted, varnished or plast coated, >= 600 mm wide",Canada,"Viet Nam",N/A,272224,194,Weight in metric tonne
+2026-07-01,"7210.70 - Flat rolled prod, i/nas, painted, varnished or plast coated, >= 600 mm wide",Canada,"Viet Nam",N/A,1981940,1177,Weight in metric tonne
+2025-07-01,"7211.13 - Flat rolled prod, i/nas, hr,rolled on 4 faces,width > 150mm < 600mm,thick >= 4mm",Canada,"Viet Nam",N/A,12149,3,Weight in metric tonne
+2025-09-01,"7212.30 - Flat rolled prod, i/nas, <600mm wide, o/w plated or coated with zinc",Canada,"Viet Nam",N/A,455,0,Weight in metric tonne
+2026-07-01,"7212.30 - Flat rolled prod, i/nas, <600mm wide, o/w plated or coated with zinc",Canada,"Viet Nam",N/A,1074,0,Weight in metric tonne
+2024-01-01,"7212.40 - Flat rolled prod, i/nas, <600mm wide, painted, varnished or coated with plast",Canada,"Viet Nam",N/A,299,0,Weight in metric tonne
+2025-06-01,"7210.61 - Flat rolled prod, i/nas, plated or coat w aluminium-zinc alloys,>=600mm wide",Canada,"Viet Nam",N/A,56496,36,Weight in metric tonne
+2025-12-01,"7210.70 - Flat rolled prod, i/nas, painted, varnished or plast coated, >= 600 mm wide",Canada,"Viet Nam",N/A,62397,39,Weight in metric tonne
+2025-12-01,"7212.40 - Flat rolled prod, i/nas, <600mm wide, painted, varnished or coated with plast",Canada,"Viet Nam",N/A,580799,321,Weight in metric tonne
+2023-01-01,"7212.50 - Flat rolled prod, i/nas, < 600 mm wide, otherwise plated/coated, nes",Canada,"Viet Nam",N/A,3296,1,Weight in metric tonne
+2024-06-01,"7213.20 - Bars & rods, i/nas, hr, in irreg wound coils, of free cutting steel",Canada,"Viet Nam",N/A,244,0,Weight in metric tonne
+2023-07-01,"7213.91 - Bars/rods, i/nas,hr, in irreg wnd coils of circ cross section, <14mm in dia",Canada,"Viet Nam",N/A,5691764,6950,Weight in metric tonne
+2023-09-01,"7213.91 - Bars/rods, i/nas,hr, in irreg wnd coils of circ cross section, <14mm in dia",Canada,"Viet Nam",N/A,6563447,8254,Weight in metric tonne
+2023-06-01,"7215.50 - Bars & rods, iron or non-alloy steel, nfw than cold formed or finished, nes",Canada,"Viet Nam",N/A,455,0,Weight in metric tonne
+2025-02-01,"7215.50 - Bars & rods, iron or non-alloy steel, nfw than cold formed or finished, nes",Canada,"Viet Nam",N/A,59,0,Weight in metric tonne
+2024-12-01,"7215.90 - Bars & rods, iron/non-alloy steel, nes",Canada,"Viet Nam",N/A,12315,5,Weight in metric tonne
+2025-03-01,"7215.90 - Bars & rods, iron/non-alloy steel, nes",Canada,"Viet Nam",N/A,27454,11,Weight in metric tonne
+2025-06-01,"7215.90 - Bars & rods, iron/non-alloy steel, nes",Canada,"Viet Nam",N/A,22058,8,Weight in metric tonne
+2026-06-01,"7216.21 - Sections, L, i/nas, nfw than hot rolled, drawn or extruded, of a height <80mm",Canada,"Viet Nam",N/A,243226,292,Weight in metric tonne
+2026-03-01,"7216.40 - Sections, L or T, i/nas, nfw than hot rolled, drawn or extruded, hght>=80mm",Canada,"Viet Nam",N/A,90951,71,Weight in metric tonne
+2023-09-01,"7216.61 - Angles, shapes & sect,i/nas,nfw than cf or cfi, obtained from flat rolled prod",Canada,"Viet Nam",N/A,908,0,Weight in metric tonne
+2025-06-01,"7216.91 - Angles, shapes and sections, i/nas, cf or cold finished from flat rolled prod",Canada,"Viet Nam",N/A,2211,1,Weight in metric tonne
+2023-05-01,"7216.99 - Angles, shapes and sections, i/nas, cold formed or cold finished, nes",Canada,"Viet Nam",N/A,87495,53,Weight in metric tonne
+2023-07-01,"7216.99 - Angles, shapes and sections, i/nas, cold formed or cold finished, nes",Canada,"Viet Nam",N/A,14312,3,Weight in metric tonne
+2023-11-01,"7216.99 - Angles, shapes and sections, i/nas, cold formed or cold finished, nes",Canada,"Viet Nam",N/A,11424,2,Weight in metric tonne
+2024-08-01,"7216.99 - Angles, shapes and sections, i/nas, cold formed or cold finished, nes",Canada,"Viet Nam",N/A,5580,1,Weight in metric tonne
+2023-04-01,"7217.10 - Wire, iron or non-alloy steel, polished or not, but not plated or coated",Canada,"Viet Nam",N/A,28755,23,Weight in metric tonne
+2024-05-01,"7217.10 - Wire, iron or non-alloy steel, polished or not, but not plated or coated",Canada,"Viet Nam",N/A,60240,24,Weight in metric tonne
+2023-03-01,"7217.10 - Wire, iron or non-alloy steel, polished or not, but not plated or coated",Canada,"Viet Nam",N/A,276120,96,Weight in metric tonne
+2024-09-01,"7215.90 - Bars & rods, iron/non-alloy steel, nes",Canada,"Viet Nam",N/A,2015,0,Weight in metric tonne
+2026-08-01,"7217.10 - Wire, iron or non-alloy steel, polished or not, but not plated or coated",Canada,"Viet Nam",N/A,466,0,Weight in metric tonne
+2026-03-01,"7217.20 - Wire, iron or non-alloy steel, plated or coated with zinc",Canada,"Viet Nam",N/A,289352,276,Weight in metric tonne
+2023-02-01,"7217.90 - Wire, iron or non-alloy steel, nes",Canada,"Viet Nam",N/A,46280,54,Weight in metric tonne
+2024-03-01,"7217.90 - Wire, iron or non-alloy steel, nes",Canada,"Viet Nam",N/A,171636,97,Weight in metric tonne
+2025-02-01,"7217.90 - Wire, iron or non-alloy steel, nes",Canada,"Viet Nam",N/A,352022,171,Weight in metric tonne
+2025-08-01,"7217.90 - Wire, iron or non-alloy steel, nes",Canada,"Viet Nam",N/A,85272,47,Weight in metric tonne
+2025-09-01,"7217.90 - Wire, iron or non-alloy steel, nes",Canada,"Viet Nam",N/A,21563,21,Weight in metric tonne
+2026-05-01,"7217.90 - Wire, iron or non-alloy steel, nes",Canada,"Viet Nam",N/A,50,0,Weight in metric tonne
+2025-04-01,"7218.99 - Semi-finished products, stainless steel, nes",Canada,"Viet Nam",N/A,18846,0,Weight in metric tonne
+2024-01-01,"7219.14 - Flat rolled prod, stainless steel,hot roll,in coil, >= 600mm wide, thick  < 3mm",Canada,"Viet Nam",N/A,11311,2,Weight in metric tonne
+2025-11-01,"7219.21 - Flat rolled prod, stainless steel, hr, nic,>=600mm wide, exceeding 10mm thick",Canada,"Viet Nam",N/A,3318,0,Weight in metric tonne
+2023-08-01,"7219.32 - Flat rolled prod, stainless steel, cr, >=600mm wide,>=3mm thick <4.75mm",Canada,"Viet Nam",N/A,60210,19,Weight in metric tonne
+2025-07-01,"7217.20 - Wire, iron or non-alloy steel, plated or coated with zinc",Canada,"Viet Nam",N/A,138835,103,Weight in metric tonne
+2023-03-01,"7219.31 - Flat rolled prod, stain steel, cold roll, >= 600 mm wide, thick 4.75 mm or more",Canada,"Viet Nam",N/A,11556,1,Weight in metric tonne
+2025-08-01,"7219.32 - Flat rolled prod, stainless steel, cr, >=600mm wide,>=3mm thick <4.75mm",Canada,"Viet Nam",N/A,101505,37,Weight in metric tonne
+2025-09-01,"7219.32 - Flat rolled prod, stainless steel, cr, >=600mm wide,>=3mm thick <4.75mm",Canada,"Viet Nam",N/A,33126,12,Weight in metric tonne
+2025-12-01,"7219.32 - Flat rolled prod, stainless steel, cr, >=600mm wide,>=3mm thick <4.75mm",Canada,"Viet Nam",N/A,41000,15,Weight in metric tonne
+2023-10-01,"7219.33 - Flat rolled prod, stainless steel, cr, >=600mm wide, >1mm thick <3mm",Canada,"Viet Nam",N/A,368861,115,Weight in metric tonne
+2024-02-01,"7219.33 - Flat rolled prod, stainless steel, cr, >=600mm wide, >1mm thick <3mm",Canada,"Viet Nam",N/A,500976,151,Weight in metric tonne
+2026-04-01,"7219.33 - Flat rolled prod, stainless steel, cr, >=600mm wide, >1mm thick <3mm",Canada,"Viet Nam",N/A,649788,163,Weight in metric tonne
+2023-01-01,"7219.34 - Flat rolled prod, stainless steel, cr, >=600mm wide,>=0.5mm thick<=1mm",Canada,"Viet Nam",N/A,223778,53,Weight in metric tonne
+2024-05-01,"7219.34 - Flat rolled prod, stainless steel, cr, >=600mm wide,>=0.5mm thick<=1mm",Canada,"Viet Nam",N/A,308892,133,Weight in metric tonne
+2024-10-01,"7219.34 - Flat rolled prod, stainless steel, cr, >=600mm wide,>=0.5mm thick<=1mm",Canada,"Viet Nam",N/A,240509,75,Weight in metric tonne
+2025-04-01,"7219.34 - Flat rolled prod, stainless steel, cr, >=600mm wide,>=0.5mm thick<=1mm",Canada,"Viet Nam",N/A,1073587,320,Weight in metric tonne
+2026-06-01,"7219.34 - Flat rolled prod, stainless steel, cr, >=600mm wide,>=0.5mm thick<=1mm",Canada,"Viet Nam",N/A,313498,97,Weight in metric tonne
+2023-11-01,"7219.35 - Flat rolled prod, stainless steel, cr, >=600mm wide, less than 0.5mm thick",Canada,"Viet Nam",N/A,2594,0,Weight in metric tonne
+2025-05-01,"7219.35 - Flat rolled prod, stainless steel, cr, >=600mm wide, less than 0.5mm thick",Canada,"Viet Nam",N/A,148636,52,Weight in metric tonne
+2026-08-01,"7219.90 - Flat rolled products, of stainless steel, of a width of 600 mm or more, nes",Canada,"Viet Nam",N/A,445900,82,Weight in metric tonne
+2026-05-01,"7220.12 - Flat rolled products, stainless steel, hot rolled, < 600 mm wide,thick < 4.75 mm",Canada,"Viet Nam",N/A,122655,29,Weight in metric tonne
+2023-09-01,"7220.20 - Flat rolled prod, stainless steel, <600mm wide, cold rolled or reduced",Canada,"Viet Nam",N/A,49372,6,Weight in metric tonne
+2025-01-01,"7219.35 - Flat rolled prod, stainless steel, cr, >=600mm wide, less than 0.5mm thick",Canada,"Viet Nam",N/A,52566,16,Weight in metric tonne
+2024-10-01,"7220.20 - Flat rolled prod, stainless steel, <600mm wide, cold rolled or reduced",Canada,"Viet Nam",N/A,6219,0,Weight in metric tonne
+2025-10-01,"7220.20 - Flat rolled prod, stainless steel, <600mm wide, cold rolled or reduced",Canada,"Viet Nam",N/A,84260,12,Weight in metric tonne
+2024-09-01,"7220.90 - Flat rolled products, stainless steel, of a width of less than 600mm, nes",Canada,"Viet Nam",N/A,88,0,Weight in metric tonne
+2024-08-01,"7222.11 - Bars & rods, stainless steel, nfwt hr/hd/extruded, of circular cross-section",Canada,"Viet Nam",N/A,5170,864,Weight in kilograms
+2025-09-01,"7222.20 - Bars & rods, stainless steel, nfw than cold formed or cold finished",Canada,"Viet Nam",N/A,14627,3,Weight in metric tonne
+2025-12-01,"7222.20 - Bars & rods, stainless steel, nfw than cold formed or cold finished",Canada,"Viet Nam",N/A,826,0,Weight in metric tonne
+2025-05-01,"7222.30 - Bars & rods, stainless steel, nes",Canada,"Viet Nam",N/A,26,0,Weight in metric tonne
+2023-03-01,"7222.40 - Angles, shapes and sections, stainless steel",Canada,"Viet Nam",N/A,1880,0,Weight in metric tonne
+2026-07-01,"7222.40 - Angles, shapes and sections, stainless steel",Canada,"Viet Nam",N/A,697,0,Weight in metric tonne
+2024-08-01,"7222.20 - Bars & rods, stainless steel, nfw than cold formed or cold finished",Canada,"Viet Nam",N/A,32476,6,Weight in metric tonne
+2023-12-01,"7223.00 - Wire of stainless steel",Canada,"Viet Nam",N/A,17077,1,Weight in metric tonne
+2024-04-01,"7223.00 - Wire of stainless steel",Canada,"Viet Nam",N/A,33475,3,Weight in metric tonne
+2025-01-01,"7223.00 - Wire of stainless steel",Canada,"Viet Nam",N/A,1006529,108,Weight in metric tonne
+2026-05-01,"7223.00 - Wire of stainless steel",Canada,"Viet Nam",N/A,1437287,240,Weight in metric tonne
+2025-01-01,"7228.20 - Bars and rods of silico-manganese steel, nes",Canada,"Viet Nam",N/A,40,0,Weight in metric tonne
+2024-06-01,"7228.50 - Bars & rods, as, o/t stainless, not further worked than cold formed/finished",Canada,"Viet Nam",N/A,1238,0,Weight in metric tonne
+2025-04-01,"7228.50 - Bars & rods, as, o/t stainless, not further worked than cold formed/finished",Canada,"Viet Nam",N/A,1609,0,Weight in metric tonne
+2023-11-01,"7229.20 - Wire of silico-manganese steel",Canada,"Viet Nam",N/A,44222,23,Weight in metric tonne
+2024-04-01,"7229.20 - Wire of silico-manganese steel",Canada,"Viet Nam",N/A,115938,76,Weight in metric tonne
+2025-08-01,"7229.20 - Wire of silico-manganese steel",Canada,"Viet Nam",N/A,209216,136,Weight in metric tonne
+2025-10-01,"7229.20 - Wire of silico-manganese steel",Canada,"Viet Nam",N/A,274023,174,Weight in metric tonne
+2026-03-01,"7229.20 - Wire of silico-manganese steel",Canada,"Viet Nam",N/A,184682,104,Weight in metric tonne
+2024-09-01,"7229.90 - Wire of alloy steel, o/t stainless",Canada,"Viet Nam",N/A,7562,0,Weight in metric tonne
+2024-12-01,"7229.90 - Wire of alloy steel, o/t stainless",Canada,"Viet Nam",N/A,77709,21,Weight in metric tonne
+2023-12-01,"7229.90 - Wire of alloy steel, o/t stainless",Canada,"Viet Nam",N/A,4027,0,Weight in metric tonne
+2025-05-01,"7229.90 - Wire of alloy steel, o/t stainless",Canada,"Viet Nam",N/A,544098,247,Weight in metric tonne
+2026-03-01,"7210.49 - Flat rolled prod, i/nas, plated or coated with zinc,>= 600 mm wide, nes",Canada,"Viet Nam",N/A,84508,78,Weight in metric tonne
+2023-10-01,"7202.92 - Ferro-vanadium",Canada,"Viet Nam",N/A,368,0,Weight in metric tonne
+2024-01-01,"7202.80 - Ferro-tungsten and ferro-silico-tungsten",Canada,"Viet Nam",N/A,39969,1,Weight in metric tonne
+2025-01-01,"7202.21 - Ferro-silicon, containing by weight more than 55% of silicon",Canada,"Viet Nam",N/A,19190,25,Weight in metric tonne
+2025-02-01,"7205.29 - Powders, iron or steel, other than alloy",Canada,"Viet Nam",N/A,15105,2,Weight in metric tonne
+2023-04-01,"7209.16 - Flat roll prod,i/nas,in coil,cold roll,n clad, >=600mm wide,thick >1mm but < 3mm",Canada,"Viet Nam",N/A,377,0,Weight in metric tonne
+2024-06-01,"7210.41 - Flat rolled prod, i/nas, pltd or ctd w zinc, corrugated, >= 600 mm wide, nes",Canada,"Viet Nam",N/A,13751,4,Weight in metric tonne
+2023-07-01,"7210.49 - Flat rolled prod, i/nas, plated or coated with zinc,>= 600 mm wide, nes",Canada,"Viet Nam",N/A,419443,279,Weight in metric tonne
+2023-10-01,"7210.61 - Flat rolled prod, i/nas, plated or coat w aluminium-zinc alloys,>=600mm wide",Canada,"Viet Nam",N/A,37399,23,Weight in metric tonne
+2024-09-01,"7210.61 - Flat rolled prod, i/nas, plated or coat w aluminium-zinc alloys,>=600mm wide",Canada,"Viet Nam",N/A,875888,283,Weight in metric tonne
+2025-04-01,"7210.61 - Flat rolled prod, i/nas, plated or coat w aluminium-zinc alloys,>=600mm wide",Canada,"Viet Nam",N/A,58798,17,Weight in metric tonne
+2026-06-01,"7210.70 - Flat rolled prod, i/nas, painted, varnished or plast coated, >= 600 mm wide",Canada,"Viet Nam",N/A,201853,119,Weight in metric tonne
+2023-06-01,"7212.40 - Flat rolled prod, i/nas, <600mm wide, painted, varnished or coated with plast",Canada,"Viet Nam",N/A,47659,24,Weight in metric tonne
+2023-09-01,"7212.40 - Flat rolled prod, i/nas, <600mm wide, painted, varnished or coated with plast",Canada,"Viet Nam",N/A,7874,3,Weight in metric tonne
+2023-12-01,"7212.40 - Flat rolled prod, i/nas, <600mm wide, painted, varnished or coated with plast",Canada,"Viet Nam",N/A,166695,83,Weight in metric tonne
+2024-02-01,"7212.40 - Flat rolled prod, i/nas, <600mm wide, painted, varnished or coated with plast",Canada,"Viet Nam",N/A,52447,2,Weight in metric tonne
+2025-07-01,"7212.40 - Flat rolled prod, i/nas, <600mm wide, painted, varnished or coated with plast",Canada,"Viet Nam",N/A,119664,82,Weight in metric tonne
+2025-08-01,"7212.40 - Flat rolled prod, i/nas, <600mm wide, painted, varnished or coated with plast",Canada,"Viet Nam",N/A,85082,56,Weight in metric tonne
+2025-01-01,"7212.30 - Flat rolled prod, i/nas, <600mm wide, o/w plated or coated with zinc",Canada,"Viet Nam",N/A,854,0,Weight in metric tonne
+2025-04-01,"7212.30 - Flat rolled prod, i/nas, <600mm wide, o/w plated or coated with zinc",Canada,"Viet Nam",N/A,915,0,Weight in metric tonne
+2024-05-01,"7212.40 - Flat rolled prod, i/nas, <600mm wide, painted, varnished or coated with plast",Canada,"Viet Nam",N/A,25821,5,Weight in metric tonne
+2026-04-01,"7212.40 - Flat rolled prod, i/nas, <600mm wide, painted, varnished or coated with plast",Canada,"Viet Nam",N/A,1020378,706,Weight in metric tonne
+2024-02-01,"7213.91 - Bars/rods, i/nas,hr, in irreg wnd coils of circ cross section, <14mm in dia",Canada,"Viet Nam",N/A,6312862,8345,Weight in metric tonne
+2024-04-01,"7213.91 - Bars/rods, i/nas,hr, in irreg wnd coils of circ cross section, <14mm in dia",Canada,"Viet Nam",N/A,7246816,8687,Weight in metric tonne
+2023-07-01,"7215.50 - Bars & rods, iron or non-alloy steel, nfw than cold formed or finished, nes",Canada,"Viet Nam",N/A,1027,0,Weight in metric tonne
+2026-04-01,"7215.50 - Bars & rods, iron or non-alloy steel, nfw than cold formed or finished, nes",Canada,"Viet Nam",N/A,1914,0,Weight in metric tonne
+2023-06-01,"7215.90 - Bars & rods, iron/non-alloy steel, nes",Canada,"Viet Nam",N/A,401,0,Weight in metric tonne
+2024-02-01,"7215.90 - Bars & rods, iron/non-alloy steel, nes",Canada,"Viet Nam",N/A,3,0,Weight in metric tonne
+2025-08-01,"7215.90 - Bars & rods, iron/non-alloy steel, nes",Canada,"Viet Nam",N/A,20913,11,Weight in metric tonne
+2026-06-01,"7215.90 - Bars & rods, iron/non-alloy steel, nes",Canada,"Viet Nam",N/A,21054,8,Weight in metric tonne
+2026-03-01,"7216.21 - Sections, L, i/nas, nfw than hot rolled, drawn or extruded, of a height <80mm",Canada,"Viet Nam",N/A,803695,834,Weight in metric tonne
+2026-01-01,"7216.40 - Sections, L or T, i/nas, nfw than hot rolled, drawn or extruded, hght>=80mm",Canada,"Viet Nam",N/A,45154,48,Weight in metric tonne
+2026-02-01,"7216.69 - Angles, shapes and sections, i/nas, nfw than cold formed or cold finished, nes",Canada,"Viet Nam",N/A,2992,0,Weight in metric tonne
+2025-04-01,"7216.91 - Angles, shapes and sections, i/nas, cf or cold finished from flat rolled prod",Canada,"Viet Nam",N/A,3019,0,Weight in metric tonne
+2025-07-01,"7216.91 - Angles, shapes and sections, i/nas, cf or cold finished from flat rolled prod",Canada,"Viet Nam",N/A,5909,2,Weight in metric tonne
+2025-10-01,"7216.91 - Angles, shapes and sections, i/nas, cf or cold finished from flat rolled prod",Canada,"Viet Nam",N/A,3834,1,Weight in metric tonne
+2023-02-01,"7217.10 - Wire, iron or non-alloy steel, polished or not, but not plated or coated",Canada,"Viet Nam",N/A,55761,19,Weight in metric tonne
+2023-09-01,"7217.10 - Wire, iron or non-alloy steel, polished or not, but not plated or coated",Canada,"Viet Nam",N/A,158400,57,Weight in metric tonne
+2023-12-01,"7217.10 - Wire, iron or non-alloy steel, polished or not, but not plated or coated",Canada,"Viet Nam",N/A,47040,19,Weight in metric tonne
+2024-05-01,"7212.50 - Flat rolled prod, i/nas, < 600 mm wide, otherwise plated/coated, nes",Canada,"Viet Nam",N/A,4719,1,Weight in metric tonne
+2024-05-01,"7213.91 - Bars/rods, i/nas,hr, in irreg wnd coils of circ cross section, <14mm in dia",Canada,"Viet Nam",N/A,7153594,8765,Weight in metric tonne
+2024-05-01,"7215.50 - Bars & rods, iron or non-alloy steel, nfw than cold formed or finished, nes",Canada,"Viet Nam",N/A,51,0,Weight in metric tonne
+2023-10-01,"7217.10 - Wire, iron or non-alloy steel, polished or not, but not plated or coated",Canada,"Viet Nam",N/A,56847,24,Weight in metric tonne
+2024-06-01,"7217.10 - Wire, iron or non-alloy steel, polished or not, but not plated or coated",Canada,"Viet Nam",N/A,188257,77,Weight in metric tonne
+2025-04-01,"7217.10 - Wire, iron or non-alloy steel, polished or not, but not plated or coated",Canada,"Viet Nam",N/A,328,0,Weight in metric tonne
+2025-04-01,"7217.20 - Wire, iron or non-alloy steel, plated or coated with zinc",Canada,"Viet Nam",N/A,60787,51,Weight in metric tonne
+2025-11-01,"7217.20 - Wire, iron or non-alloy steel, plated or coated with zinc",Canada,"Viet Nam",N/A,78021,55,Weight in metric tonne
+2023-11-01,"7217.90 - Wire, iron or non-alloy steel, nes",Canada,"Viet Nam",N/A,605694,341,Weight in metric tonne
+2024-12-01,"7217.90 - Wire, iron or non-alloy steel, nes",Canada,"Viet Nam",N/A,553944,314,Weight in metric tonne
+2025-11-01,"7217.90 - Wire, iron or non-alloy steel, nes",Canada,"Viet Nam",N/A,208,0,Weight in metric tonne
+2026-02-01,"7217.90 - Wire, iron or non-alloy steel, nes",Canada,"Viet Nam",N/A,60,0,Weight in metric tonne
+2026-03-01,"7218.99 - Semi-finished products, stainless steel, nes",Canada,"Viet Nam",N/A,411,0,Weight in metric tonne
+2024-02-01,"7219.14 - Flat rolled prod, stainless steel,hot roll,in coil, >= 600mm wide, thick  < 3mm",Canada,"Viet Nam",N/A,10893,1,Weight in metric tonne
+2025-04-01,"7219.21 - Flat rolled prod, stainless steel, hr, nic,>=600mm wide, exceeding 10mm thick",Canada,"Viet Nam",N/A,7578,2,Weight in metric tonne
+2023-04-01,"7219.31 - Flat rolled prod, stain steel, cold roll, >= 600 mm wide, thick 4.75 mm or more",Canada,"Viet Nam",N/A,13828,1,Weight in metric tonne
+2023-05-01,"7219.32 - Flat rolled prod, stainless steel, cr, >=600mm wide,>=3mm thick <4.75mm",Canada,"Viet Nam",N/A,77620,21,Weight in metric tonne
+2024-08-01,"7217.90 - Wire, iron or non-alloy steel, nes",Canada,"Viet Nam",N/A,95233,51,Weight in metric tonne
+2025-07-01,"7217.10 - Wire, iron or non-alloy steel, polished or not, but not plated or coated",Canada,"Viet Nam",N/A,25955,20,Weight in metric tonne
+2024-09-01,"7219.32 - Flat rolled prod, stainless steel, cr, >=600mm wide,>=3mm thick <4.75mm",Canada,"Viet Nam",N/A,1110,0,Weight in metric tonne
+2025-04-01,"7219.32 - Flat rolled prod, stainless steel, cr, >=600mm wide,>=3mm thick <4.75mm",Canada,"Viet Nam",N/A,30237,10,Weight in metric tonne
+2026-01-01,"7219.32 - Flat rolled prod, stainless steel, cr, >=600mm wide,>=3mm thick <4.75mm",Canada,"Viet Nam",N/A,123997,45,Weight in metric tonne
+2026-08-01,"7219.32 - Flat rolled prod, stainless steel, cr, >=600mm wide,>=3mm thick <4.75mm",Canada,"Viet Nam",N/A,32252,11,Weight in metric tonne
+2024-06-01,"7219.33 - Flat rolled prod, stainless steel, cr, >=600mm wide, >1mm thick <3mm",Canada,"Viet Nam",N/A,60965,21,Weight in metric tonne
+2025-05-01,"7219.33 - Flat rolled prod, stainless steel, cr, >=600mm wide, >1mm thick <3mm",Canada,"Viet Nam",N/A,677693,225,Weight in metric tonne
+2025-12-01,"7219.33 - Flat rolled prod, stainless steel, cr, >=600mm wide, >1mm thick <3mm",Canada,"Viet Nam",N/A,1007545,372,Weight in metric tonne
+2023-02-01,"7219.34 - Flat rolled prod, stainless steel, cr, >=600mm wide,>=0.5mm thick<=1mm",Canada,"Viet Nam",N/A,535681,105,Weight in metric tonne
+2024-06-01,"7219.34 - Flat rolled prod, stainless steel, cr, >=600mm wide,>=0.5mm thick<=1mm",Canada,"Viet Nam",N/A,60988,20,Weight in metric tonne
+2025-03-01,"7219.34 - Flat rolled prod, stainless steel, cr, >=600mm wide,>=0.5mm thick<=1mm",Canada,"Viet Nam",N/A,166101,49,Weight in metric tonne
+2026-05-01,"7219.34 - Flat rolled prod, stainless steel, cr, >=600mm wide,>=0.5mm thick<=1mm",Canada,"Viet Nam",N/A,220180,71,Weight in metric tonne
+2025-04-01,"7219.35 - Flat rolled prod, stainless steel, cr, >=600mm wide, less than 0.5mm thick",Canada,"Viet Nam",N/A,225591,66,Weight in metric tonne
+2025-09-01,"7219.35 - Flat rolled prod, stainless steel, cr, >=600mm wide, less than 0.5mm thick",Canada,"Viet Nam",N/A,1664052,516,Weight in metric tonne
+2026-06-01,"7219.35 - Flat rolled prod, stainless steel, cr, >=600mm wide, less than 0.5mm thick",Canada,"Viet Nam",N/A,232005,64,Weight in metric tonne
+2023-08-01,"7219.90 - Flat rolled products, of stainless steel, of a width of 600 mm or more, nes",Canada,"Viet Nam",N/A,2434,0,Weight in metric tonne
+2026-06-01,"7219.90 - Flat rolled products, of stainless steel, of a width of 600 mm or more, nes",Canada,"Viet Nam",N/A,30864,1,Weight in metric tonne
+2026-07-01,"7219.90 - Flat rolled products, of stainless steel, of a width of 600 mm or more, nes",Canada,"Viet Nam",N/A,135731,31,Weight in metric tonne
+2023-02-01,"7220.20 - Flat rolled prod, stainless steel, <600mm wide, cold rolled or reduced",Canada,"Viet Nam",N/A,14191,1,Weight in metric tonne
+2023-07-01,"7220.20 - Flat rolled prod, stainless steel, <600mm wide, cold rolled or reduced",Canada,"Viet Nam",N/A,52361,6,Weight in metric tonne
+2024-03-01,"7220.20 - Flat rolled prod, stainless steel, <600mm wide, cold rolled or reduced",Canada,"Viet Nam",N/A,8250,1,Weight in metric tonne
+2024-08-01,"7220.20 - Flat rolled prod, stainless steel, <600mm wide, cold rolled or reduced",Canada,"Viet Nam",N/A,8190,1,Weight in metric tonne
+2025-01-01,"7219.33 - Flat rolled prod, stainless steel, cr, >=600mm wide, >1mm thick <3mm",Canada,"Viet Nam",N/A,1224734,369,Weight in metric tonne
+2024-10-01,"7219.90 - Flat rolled products, of stainless steel, of a width of 600 mm or more, nes",Canada,"Viet Nam",N/A,13915,1,Weight in metric tonne
+2024-11-01,"7220.20 - Flat rolled prod, stainless steel, <600mm wide, cold rolled or reduced",Canada,"Viet Nam",N/A,9004,2,Weight in metric tonne
+2025-01-01,"7220.20 - Flat rolled prod, stainless steel, <600mm wide, cold rolled or reduced",Canada,"Viet Nam",N/A,11508,1,Weight in metric tonne
+2025-08-01,"7220.20 - Flat rolled prod, stainless steel, <600mm wide, cold rolled or reduced",Canada,"Viet Nam",N/A,8261,1,Weight in metric tonne
+2026-04-01,"7220.20 - Flat rolled prod, stainless steel, <600mm wide, cold rolled or reduced",Canada,"Viet Nam",N/A,161097,33,Weight in metric tonne
+2024-03-01,"7220.90 - Flat rolled products, stainless steel, of a width of less than 600mm, nes",Canada,"Viet Nam",N/A,4889,0,Weight in metric tonne
+2024-12-01,"7220.90 - Flat rolled products, stainless steel, of a width of less than 600mm, nes",Canada,"Viet Nam",N/A,3665,0,Weight in metric tonne
+2025-01-01,"7220.90 - Flat rolled products, stainless steel, of a width of less than 600mm, nes",Canada,"Viet Nam",N/A,17147,3,Weight in metric tonne
+2023-10-01,"7221.00 - Bars & rods, stainless steel, hot rolled in irregularly wound coils",Canada,"Viet Nam",N/A,2,0,Weight in metric tonne
+2023-12-01,"7222.20 - Bars & rods, stainless steel, nfw than cold formed or cold finished",Canada,"Viet Nam",N/A,274,0,Weight in metric tonne
+2024-07-01,"7222.20 - Bars & rods, stainless steel, nfw than cold formed or cold finished",Canada,"Viet Nam",N/A,365,0,Weight in metric tonne
+2026-02-01,"7222.20 - Bars & rods, stainless steel, nfw than cold formed or cold finished",Canada,"Viet Nam",N/A,360,0,Weight in metric tonne
+2026-07-01,"7222.20 - Bars & rods, stainless steel, nfw than cold formed or cold finished",Canada,"Viet Nam",N/A,14,0,Weight in metric tonne
+2025-12-01,"7222.30 - Bars & rods, stainless steel, nes",Canada,"Viet Nam",N/A,637,0,Weight in metric tonne
+2024-04-01,"7222.40 - Angles, shapes and sections, stainless steel",Canada,"Viet Nam",N/A,707,0,Weight in metric tonne
+2025-07-01,"7222.40 - Angles, shapes and sections, stainless steel",Canada,"Viet Nam",N/A,7654,0,Weight in metric tonne
+2023-10-01,"7222.40 - Angles, shapes and sections, stainless steel",Canada,"Viet Nam",N/A,4234,0,Weight in metric tonne
+2023-11-01,"7223.00 - Wire of stainless steel",Canada,"Viet Nam",N/A,756642,44,Weight in metric tonne
+2024-09-01,"7223.00 - Wire of stainless steel",Canada,"Viet Nam",N/A,14190,1,Weight in metric tonne
+2025-10-01,"7223.00 - Wire of stainless steel",Canada,"Viet Nam",N/A,1024495,200,Weight in metric tonne
+2026-06-01,"7223.00 - Wire of stainless steel",Canada,"Viet Nam",N/A,1317732,273,Weight in metric tonne
+2024-03-01,"7228.50 - Bars & rods, as, o/t stainless, not further worked than cold formed/finished",Canada,"Viet Nam",N/A,864,0,Weight in metric tonne
+2024-04-01,"7228.50 - Bars & rods, as, o/t stainless, not further worked than cold formed/finished",Canada,"Viet Nam",N/A,305,0,Weight in metric tonne
+2024-12-01,"7228.50 - Bars & rods, as, o/t stainless, not further worked than cold formed/finished",Canada,"Viet Nam",N/A,566,0,Weight in metric tonne
+2024-03-01,"7229.20 - Wire of silico-manganese steel",Canada,"Viet Nam",N/A,15390,5,Weight in metric tonne
+2026-04-01,"7229.20 - Wire of silico-manganese steel",Canada,"Viet Nam",N/A,342714,221,Weight in metric tonne
+2023-04-01,"7229.90 - Wire of alloy steel, o/t stainless",Canada,"Viet Nam",N/A,3183,0,Weight in metric tonne
+2025-02-01,"7229.90 - Wire of alloy steel, o/t stainless",Canada,"Viet Nam",N/A,11869,2,Weight in metric tonne
+2026-01-01,"7229.90 - Wire of alloy steel, o/t stainless",Canada,"Viet Nam",N/A,435,0,Weight in metric tonne
+2026-05-01,"7229.90 - Wire of alloy steel, o/t stainless",Canada,"Viet Nam",N/A,3017,0,Weight in metric tonne
+2026-07-01,"7229.90 - Wire of alloy steel, o/t stainless",Canada,"Viet Nam",N/A,1400,0,Weight in metric tonne
+2023-10-01,"7229.90 - Wire of alloy steel, o/t stainless",Canada,"Viet Nam",N/A,3186,0,Weight in metric tonne
+2026-03-01,"7208.53 - Flat rolled prod, i/nas,nic,hr,n clad, >=600mm wide,thick >=3mm but < 4.75mm,nes",Canada,"Viet Nam",N/A,14978,1,Weight in metric tonne
+2024-01-01,"7202.21 - Ferro-silicon, containing by weight more than 55% of silicon",Canada,"Viet Nam",N/A,26544,12,Weight in metric tonne
+2024-09-01,"7204.21 - Waste and scrap, stainless steel",Canada,"Viet Nam",N/A,1,0,Weight in metric tonne
+2023-09-01,"7205.29 - Powders, iron or steel, other than alloy",Canada,"Viet Nam",N/A,145123,8,Weight in metric tonne
+2023-12-01,"7210.49 - Flat rolled prod, i/nas, plated or coated with zinc,>= 600 mm wide, nes",Canada,"Viet Nam",N/A,1163916,1000,Weight in metric tonne
+2026-05-01,"7208.26 - Flat roll prod,i/nas,in coil,hr,n clad,pkld, >= 600mm wd,thick >=3mm but <4.75mm",Canada,"Viet Nam",N/A,696200,877,Weight in metric tonne
+2026-05-01,"7208.27 - Flat rolled prod, i/nas,in coil,hr,n clad, pickled, >= 600 mm wide, thick < 3 mm",Canada,"Viet Nam",N/A,341723,429,Weight in metric tonne
+2026-05-01,"7209.26 - Flat roll prod, i/nas, nic, cold roll, n clad, >=600mm wide,thick >1mm but < 3mm",Canada,"Viet Nam",N/A,637,0,Weight in metric tonne
+2024-04-01,"7210.49 - Flat rolled prod, i/nas, plated or coated with zinc,>= 600 mm wide, nes",Canada,"Viet Nam",N/A,3429649,2963,Weight in metric tonne
+2026-01-01,"7210.49 - Flat rolled prod, i/nas, plated or coated with zinc,>= 600 mm wide, nes",Canada,"Viet Nam",N/A,502188,339,Weight in metric tonne
+2023-02-01,"7210.61 - Flat rolled prod, i/nas, plated or coat w aluminium-zinc alloys,>=600mm wide",Canada,"Viet Nam",N/A,81558,39,Weight in metric tonne
+2024-12-01,"7210.49 - Flat rolled prod, i/nas, plated or coated with zinc,>= 600 mm wide, nes",Canada,"Viet Nam",N/A,3390002,3244,Weight in metric tonne
+2024-01-01,"7210.61 - Flat rolled prod, i/nas, plated or coat w aluminium-zinc alloys,>=600mm wide",Canada,"Viet Nam",N/A,35475,22,Weight in metric tonne
+2024-04-01,"7210.61 - Flat rolled prod, i/nas, plated or coat w aluminium-zinc alloys,>=600mm wide",Canada,"Viet Nam",N/A,37112,23,Weight in metric tonne
+2024-12-01,"7210.61 - Flat rolled prod, i/nas, plated or coat w aluminium-zinc alloys,>=600mm wide",Canada,"Viet Nam",N/A,375498,115,Weight in metric tonne
+2025-09-01,"7210.61 - Flat rolled prod, i/nas, plated or coat w aluminium-zinc alloys,>=600mm wide",Canada,"Viet Nam",N/A,47307,8,Weight in metric tonne
+2026-07-01,"7211.23 - Flat rolled products, i/nas, cold rolled,<600mm wide,cont by wt <0.25% of carbon",Canada,"Viet Nam",N/A,85499,49,Weight in metric tonne
+2024-07-01,"7212.30 - Flat rolled prod, i/nas, <600mm wide, o/w plated or coated with zinc",Canada,"Viet Nam",N/A,864,0,Weight in metric tonne
+2023-01-01,"7212.40 - Flat rolled prod, i/nas, <600mm wide, painted, varnished or coated with plast",Canada,"Viet Nam",N/A,147363,65,Weight in metric tonne
+2023-07-01,"7212.40 - Flat rolled prod, i/nas, <600mm wide, painted, varnished or coated with plast",Canada,"Viet Nam",N/A,41047,22,Weight in metric tonne
+2024-03-01,"7212.40 - Flat rolled prod, i/nas, <600mm wide, painted, varnished or coated with plast",Canada,"Viet Nam",N/A,58316,4,Weight in metric tonne
+2024-08-01,"7212.30 - Flat rolled prod, i/nas, <600mm wide, o/w plated or coated with zinc",Canada,"Viet Nam",N/A,1638,0,Weight in metric tonne
+2025-05-01,"7210.61 - Flat rolled prod, i/nas, plated or coat w aluminium-zinc alloys,>=600mm wide",Canada,"Viet Nam",N/A,18832,12,Weight in metric tonne
+2025-06-01,"7212.40 - Flat rolled prod, i/nas, <600mm wide, painted, varnished or coated with plast",Canada,"Viet Nam",N/A,128867,83,Weight in metric tonne
+2024-12-01,"7210.70 - Flat rolled prod, i/nas, painted, varnished or plast coated, >= 600 mm wide",Canada,"Viet Nam",N/A,99870,66,Weight in metric tonne
+2023-08-01,"7213.91 - Bars/rods, i/nas,hr, in irreg wnd coils of circ cross section, <14mm in dia",Canada,"Viet Nam",N/A,6995444,8902,Weight in metric tonne
+2025-05-01,"7214.20 - Bars and rods, i/nas, hr, hd or he, cont indent, ribs, etc, prod during rp, nes",Canada,"Viet Nam",N/A,291,0,Weight in metric tonne
+2023-08-01,"7215.50 - Bars & rods, iron or non-alloy steel, nfw than cold formed or finished, nes",Canada,"Viet Nam",N/A,1073,0,Weight in metric tonne
+2024-02-01,"7215.50 - Bars & rods, iron or non-alloy steel, nfw than cold formed or finished, nes",Canada,"Viet Nam",N/A,494,0,Weight in metric tonne
+2025-10-01,"7215.50 - Bars & rods, iron or non-alloy steel, nfw than cold formed or finished, nes",Canada,"Viet Nam",N/A,1140,0,Weight in metric tonne
+2026-01-01,"7215.50 - Bars & rods, iron or non-alloy steel, nfw than cold formed or finished, nes",Canada,"Viet Nam",N/A,3262,0,Weight in metric tonne
+2026-06-01,"7215.50 - Bars & rods, iron or non-alloy steel, nfw than cold formed or finished, nes",Canada,"Viet Nam",N/A,1476,0,Weight in metric tonne
+2025-05-01,"7215.90 - Bars & rods, iron/non-alloy steel, nes",Canada,"Viet Nam",N/A,5296,3,Weight in metric tonne
+2025-11-01,"7215.90 - Bars & rods, iron/non-alloy steel, nes",Canada,"Viet Nam",N/A,21724,5,Weight in metric tonne
+2026-03-01,"7215.90 - Bars & rods, iron/non-alloy steel, nes",Canada,"Viet Nam",N/A,6797,2,Weight in metric tonne
+2026-01-01,"7216.91 - Angles, shapes and sections, i/nas, cf or cold finished from flat rolled prod",Canada,"Viet Nam",N/A,167,0,Weight in metric tonne
+2025-02-01,"7216.99 - Angles, shapes and sections, i/nas, cold formed or cold finished, nes",Canada,"Viet Nam",N/A,5728,1,Weight in metric tonne
+2025-06-01,"7216.99 - Angles, shapes and sections, i/nas, cold formed or cold finished, nes",Canada,"Viet Nam",N/A,6579,1,Weight in metric tonne
+2025-08-01,"7216.99 - Angles, shapes and sections, i/nas, cold formed or cold finished, nes",Canada,"Viet Nam",N/A,144,0,Weight in metric tonne
+2024-02-01,"7217.10 - Wire, iron or non-alloy steel, polished or not, but not plated or coated",Canada,"Viet Nam",N/A,46080,19,Weight in metric tonne
+2023-03-01,"7216.99 - Angles, shapes and sections, i/nas, cold formed or cold finished, nes",Canada,"Viet Nam",N/A,17789,3,Weight in metric tonne
+2024-10-01,"7217.10 - Wire, iron or non-alloy steel, polished or not, but not plated or coated",Canada,"Viet Nam",N/A,49920,19,Weight in metric tonne
+2025-12-01,"7217.10 - Wire, iron or non-alloy steel, polished or not, but not plated or coated",Canada,"Viet Nam",N/A,251,0,Weight in metric tonne
+2025-02-01,"7217.20 - Wire, iron or non-alloy steel, plated or coated with zinc",Canada,"Viet Nam",N/A,35807,26,Weight in metric tonne
+2025-05-01,"7217.20 - Wire, iron or non-alloy steel, plated or coated with zinc",Canada,"Viet Nam",N/A,81399,55,Weight in metric tonne
+2026-01-01,"7217.20 - Wire, iron or non-alloy steel, plated or coated with zinc",Canada,"Viet Nam",N/A,32362,27,Weight in metric tonne
+2026-05-01,"7217.20 - Wire, iron or non-alloy steel, plated or coated with zinc",Canada,"Viet Nam",N/A,67927,53,Weight in metric tonne
+2026-06-01,"7217.20 - Wire, iron or non-alloy steel, plated or coated with zinc",Canada,"Viet Nam",N/A,1399879,1176,Weight in metric tonne
+2024-04-01,"7217.90 - Wire, iron or non-alloy steel, nes",Canada,"Viet Nam",N/A,61457,44,Weight in metric tonne
+2025-03-01,"7217.90 - Wire, iron or non-alloy steel, nes",Canada,"Viet Nam",N/A,514422,309,Weight in metric tonne
+2026-03-01,"7217.90 - Wire, iron or non-alloy steel, nes",Canada,"Viet Nam",N/A,70,0,Weight in metric tonne
+2025-03-01,"7218.10 - Ingots and other primary forms, stainless steel",Canada,"Viet Nam",N/A,64,0,Weight in metric tonne
+2026-06-01,"7219.14 - Flat rolled prod, stainless steel,hot roll,in coil, >= 600mm wide, thick  < 3mm",Canada,"Viet Nam",N/A,667771,127,Weight in metric tonne
+2026-07-01,"7219.14 - Flat rolled prod, stainless steel,hot roll,in coil, >= 600mm wide, thick  < 3mm",Canada,"Viet Nam",N/A,227677,78,Weight in metric tonne
+2026-01-01,"7219.31 - Flat rolled prod, stain steel, cold roll, >= 600 mm wide, thick 4.75 mm or more",Canada,"Viet Nam",N/A,5794,1,Weight in metric tonne
+2023-11-01,"7219.32 - Flat rolled prod, stainless steel, cr, >=600mm wide,>=3mm thick <4.75mm",Canada,"Viet Nam",N/A,6968,1,Weight in metric tonne
+2023-03-01,"7217.90 - Wire, iron or non-alloy steel, nes",Canada,"Viet Nam",N/A,342047,296,Weight in metric tonne
+2023-06-01,"7219.32 - Flat rolled prod, stainless steel, cr, >=600mm wide,>=3mm thick <4.75mm",Canada,"Viet Nam",N/A,3111,1,Weight in metric tonne
+2025-05-01,"7219.32 - Flat rolled prod, stainless steel, cr, >=600mm wide,>=3mm thick <4.75mm",Canada,"Viet Nam",N/A,33118,10,Weight in metric tonne
+2025-07-01,"7219.32 - Flat rolled prod, stainless steel, cr, >=600mm wide,>=3mm thick <4.75mm",Canada,"Viet Nam",N/A,245769,88,Weight in metric tonne
+2025-10-01,"7219.32 - Flat rolled prod, stainless steel, cr, >=600mm wide,>=3mm thick <4.75mm",Canada,"Viet Nam",N/A,344672,126,Weight in metric tonne
+2026-02-01,"7219.32 - Flat rolled prod, stainless steel, cr, >=600mm wide,>=3mm thick <4.75mm",Canada,"Viet Nam",N/A,71870,20,Weight in metric tonne
+2023-02-01,"7219.33 - Flat rolled prod, stainless steel, cr, >=600mm wide, >1mm thick <3mm",Canada,"Viet Nam",N/A,998,0,Weight in metric tonne
+2023-11-01,"7219.33 - Flat rolled prod, stainless steel, cr, >=600mm wide, >1mm thick <3mm",Canada,"Viet Nam",N/A,1034,0,Weight in metric tonne
+2025-08-01,"7219.33 - Flat rolled prod, stainless steel, cr, >=600mm wide, >1mm thick <3mm",Canada,"Viet Nam",N/A,358089,128,Weight in metric tonne
+2025-09-01,"7219.33 - Flat rolled prod, stainless steel, cr, >=600mm wide, >1mm thick <3mm",Canada,"Viet Nam",N/A,2853556,954,Weight in metric tonne
+2026-01-01,"7219.33 - Flat rolled prod, stainless steel, cr, >=600mm wide, >1mm thick <3mm",Canada,"Viet Nam",N/A,985420,316,Weight in metric tonne
+2023-06-01,"7219.34 - Flat rolled prod, stainless steel, cr, >=600mm wide,>=0.5mm thick<=1mm",Canada,"Viet Nam",N/A,8243,1,Weight in metric tonne
+2024-02-01,"7219.34 - Flat rolled prod, stainless steel, cr, >=600mm wide,>=0.5mm thick<=1mm",Canada,"Viet Nam",N/A,15760,2,Weight in metric tonne
+2025-07-01,"7219.34 - Flat rolled prod, stainless steel, cr, >=600mm wide,>=0.5mm thick<=1mm",Canada,"Viet Nam",N/A,148380,50,Weight in metric tonne
+2026-01-01,"7219.34 - Flat rolled prod, stainless steel, cr, >=600mm wide,>=0.5mm thick<=1mm",Canada,"Viet Nam",N/A,572592,174,Weight in metric tonne
+2026-02-01,"7219.34 - Flat rolled prod, stainless steel, cr, >=600mm wide,>=0.5mm thick<=1mm",Canada,"Viet Nam",N/A,97962,35,Weight in metric tonne
+2024-11-01,"7219.35 - Flat rolled prod, stainless steel, cr, >=600mm wide, less than 0.5mm thick",Canada,"Viet Nam",N/A,3485,0,Weight in metric tonne
+2026-01-01,"7219.35 - Flat rolled prod, stainless steel, cr, >=600mm wide, less than 0.5mm thick",Canada,"Viet Nam",N/A,43603,13,Weight in metric tonne
+2026-07-01,"7219.35 - Flat rolled prod, stainless steel, cr, >=600mm wide, less than 0.5mm thick",Canada,"Viet Nam",N/A,67534,14,Weight in metric tonne
+2026-08-01,"7219.35 - Flat rolled prod, stainless steel, cr, >=600mm wide, less than 0.5mm thick",Canada,"Viet Nam",N/A,94576,21,Weight in metric tonne
+2023-06-01,"7219.90 - Flat rolled products, of stainless steel, of a width of 600 mm or more, nes",Canada,"Viet Nam",N/A,175,0,Weight in metric tonne
+2023-01-01,"7220.20 - Flat rolled prod, stainless steel, <600mm wide, cold rolled or reduced",Canada,"Viet Nam",N/A,95098,9,Weight in metric tonne
+2024-02-01,"7220.20 - Flat rolled prod, stainless steel, <600mm wide, cold rolled or reduced",Canada,"Viet Nam",N/A,45370,5,Weight in metric tonne
+2024-05-01,"7220.20 - Flat rolled prod, stainless steel, <600mm wide, cold rolled or reduced",Canada,"Viet Nam",N/A,83173,12,Weight in metric tonne
+2024-06-01,"7219.35 - Flat rolled prod, stainless steel, cr, >=600mm wide, less than 0.5mm thick",Canada,"Viet Nam",N/A,1870045,573,Weight in metric tonne
+2025-02-01,"7220.20 - Flat rolled prod, stainless steel, <600mm wide, cold rolled or reduced",Canada,"Viet Nam",N/A,12196,2,Weight in metric tonne
+2026-01-01,"7220.20 - Flat rolled prod, stainless steel, <600mm wide, cold rolled or reduced",Canada,"Viet Nam",N/A,10139,2,Weight in metric tonne
+2026-06-01,"7220.20 - Flat rolled prod, stainless steel, <600mm wide, cold rolled or reduced",Canada,"Viet Nam",N/A,32731,4,Weight in metric tonne
+2026-07-01,"7220.20 - Flat rolled prod, stainless steel, <600mm wide, cold rolled or reduced",Canada,"Viet Nam",N/A,63059,7,Weight in metric tonne
+2023-04-01,"7220.90 - Flat rolled products, stainless steel, of a width of less than 600mm, nes",Canada,"Viet Nam",N/A,1109,0,Weight in metric tonne
+2025-04-01,"7220.90 - Flat rolled products, stainless steel, of a width of less than 600mm, nes",Canada,"Viet Nam",N/A,1708,0,Weight in metric tonne
+2025-10-01,"7220.90 - Flat rolled products, stainless steel, of a width of less than 600mm, nes",Canada,"Viet Nam",N/A,218,0,Weight in metric tonne
+2024-06-01,"7221.00 - Bars & rods, stainless steel, hot rolled in irregularly wound coils",Canada,"Viet Nam",N/A,7,0,Weight in metric tonne
+2024-04-01,"7222.11 - Bars & rods, stainless steel, nfwt hr/hd/extruded, of circular cross-section",Canada,"Viet Nam",N/A,2475,292,Weight in kilograms
+2024-09-01,"7222.19 - Bars & rods, stainless steel, nfw than hot rolled, hot drawn or extruded, nes",Canada,"Viet Nam",N/A,13043,2,Weight in metric tonne
+2023-11-01,"7222.40 - Angles, shapes and sections, stainless steel",Canada,"Viet Nam",N/A,2184,0,Weight in metric tonne
+2024-12-01,"7222.40 - Angles, shapes and sections, stainless steel",Canada,"Viet Nam",N/A,4651,0,Weight in metric tonne
+2025-04-01,"7222.40 - Angles, shapes and sections, stainless steel",Canada,"Viet Nam",N/A,12039,0,Weight in metric tonne
+2025-05-01,"7222.40 - Angles, shapes and sections, stainless steel",Canada,"Viet Nam",N/A,4966,0,Weight in metric tonne
+2025-10-01,"7222.40 - Angles, shapes and sections, stainless steel",Canada,"Viet Nam",N/A,1310,0,Weight in metric tonne
+2026-04-01,"7222.40 - Angles, shapes and sections, stainless steel",Canada,"Viet Nam",N/A,189306,0,Weight in metric tonne
+2026-05-01,"7222.40 - Angles, shapes and sections, stainless steel",Canada,"Viet Nam",N/A,1084,0,Weight in metric tonne
+2023-02-01,"7223.00 - Wire of stainless steel",Canada,"Viet Nam",N/A,7828,1,Weight in metric tonne
+2023-06-01,"7223.00 - Wire of stainless steel",Canada,"Viet Nam",N/A,335343,37,Weight in metric tonne
+2023-10-01,"7223.00 - Wire of stainless steel",Canada,"Viet Nam",N/A,219913,20,Weight in metric tonne
+2024-08-01,"7222.40 - Angles, shapes and sections, stainless steel",Canada,"Viet Nam",N/A,591,0,Weight in metric tonne
+2024-08-01,"7223.00 - Wire of stainless steel",Canada,"Viet Nam",N/A,173869,21,Weight in metric tonne
+2025-03-01,"7223.00 - Wire of stainless steel",Canada,"Viet Nam",N/A,1162177,173,Weight in metric tonne
+2025-06-01,"7223.00 - Wire of stainless steel",Canada,"Viet Nam",N/A,869685,125,Weight in metric tonne
+2025-07-01,"7223.00 - Wire of stainless steel",Canada,"Viet Nam",N/A,1824600,288,Weight in metric tonne
+2025-11-01,"7223.00 - Wire of stainless steel",Canada,"Viet Nam",N/A,1678435,278,Weight in metric tonne
+2026-04-01,"7223.00 - Wire of stainless steel",Canada,"Viet Nam",N/A,1731653,344,Weight in metric tonne
+2024-07-01,"7228.50 - Bars & rods, as, o/t stainless, not further worked than cold formed/finished",Canada,"Viet Nam",N/A,15,0,Weight in metric tonne
+2025-06-01,"7228.50 - Bars & rods, as, o/t stainless, not further worked than cold formed/finished",Canada,"Viet Nam",N/A,933,0,Weight in metric tonne
+2026-02-01,"7228.50 - Bars & rods, as, o/t stainless, not further worked than cold formed/finished",Canada,"Viet Nam",N/A,195,0,Weight in metric tonne
+2024-01-01,"7228.60 - Bars & rods, alloy steel, o/t stainless, nes",Canada,"Viet Nam",N/A,316,0,Weight in metric tonne
+2025-04-01,"7228.60 - Bars & rods, alloy steel, o/t stainless, nes",Canada,"Viet Nam",N/A,328,0,Weight in metric tonne
+2025-06-01,"7228.60 - Bars & rods, alloy steel, o/t stainless, nes",Canada,"Viet Nam",N/A,67,0,Weight in metric tonne
+2026-08-01,"7228.60 - Bars & rods, alloy steel, o/t stainless, nes",Canada,"Viet Nam",N/A,1683,0,Weight in metric tonne
+2023-06-01,"7229.20 - Wire of silico-manganese steel",Canada,"Viet Nam",N/A,58061,383,Weight in metric tonne
+2024-12-01,"7229.20 - Wire of silico-manganese steel",Canada,"Viet Nam",N/A,152124,99,Weight in metric tonne
+2025-07-01,"7229.20 - Wire of silico-manganese steel",Canada,"Viet Nam",N/A,406767,251,Weight in metric tonne
+2023-02-01,"7229.90 - Wire of alloy steel, o/t stainless",Canada,"Viet Nam",N/A,4885,1,Weight in metric tonne
+2024-02-01,"7229.90 - Wire of alloy steel, o/t stainless",Canada,"Viet Nam",N/A,64036,19,Weight in metric tonne
+2024-07-01,"7229.90 - Wire of alloy steel, o/t stainless",Canada,"Viet Nam",N/A,2933,0,Weight in metric tonne
+2025-03-01,"7229.90 - Wire of alloy steel, o/t stainless",Canada,"Viet Nam",N/A,94555,38,Weight in metric tonne
+2025-08-01,"7229.90 - Wire of alloy steel, o/t stainless",Canada,"Viet Nam",N/A,781,0,Weight in metric tonne
+2025-11-01,"7229.90 - Wire of alloy steel, o/t stainless",Canada,"Viet Nam",N/A,279,0,Weight in metric tonne
+2026-08-01,"7229.90 - Wire of alloy steel, o/t stainless",Canada,"Viet Nam",N/A,1036,0,Weight in metric tonne
+2023-12-01,"7228.20 - Bars and rods of silico-manganese steel, nes",Canada,"Viet Nam",N/A,36,0,Weight in metric tonne
+2024-11-01,"7229.20 - Wire of silico-manganese steel",Canada,"Viet Nam",N/A,118190,75,Weight in metric tonne
+2023-06-01,"7210.49 - Flat rolled prod, i/nas, plated or coated with zinc,>= 600 mm wide, nes",Canada,"Viet Nam",N/A,3257548,2549,Weight in metric tonne
+2024-09-01,"7202.21 - Ferro-silicon, containing by weight more than 55% of silicon",Canada,"Viet Nam",N/A,60527,21,Weight in metric tonne
+2025-03-01,"7202.21 - Ferro-silicon, containing by weight more than 55% of silicon",Canada,"Viet Nam",N/A,272175,180,Weight in metric tonne
+2023-11-01,"7202.80 - Ferro-tungsten and ferro-silico-tungsten",Canada,"Viet Nam",N/A,10803,0,Weight in metric tonne
+2024-10-01,"7205.29 - Powders, iron or steel, other than alloy",Canada,"Viet Nam",N/A,215436,13,Weight in metric tonne
+2025-09-01,"7205.29 - Powders, iron or steel, other than alloy",Canada,"Viet Nam",N/A,2939,0,Weight in metric tonne
+2023-05-01,"7210.61 - Flat rolled prod, i/nas, plated or coat w aluminium-zinc alloys,>=600mm wide",Canada,"Viet Nam",N/A,933382,740,Weight in metric tonne
+2025-07-01,"7210.30 - Flat rolled products, steel,electrol plated or coated with zinc,>=600mm wide",Canada,"Viet Nam",N/A,29274,18,Weight in metric tonne
+2025-07-01,"7210.49 - Flat rolled prod, i/nas, plated or coated with zinc,>= 600 mm wide, nes",Canada,"Viet Nam",N/A,426123,329,Weight in metric tonne
+2024-06-01,"7210.49 - Flat rolled prod, i/nas, plated or coated with zinc,>= 600 mm wide, nes",Canada,"Viet Nam",N/A,26012,20,Weight in metric tonne
+2025-03-01,"7210.61 - Flat rolled prod, i/nas, plated or coat w aluminium-zinc alloys,>=600mm wide",Canada,"Viet Nam",N/A,191058,75,Weight in metric tonne
+2025-07-01,"7210.61 - Flat rolled prod, i/nas, plated or coat w aluminium-zinc alloys,>=600mm wide",Canada,"Viet Nam",N/A,76174,50,Weight in metric tonne
+2026-03-01,"7212.30 - Flat rolled prod, i/nas, <600mm wide, o/w plated or coated with zinc",Canada,"Viet Nam",N/A,466908,442,Weight in metric tonne
+2024-11-01,"7212.40 - Flat rolled prod, i/nas, <600mm wide, painted, varnished or coated with plast",Canada,"Viet Nam",N/A,40079,28,Weight in metric tonne
+2025-01-01,"7210.70 - Flat rolled prod, i/nas, painted, varnished or plast coated, >= 600 mm wide",Canada,"Viet Nam",N/A,174075,45,Weight in metric tonne
+2025-01-01,"7212.40 - Flat rolled prod, i/nas, <600mm wide, painted, varnished or coated with plast",Canada,"Viet Nam",N/A,79894,54,Weight in metric tonne
+2025-11-01,"7211.14 - Flat rolled prod,iron/non-alloy steel,hot rolled, < 600 mm wide,thick >= 4.75 mm",Canada,"Viet Nam",N/A,702,0,Weight in metric tonne
+2026-01-01,"7212.40 - Flat rolled prod, i/nas, <600mm wide, painted, varnished or coated with plast",Canada,"Viet Nam",N/A,781748,415,Weight in metric tonne
+2026-03-01,"7212.40 - Flat rolled prod, i/nas, <600mm wide, painted, varnished or coated with plast",Canada,"Viet Nam",N/A,376337,247,Weight in metric tonne
+2026-08-01,"7212.40 - Flat rolled prod, i/nas, <600mm wide, painted, varnished or coated with plast",Canada,"Viet Nam",N/A,216467,137,Weight in metric tonne
+2023-07-01,"7212.50 - Flat rolled prod, i/nas, < 600 mm wide, otherwise plated/coated, nes",Canada,"Viet Nam",N/A,179,0,Weight in metric tonne
+2024-01-01,"7213.91 - Bars/rods, i/nas,hr, in irreg wnd coils of circ cross section, <14mm in dia",Canada,"Viet Nam",N/A,262338,254,Weight in metric tonne
+2024-04-01,"7215.50 - Bars & rods, iron or non-alloy steel, nfw than cold formed or finished, nes",Canada,"Viet Nam",N/A,613,0,Weight in metric tonne
+2025-07-01,"7215.50 - Bars & rods, iron or non-alloy steel, nfw than cold formed or finished, nes",Canada,"Viet Nam",N/A,1042,0,Weight in metric tonne
+2024-01-01,"7215.90 - Bars & rods, iron/non-alloy steel, nes",Canada,"Viet Nam",N/A,34,0,Weight in metric tonne
+2026-07-01,"7216.21 - Sections, L, i/nas, nfw than hot rolled, drawn or extruded, of a height <80mm",Canada,"Viet Nam",N/A,349420,416,Weight in metric tonne
+2026-07-01,"7216.40 - Sections, L or T, i/nas, nfw than hot rolled, drawn or extruded, hght>=80mm",Canada,"Viet Nam",N/A,229996,274,Weight in metric tonne
+2025-05-01,"7216.91 - Angles, shapes and sections, i/nas, cf or cold finished from flat rolled prod",Canada,"Viet Nam",N/A,2983,1,Weight in metric tonne
+2026-03-01,"7216.91 - Angles, shapes and sections, i/nas, cf or cold finished from flat rolled prod",Canada,"Viet Nam",N/A,154,0,Weight in metric tonne
+2026-08-01,"7216.91 - Angles, shapes and sections, i/nas, cf or cold finished from flat rolled prod",Canada,"Viet Nam",N/A,1619,0,Weight in metric tonne
+2024-11-01,"7216.99 - Angles, shapes and sections, i/nas, cold formed or cold finished, nes",Canada,"Viet Nam",N/A,5348,1,Weight in metric tonne
+2026-07-01,"7216.99 - Angles, shapes and sections, i/nas, cold formed or cold finished, nes",Canada,"Viet Nam",N/A,183,0,Weight in metric tonne
+2023-03-01,"7213.91 - Bars/rods, i/nas,hr, in irreg wnd coils of circ cross section, <14mm in dia",Canada,"Viet Nam",N/A,6094328,7376,Weight in metric tonne
+2023-03-01,"7215.50 - Bars & rods, iron or non-alloy steel, nfw than cold formed or finished, nes",Canada,"Viet Nam",N/A,126,0,Weight in metric tonne
+2025-06-01,"7217.10 - Wire, iron or non-alloy steel, polished or not, but not plated or coated",Canada,"Viet Nam",N/A,122,0,Weight in metric tonne
+2025-09-01,"7217.10 - Wire, iron or non-alloy steel, polished or not, but not plated or coated",Canada,"Viet Nam",N/A,26328,25,Weight in metric tonne
+2026-05-01,"7217.10 - Wire, iron or non-alloy steel, polished or not, but not plated or coated",Canada,"Viet Nam",N/A,231,0,Weight in metric tonne
+2024-01-01,"7217.90 - Wire, iron or non-alloy steel, nes",Canada,"Viet Nam",N/A,316501,175,Weight in metric tonne
+2025-01-01,"7217.90 - Wire, iron or non-alloy steel, nes",Canada,"Viet Nam",N/A,128740,74,Weight in metric tonne
+2025-05-01,"7217.90 - Wire, iron or non-alloy steel, nes",Canada,"Viet Nam",N/A,1310474,652,Weight in metric tonne
+2025-12-01,"7217.90 - Wire, iron or non-alloy steel, nes",Canada,"Viet Nam",N/A,117,0,Weight in metric tonne
+2023-07-01,"7219.32 - Flat rolled prod, stainless steel, cr, >=600mm wide,>=3mm thick <4.75mm",Canada,"Viet Nam",N/A,212694,62,Weight in metric tonne
+2024-08-01,"7217.10 - Wire, iron or non-alloy steel, polished or not, but not plated or coated",Canada,"Viet Nam",N/A,92193,38,Weight in metric tonne
+2025-03-01,"7218.99 - Semi-finished products, stainless steel, nes",Canada,"Viet Nam",N/A,4,0,Weight in metric tonne
+2023-03-01,"7219.32 - Flat rolled prod, stainless steel, cr, >=600mm wide,>=3mm thick <4.75mm",Canada,"Viet Nam",N/A,149214,40,Weight in metric tonne
+2023-06-01,"7219.31 - Flat rolled prod, stain steel, cold roll, >= 600 mm wide, thick 4.75 mm or more",Canada,"Viet Nam",N/A,2314,0,Weight in metric tonne
+2025-02-01,"7219.32 - Flat rolled prod, stainless steel, cr, >=600mm wide,>=3mm thick <4.75mm",Canada,"Viet Nam",N/A,65075,20,Weight in metric tonne
+2025-06-01,"7219.32 - Flat rolled prod, stainless steel, cr, >=600mm wide,>=3mm thick <4.75mm",Canada,"Viet Nam",N/A,338854,120,Weight in metric tonne
+2025-11-01,"7219.32 - Flat rolled prod, stainless steel, cr, >=600mm wide,>=3mm thick <4.75mm",Canada,"Viet Nam",N/A,284280,71,Weight in metric tonne
+2023-06-01,"7219.33 - Flat rolled prod, stainless steel, cr, >=600mm wide, >1mm thick <3mm",Canada,"Viet Nam",N/A,7210,0,Weight in metric tonne
+2024-05-01,"7219.33 - Flat rolled prod, stainless steel, cr, >=600mm wide, >1mm thick <3mm",Canada,"Viet Nam",N/A,295069,103,Weight in metric tonne
+2024-10-01,"7219.33 - Flat rolled prod, stainless steel, cr, >=600mm wide, >1mm thick <3mm",Canada,"Viet Nam",N/A,32595,8,Weight in metric tonne
+2025-02-01,"7219.33 - Flat rolled prod, stainless steel, cr, >=600mm wide, >1mm thick <3mm",Canada,"Viet Nam",N/A,1290479,383,Weight in metric tonne
+2025-04-01,"7219.33 - Flat rolled prod, stainless steel, cr, >=600mm wide, >1mm thick <3mm",Canada,"Viet Nam",N/A,442179,146,Weight in metric tonne
+2025-06-01,"7219.33 - Flat rolled prod, stainless steel, cr, >=600mm wide, >1mm thick <3mm",Canada,"Viet Nam",N/A,2656430,904,Weight in metric tonne
+2026-05-01,"7219.33 - Flat rolled prod, stainless steel, cr, >=600mm wide, >1mm thick <3mm",Canada,"Viet Nam",N/A,1477423,527,Weight in metric tonne
+2023-10-01,"7219.34 - Flat rolled prod, stainless steel, cr, >=600mm wide,>=0.5mm thick<=1mm",Canada,"Viet Nam",N/A,38929,13,Weight in metric tonne
+2025-08-01,"7219.34 - Flat rolled prod, stainless steel, cr, >=600mm wide,>=0.5mm thick<=1mm",Canada,"Viet Nam",N/A,113688,41,Weight in metric tonne
+2025-11-01,"7219.34 - Flat rolled prod, stainless steel, cr, >=600mm wide,>=0.5mm thick<=1mm",Canada,"Viet Nam",N/A,416890,126,Weight in metric tonne
+2025-12-01,"7219.34 - Flat rolled prod, stainless steel, cr, >=600mm wide,>=0.5mm thick<=1mm",Canada,"Viet Nam",N/A,181329,56,Weight in metric tonne
+2026-03-01,"7219.34 - Flat rolled prod, stainless steel, cr, >=600mm wide,>=0.5mm thick<=1mm",Canada,"Viet Nam",N/A,189871,65,Weight in metric tonne
+2024-05-01,"7219.35 - Flat rolled prod, stainless steel, cr, >=600mm wide, less than 0.5mm thick",Canada,"Viet Nam",N/A,1371674,411,Weight in metric tonne
+2024-03-01,"7220.12 - Flat rolled products, stainless steel, hot rolled, < 600 mm wide,thick < 4.75 mm",Canada,"Viet Nam",N/A,3101,0,Weight in metric tonne
+2025-02-01,"7220.12 - Flat rolled products, stainless steel, hot rolled, < 600 mm wide,thick < 4.75 mm",Canada,"Viet Nam",N/A,7233,1,Weight in metric tonne
+2023-06-01,"7220.20 - Flat rolled prod, stainless steel, <600mm wide, cold rolled or reduced",Canada,"Viet Nam",N/A,137626,16,Weight in metric tonne
+2023-12-01,"7220.20 - Flat rolled prod, stainless steel, <600mm wide, cold rolled or reduced",Canada,"Viet Nam",N/A,152125,18,Weight in metric tonne
+2024-09-01,"7220.20 - Flat rolled prod, stainless steel, <600mm wide, cold rolled or reduced",Canada,"Viet Nam",N/A,31935,5,Weight in metric tonne
+2025-03-01,"7220.20 - Flat rolled prod, stainless steel, <600mm wide, cold rolled or reduced",Canada,"Viet Nam",N/A,53715,6,Weight in metric tonne
+2025-11-01,"7220.20 - Flat rolled prod, stainless steel, <600mm wide, cold rolled or reduced",Canada,"Viet Nam",N/A,19833,3,Weight in metric tonne
+2023-02-01,"7220.90 - Flat rolled products, stainless steel, of a width of less than 600mm, nes",Canada,"Viet Nam",N/A,30845,5,Weight in metric tonne
+2024-07-01,"7220.90 - Flat rolled products, stainless steel, of a width of less than 600mm, nes",Canada,"Viet Nam",N/A,11581,2,Weight in metric tonne
+2024-10-01,"7220.90 - Flat rolled products, stainless steel, of a width of less than 600mm, nes",Canada,"Viet Nam",N/A,912,0,Weight in metric tonne
+2026-03-01,"7222.11 - Bars & rods, stainless steel, nfwt hr/hd/extruded, of circular cross-section",Canada,"Viet Nam",N/A,4826,206,Weight in kilograms
+2024-03-01,"7222.20 - Bars & rods, stainless steel, nfw than cold formed or cold finished",Canada,"Viet Nam",N/A,32212,4,Weight in metric tonne
+2024-11-01,"7222.20 - Bars & rods, stainless steel, nfw than cold formed or cold finished",Canada,"Viet Nam",N/A,21970,4,Weight in metric tonne
+2026-04-01,"7222.20 - Bars & rods, stainless steel, nfw than cold formed or cold finished",Canada,"Viet Nam",N/A,49,0,Weight in metric tonne
+2023-06-01,"7222.40 - Angles, shapes and sections, stainless steel",Canada,"Viet Nam",N/A,1748,0,Weight in metric tonne
+2024-10-01,"7222.40 - Angles, shapes and sections, stainless steel",Canada,"Viet Nam",N/A,772,0,Weight in metric tonne
+2025-02-01,"7222.40 - Angles, shapes and sections, stainless steel",Canada,"Viet Nam",N/A,1750,0,Weight in metric tonne
+2025-12-01,"7222.40 - Angles, shapes and sections, stainless steel",Canada,"Viet Nam",N/A,576,0,Weight in metric tonne
+2026-02-01,"7222.40 - Angles, shapes and sections, stainless steel",Canada,"Viet Nam",N/A,4779,0,Weight in metric tonne
+2024-05-01,"7220.90 - Flat rolled products, stainless steel, of a width of less than 600mm, nes",Canada,"Viet Nam",N/A,1101,0,Weight in metric tonne
+2024-05-01,"7222.40 - Angles, shapes and sections, stainless steel",Canada,"Viet Nam",N/A,575,0,Weight in metric tonne
+2023-01-01,"7223.00 - Wire of stainless steel",Canada,"Viet Nam",N/A,107206,11,Weight in metric tonne
+2023-10-01,"7222.30 - Bars & rods, stainless steel, nes",Canada,"Viet Nam",N/A,1506,0,Weight in metric tonne
+2023-09-01,"7222.40 - Angles, shapes and sections, stainless steel",Canada,"Viet Nam",N/A,996,0,Weight in metric tonne
+2024-12-01,"7223.00 - Wire of stainless steel",Canada,"Viet Nam",N/A,72405,21,Weight in metric tonne
+2026-01-01,"7223.00 - Wire of stainless steel",Canada,"Viet Nam",N/A,1391993,254,Weight in metric tonne
+2026-02-01,"7223.00 - Wire of stainless steel",Canada,"Viet Nam",N/A,742028,157,Weight in metric tonne
+2023-02-01,"7225.11 - Flat rolled products,of silicon-electrical steel, >= 600 mm wide, grain oriented",Canada,"Viet Nam",N/A,249726,43,Weight in metric tonne
+2024-06-01,"7225.92 - Flat rolled prod,al/s,o/t stainless,o/w plated/ctd with zinc,>=600mm wide,nes",Canada,"Viet Nam",N/A,203506,164,Weight in metric tonne
+2023-01-01,"7228.30 - Bars & rods, alloy steel,o/t stainless, nfw than hot rolled/drawn/extruded, nes",Canada,"Viet Nam",N/A,40,0,Weight in metric tonne
+2024-08-01,"7228.50 - Bars & rods, as, o/t stainless, not further worked than cold formed/finished",Canada,"Viet Nam",N/A,1241,0,Weight in metric tonne
+2025-08-01,"7228.50 - Bars & rods, as, o/t stainless, not further worked than cold formed/finished",Canada,"Viet Nam",N/A,29,0,Weight in metric tonne
+2026-07-01,"7228.60 - Bars & rods, alloy steel, o/t stainless, nes",Canada,"Viet Nam",N/A,1811,0,Weight in metric tonne
+2024-06-01,"7229.20 - Wire of silico-manganese steel",Canada,"Viet Nam",N/A,148782,82,Weight in metric tonne
+2026-05-01,"7229.20 - Wire of silico-manganese steel",Canada,"Viet Nam",N/A,291417,189,Weight in metric tonne
+2023-08-01,"7229.90 - Wire of alloy steel, o/t stainless",Canada,"Viet Nam",N/A,1216,0,Weight in metric tonne
+2024-04-01,"7229.90 - Wire of alloy steel, o/t stainless",Canada,"Viet Nam",N/A,16099,5,Weight in metric tonne
+2025-01-01,"7229.90 - Wire of alloy steel, o/t stainless",Canada,"Viet Nam",N/A,1254,0,Weight in metric tonne
+2025-09-01,"7229.90 - Wire of alloy steel, o/t stainless",Canada,"Viet Nam",N/A,187,0,Weight in metric tonne
+2025-10-01,"7229.90 - Wire of alloy steel, o/t stainless",Canada,"Viet Nam",N/A,140,0,Weight in metric tonne
+2024-05-01,"7223.00 - Wire of stainless steel",Canada,"Viet Nam",N/A,217088,21,Weight in metric tonne
+2024-11-01,"7228.60 - Bars & rods, alloy steel, o/t stainless, nes",Canada,"Viet Nam",N/A,327,0,Weight in metric tonne
+2023-06-01,"7229.90 - Wire of alloy steel, o/t stainless",Canada,"Viet Nam",N/A,7177,1,Weight in metric tonne
+
+
+How to cite: Statistics Canada. Canadian International Merchandise Trade Web Application
+https://www150.statcan.gc.ca/n1/pub/71-607-x/71-607-x2021004-eng.htm
+Accessed date: 2026-10-09
