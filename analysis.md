@@ -11,10 +11,11 @@ This report asks whether that tax changed where Canada buys its steel.
 
 **What happened.** China’s share of Canada’s steel imports fell from
 about 6% before the tax to under 4% afterwards. The drop also shows up
-when imports are measured by weight instead of value, and it is not
-explained by the usual ups and downs between seasons. Imports from China
-themselves fell by about 39% compared with the same winter a year
-earlier, so this was not just other countries selling more.
+when imports are measured by weight instead of value. The decline
+remains when comparing the same winter months one year apart, making a
+purely seasonal explanation less likely. Imports from China themselves
+fell by about 39% compared with the same winter a year earlier, so this
+was not just other countries selling more.
 
 **Was it the tax?** The tax applied only to some steel products. China’s
 share fell more for the taxed products than for the untaxed ones: about
@@ -25,11 +26,11 @@ this comparison more convincing.
 **How sure can we be?** Not very. Only four months passed between the
 tax and the start of a 2025 trade dispute between the United States and
 Canada, which disrupted steel trade again. With so little clean data,
-the result sits at the edge of what is usually accepted as more than
-chance. Depending on choices in the calculation, it lands just on one
-side or the other of the usual line, and a comparison that keeps the 167
-products separate finds that it could well be chance. Several checks
-point in the same direction, but none settles the question on its own.
+the estimate is not precise. Depending on choices in the calculation, it
+lands just on one side or the other of the usual line for statistical
+significance, and in a comparison that keeps the 167 products separate
+its likely range includes zero. Several checks point in the same
+direction, but none settles the question on its own.
 
 **Who gained?** Comparing taxed and untaxed products for every supplier,
 Japan is the most likely gainer: its share of taxed products rose more
@@ -319,8 +320,9 @@ Average share of Canada’s steel imports (by value) in each stage
   Taiwan about a month before Japan and South Korea, and on different
   terms, which may help explain why these shares moved differently, but
   these averages cannot separate the policies.
-- **Vietnam’s share stayed small and steady**, so there is no clear sign
-  of Chinese steel being sent to Canada through Vietnam.
+- **Vietnam’s share stayed small and steady.** Country totals like these
+  cannot show whether Chinese steel reached Canada by way of other
+  countries.
 - **Suppliers outside these six kept a steady combined share**, about
   30.3% before the tax and 30.1% in the tax-only stage, so China’s lost
   share did not simply move to countries left out of this table.
@@ -356,9 +358,11 @@ shares |>
 Same winter months, one year apart (share by value)
 
 In the same winter months, China’s share fell from 5.8% to 3.7%, while
-South Korea’s and the United States’ shares barely changed. A normal
-seasonal pattern cannot explain China’s drop. Japan’s share rose from
-1.7% to 3.6%, but part of that continues its earlier rise.
+South Korea’s and the United States’ shares barely changed. A purely
+seasonal explanation is therefore less likely, although a single
+year-on-year comparison cannot rule out a change in the seasonal pattern
+itself. Japan’s share rose from 1.7% to 3.6%, but part of that continues
+its earlier rise.
 
 ## 8. Is it just prices?
 
@@ -459,9 +463,10 @@ changed between the two winters.
 Here I estimate how much China’s share changed after the tax, after
 removing the usual seasonal pattern and allowing for the later
 U.S.-Canada dispute and import limits. The months between the
-announcement and the start of the tax are left out. The dispute period
-in this calculation also includes June and July 2025, when the first
-import limits on China and Taiwan began.
+announcement and the start of the tax are left out. The import-limit
+period starts in July 2025, the first full month after the limits on
+China began on June 27. The later extension to other countries in August
+is not separated.
 
 The tables report a **p-value** for each estimate. It measures how
 easily ordinary month-to-month swings alone could produce a change as
@@ -477,7 +482,7 @@ china_reg <- shares |>
   mutate(
     surtax    = as.integer(month >= as.Date("2024-11-01")),
     us_tariff = as.integer(month >= as.Date("2025-03-01")),
-    quota     = as.integer(month >= as.Date("2025-08-01")),
+    quota     = as.integer(month >= as.Date("2025-07-01")),   # first full month of limits on China
     cal_month = factor(lubridate::month(month))
   )
 
@@ -510,19 +515,19 @@ tibble(
 
 | Policy              | Change in China’s share (points) | Likely range: low | Likely range: high | p-value (standard) | p-value (allowing for linked months) |
 |:--------------------|---------------------------------:|------------------:|-------------------:|-------------------:|-------------------------------------:|
-| China tax           |                           -2.410 |            -3.846 |             -0.974 |              0.010 |                                0.002 |
-| U.S.-Canada dispute |                            0.105 |            -1.285 |              1.495 |              0.925 |                                0.878 |
-| Import limits       |                           -0.268 |            -0.940 |              0.404 |              0.741 |                                0.420 |
+| China tax           |                           -2.413 |            -3.840 |             -0.986 |              0.009 |                                0.002 |
+| U.S.-Canada dispute |                            0.194 |            -1.174 |              1.562 |              0.869 |                                0.773 |
+| Import limits       |                           -0.360 |            -1.181 |              0.460 |              0.685 |                                0.375 |
 
 Change in China’s share linked to each policy, after removing seasonal
 patterns (41 months)
 
 After taking seasons and later policies into account, China’s share is
 about 2.4 percentage points lower after the tax (for example, a fall
-from 6% to 3.6% is a drop of 2.4 points). Both versions of the
-calculation suggest this is unlikely to be chance alone. The U.S.-Canada
-dispute and the import limits show no clear additional effect on China’s
-share.
+from 6% to 3.6% is a drop of 2.4 points). In both versions of the
+calculation, the likely range for this drop excludes zero. The
+U.S.-Canada dispute and the import limits show no clear additional
+effect on China’s share.
 
 ### Allowing for a long-term drift
 
@@ -552,18 +557,18 @@ tibble(
 
 | Version                 | Change in China’s share after the tax (points) | p-value (standard) | p-value (allowing for linked months) |
 |:------------------------|-----------------------------------------------:|-------------------:|-------------------------------------:|
-| Without long-term drift |                                         -2.410 |              0.010 |                                0.002 |
-| With long-term drift    |                                         -1.097 |              0.372 |                                0.217 |
+| Without long-term drift |                                         -2.413 |              0.009 |                                0.002 |
+| With long-term drift    |                                         -1.292 |              0.278 |                                0.099 |
 
 Effect of the tax with and without allowing for a long-term drift
 
-Once the drift is allowed for, the estimated drop shrinks to about 1.1
-points and could easily be chance. With so few months after the tax, it
-is hard to tell a steady drift apart from a sudden drop. Allowing for
-the drift may also overcorrect, since China’s share was roughly flat
-through 2024 and then fell sharply. This is why Section 11 uses a
-different approach: comparing taxed and untaxed products over the same
-months.
+Once the drift is allowed for, the estimated drop shrinks to about 1.3
+points and its likely range includes zero. With so few months after the
+tax, it is hard to tell a steady drift apart from a sudden drop.
+Allowing for the drift may also overcorrect, since China’s share was
+roughly flat through 2024 and then fell sharply. This is why Section 11
+uses a different approach: comparing taxed and untaxed products over the
+same months.
 
 ### Checking the range of uncertainty by reshuffling the data
 
@@ -609,17 +614,16 @@ boot_ci |>
 
 | Method                             | Likely range: low (points) | Estimate (points) | Likely range: high (points) |
 |:-----------------------------------|---------------------------:|------------------:|----------------------------:|
-| Standard formula                   |                      -4.18 |             -2.41 |                       -0.64 |
-| Formula allowing for linked months |                      -3.85 |             -2.41 |                       -0.97 |
+| Standard formula                   |                      -4.18 |             -2.41 |                       -0.65 |
+| Formula allowing for linked months |                      -3.84 |             -2.41 |                       -0.99 |
 | Simple reshuffle                   |                      -4.94 |             -2.41 |                        0.11 |
-| Reshuffling blocks of 4 months     |                      -4.56 |             -2.41 |                        0.33 |
+| Reshuffling blocks of 4 months     |                      -4.54 |             -2.41 |                        0.36 |
 
 Likely range for the effect of the tax, calculated four ways
 
 With the simple reshuffle, the likely range for the drop runs from -4.9
-to 0.1 points; with blocks of four months, it runs from -4.6 to 0.3
-points. Both ranges just include zero, so this approach cannot rule out
-that the drop was chance.
+to 0.1 points; with blocks of four months, it runs from -4.5 to 0.4
+points. Both ranges just include zero.
 
 ## 10. Two ways of averaging
 
@@ -902,10 +906,10 @@ With this calculation, the main comparison’s p-value falls below 0.05,
 and the comparison through June 2025 is even clearer. This should not be
 over-read. With only about two years of monthly data, this calculation
 is itself approximate and can be too optimistic, and the reshuffling
-check in Section 9 still could not rule out chance. So far, the main
-result sits right at the edge: depending on the method, it falls just on
-one side or the other of the usual 0.05 line. The next two parts check
-how much this depends on choices in the calculation.
+ranges in Section 9 still include zero. So far, the main result sits
+right at the edge: depending on the method, it falls just on one side or
+the other of the usual 0.05 line. The next two parts check how much this
+depends on choices in the calculation.
 
 ### How much does the result depend on calculation choices?
 
@@ -1047,13 +1051,13 @@ products)
 The product-by-product comparison points the same way as the group
 comparison: in the main period, China’s share of taxed products fell by
 about 1.6 points more than its share of untaxed products. But once
-uncertainty is judged across products, the main result could well be
-chance (p = 0.155); only the longer comparison through June 2025, which
-overlaps the U.S. dispute, stands out (p = 0.004). Research on this kind
-of comparison recommends measuring uncertainty across the units that
-were or were not affected (Bertrand, Duflo and Mullainathan, 2004), so
-this result is a strong reason not to call the drop clear on four months
-of data.
+uncertainty is judged across products, its likely range includes zero (p
+= 0.155); only the longer comparison through June 2025, which overlaps
+the U.S. dispute, stands out (p = 0.004). Research on this kind of
+comparison recommends measuring uncertainty across the units that were
+or were not affected (Bertrand, Duflo and Mullainathan, 2004), so this
+result is a strong reason not to call the drop clear on four months of
+data.
 
 When every product counts equally, whatever its size, the drop
 disappears in the main period (+0.7 points). Most of the 167 products
@@ -1125,11 +1129,11 @@ did_data |>
 
 Before the tax, the gap between the two groups changed by only about
 0.09 points per month, and the fake start date shows a change of only
-about 0.5 points. Both could easily be chance, so neither check finds a
-warning sign. Two cautions apply: with only 19 months, these checks can
-catch only fairly large differences, and if the small downward drift in
-the gap were real and continued, it would explain part of the measured
-drop.
+about 0.5 points. Neither is large relative to its uncertainty, so
+neither check finds a warning sign. Two cautions apply: with only 19
+months, these checks can catch only fairly large differences, and if the
+small downward drift in the gap were real and continued, it would
+explain part of the measured drop.
 
 The product-by-product data allow a month-by-month version of the same
 check. For each month, it estimates how far China’s share of taxed
@@ -1376,12 +1380,11 @@ the gain is still about 2.1 points, but after the adjustment it is no
 longer clear (adjusted p = 0.073). Japan sold almost no untaxed steel
 products to Canada, so this mainly reflects its growing share of taxed
 products. South Korea’s share of taxed products also rose, by about 1.5
-points, but that could be chance (p = 0.111), and it disappears once
-Korea’s earlier trend is allowed for. The estimates for the United
+points, but the estimate is not precise (p = 0.111), and it disappears
+once Korea’s earlier trend is allowed for. The estimates for the United
 States and other countries are large in either direction and far from
 clear, so the data cannot say whether they gained. Vietnam’s and
-Taiwan’s shares changed by less than a quarter of a point, which again
-gives no sign of Chinese steel being sent through them.
+Taiwan’s shares changed by less than a quarter of a point.
 
 So Japan is the most likely gainer, but even its result is not
 conclusive, and it does not show that the buyers who stopped buying from
@@ -1395,12 +1398,13 @@ products before the tax.
   U.S.-Canada dispute, so the cleanest estimates are uncertain. February
   2025 may already reflect worries about U.S. tariffs.
 - **Long-term drift.** Looking at China’s share on its own, the
-  estimated drop shrinks and could be chance once a steady long-term
-  drift is allowed for. Comparing taxed and untaxed products avoids this
-  problem only if the two groups would otherwise have moved together.
-  The checks found no sign that they would not, but they can catch only
-  fairly large differences, and allowing the gap to follow a steady
-  straight-line trend shrinks the main estimate to about 0.5 points.
+  estimated drop shrinks and its likely range includes zero once a
+  steady long-term drift is allowed for. Comparing taxed and untaxed
+  products avoids this problem only if the two groups would otherwise
+  have moved together. The checks found no sign that they would not, but
+  they can catch only fairly large differences, and allowing the gap to
+  follow a steady straight-line trend shrinks the main estimate to about
+  0.5 points.
 - **Comparison group.** Most untaxed products are raw materials that
   serve different buyers from finished steel. Using only untaxed
   finished steel gives a larger drop in the same direction, but that
@@ -1410,17 +1414,18 @@ products before the tax.
   month’s. I used calculations that allow for this, but with so few
   months after the tax, all measures of uncertainty are approximate. The
   result also depends on how many neighbouring months are allowed to be
-  linked, and the comparison that keeps products separate finds that the
-  main result could be chance.
+  linked, and in the comparison that keeps products separate the likely
+  range of the main result includes zero.
 - **Size of products.** The drop appears when larger products count for
   more, as they do in China’s overall share, but not when every product
   counts equally.
 - **Coverage.** The tax also applies to some steel products not studied
   here, such as pipes and tubes.
-- **Country of origin.** Customs records show where goods were made. If
-  Chinese steel was processed or shipped through another country, it may
-  be recorded under that country. Canada’s July 2025 rule on steel first
-  made in China suggests this was a concern.
+- **Country of origin.** Customs records show the country of origin.
+  Simple transshipment does not normally change origin. Processing in a
+  third country may change recorded origin depending on the applicable
+  rules; these data cannot identify such routes. Canada’s July 2025 rule
+  on steel first melted and poured in China suggests this was a concern.
 - **What the results do not show.** A lower Chinese share does not mean
   the tax was good for Canada overall. I did not look at Canadian steel
   production, jobs, costs for businesses that use steel, or prices paid
@@ -1462,25 +1467,26 @@ Other studies of tariffs point in the same direction as these results:
 The results fit the basic economic idea that making one supplier more
 expensive pushes buyers toward others. China’s share of Canada’s steel
 imports fell sharply when the tax started. The drop also shows up by
-weight, is not a normal seasonal pattern, and happened mainly in the
-products the tax covered. My best estimate is that the tax reduced
-China’s share of taxed products by about 2 percentage points, roughly a
-third of its earlier share. Comparing taxed and untaxed products, the
-estimates range from about 1.6 to 3.1 points depending on the months and
-method used. A narrower comparison group gives a larger drop, and
-allowing for a steady trend in the gap gives a much smaller one. The
-evidence is suggestive rather than conclusive: with only four clean
-months after the tax, the main result sits at the edge of what is
-usually accepted as more than chance, and some calculations, including
-the product-by-product comparison, find that it could be chance.
+weight, remains when comparing the same winter months one year apart,
+and happened mainly in the products the tax covered. The main
+difference-in-differences estimate is a 1.9-percentage-point decline,
+roughly a third of China’s earlier share. This is consistent with a
+surtax effect, but sensitive to modelling choices. Comparing taxed and
+untaxed products, the estimates range from about 1.6 to 3.1 points
+depending on the months and method used. A narrower comparison group
+gives a larger drop, and allowing for a steady trend in the gap gives a
+much smaller one. The evidence is suggestive rather than conclusive:
+with only four clean months after the tax, the main estimate is
+imprecise, and under some calculations, including the product-by-product
+comparison, its likely range includes zero.
 
 Where China’s lost share went is only partly clear. Comparing taxed and
 untaxed products, Japan is the most likely gainer, though not
-conclusively; South Korea’s gain could be chance, and the United States
-and smaller suppliers are too noisy to tell. Later changes in the U.S.,
-South Korean and Taiwanese shares line up with the 2025 trade dispute
-and import limits. Separating the tax from these overlapping trends and
-policies was the hardest part of this analysis.
+conclusively; South Korea’s estimated gain is imprecise, and the United
+States and smaller suppliers are too noisy to tell. Later changes in the
+U.S., South Korean and Taiwanese shares line up with the 2025 trade
+dispute and import limits. Separating the tax from these overlapping
+trends and policies was the hardest part of this analysis.
 
 ## Technical notes
 
@@ -1525,9 +1531,10 @@ For readers familiar with the methods:
   products): -4.6 points in the main window (Newey-West p = 0.024).
 - **China-only time series** with calendar-month fixed effects and
   cumulative policy indicators: surtax coefficient -2.4 points (OLS p =
-  0.0096; Newey-West p = 0.002); with a linear trend -1.1 points
-  (Newey-West p = 0.22). Moving block bootstrap (block length 4) 95%
-  interval: -4.6 to +0.3 points.
+  0.0096; Newey-West p = 0.002); with a linear trend -1.3 points
+  (Newey-West p = 0.099). Moving block bootstrap (block length 4) 95%
+  interval: -4.5 to +0.4 points. The import-limit indicator starts in
+  July 2025.
 - **Other checks:** same-season comparison, tonnage shares, and a ratio
   estimator compared with the mean of monthly shares. The input files
   are checked for missing months, missing or negative values, unexpected

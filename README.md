@@ -13,8 +13,7 @@ Canada.
 
 **China's share of Canada's steel imports fell after the surtax.** It dropped from about 6%
 before the surtax to under 4% in the four months after it took effect. The drop also shows
-up when imports are measured by weight rather than value, and it cannot be explained by the
-usual seasonal pattern. Imports from China themselves fell by about 39% compared with the
+up when imports are measured by weight rather than value. The decline remains when comparing the same winter months one year apart, making a purely seasonal explanation less likely. Imports from China themselves fell by about 39% compared with the
 same winter a year earlier.
 
 **The drop was concentrated in the steel products the surtax targeted.** Comparing
@@ -25,14 +24,15 @@ groups of products followed similar trends.
 **The evidence is suggestive, not conclusive.** Only four months separate the surtax from
 the 2025 US–Canada tariff dispute, so the cleanest estimate rests on very little data.
 Depending on choices in the calculation, it falls just on one side or the other of the
-usual threshold for statistical significance, and a comparison that keeps the 167 products
-separate finds that it could well be chance.
+usual threshold for statistical significance, and in a comparison that keeps the 167
+products separate its likely range includes zero. The main estimate is consistent with a
+surtax effect, but sensitive to modelling choices.
 
 **Japan is the most likely gainer.** Applying the same listed-versus-unlisted comparison
 to every supplier, Japan's share of listed products rose by about 1.6 percentage points
 more than its share of unlisted products. This holds up after adjusting for testing seven
 suppliers, but not once Japan's earlier growth is also allowed for, so it is suggestive
-rather than conclusive. South Korea's gain could be chance, and for the United States and
+rather than conclusive. South Korea's estimated gain is imprecise, and for the United States and
 other countries the data are too noisy to tell. A lower Chinese share also does not by itself show that the policy
 benefited Canada overall.
 
@@ -59,8 +59,8 @@ benefited Canada overall.
   main window (p = 0.024); a small, noisy group that may have absorbed diverted Chinese
   exports.
 - China-only time series with calendar-month effects: −2.4 pp (Newey-West p = 0.002);
-  with a linear trend −1.1 pp (Newey-West p = 0.22). Block bootstrap 95% CI (no trend):
-  −4.6 to +0.3 pp.
+  with a linear trend −1.3 pp (Newey-West p = 0.10). Block bootstrap 95% CI (no trend):
+  −4.5 to +0.4 pp.
 
 ## Related research
 
