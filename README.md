@@ -24,11 +24,15 @@ groups of products followed similar trends.
 **The evidence is suggestive, not conclusive.** Only four months separate the surtax from
 the 2025 US–Canada tariff dispute, so the cleanest estimate rests on very little data.
 Depending on how the uncertainty is measured, it falls just on one side or the other of
-the usual threshold for statistical significance.
+the usual threshold for statistical significance, and the strictest test, which compares
+the 167 products one by one, finds that it could well be chance.
 
-**Where the lost share went is unclear.** Japan's and South Korea's shares rose, but both
-were already rising before the surtax. A lower Chinese share also does not by itself show
-that the policy benefited Canada overall.
+**Japan is the clearest gainer.** Applying the same listed-versus-unlisted comparison to
+every supplier, Japan's share of listed products rose by about 1.6 percentage points more
+than its share of unlisted products, even after allowing for its earlier growth. South
+Korea's gain could be chance, and for the United States and other countries the data are
+too noisy to tell. A lower Chinese share also does not by itself show that the policy
+benefited Canada overall.
 
 ### Technical details
 
@@ -36,8 +40,17 @@ that the policy benefited Canada overall.
   effects. Main window (to Feb 2025): −1.9 pp; p = 0.086 (OLS), p = 0.034 (Newey-West,
   3 lags). Window to Jan 2025: −1.6 pp (Newey-West p = 0.094). Window to Jun 2025, which
   overlaps the tariff dispute: −3.1 pp (Newey-West p = 0.001).
+- Product-level panel (167 products, product and month fixed effects, weighted by pre-surtax
+  imports, standard errors clustered by product): −1.6 pp in the main window (p = 0.16);
+  −2.6 pp to Jun 2025 (p = 0.005). Unweighted: +0.7 pp in the main window (p = 0.60), so the
+  drop is concentrated in high-volume products.
 - Pre-surtax checks (Jan 2023 – Jul 2024): slope of the gap −0.09 pp per month (p = 0.30);
-  placebo surtax in Jan 2024: −0.5 pp (p = 0.46).
+  placebo surtax in Jan 2024: −0.5 pp (p = 0.46); event study, joint test that all 19
+  pre-surtax months are equal, p = 0.27. Extending the small pre-surtax trend in the gap
+  shrinks the main estimate to −0.5 pp (p = 0.64).
+- Diversion (same comparison for each supplier's share, main window): Japan +1.6 pp
+  (p = 0.003; +2.1 pp, p = 0.010 with its own trend); South Korea +1.5 pp (p = 0.11);
+  United States and other countries noisy (p = 0.34 and 0.51).
 - Alternative comparison group (seven unlisted finished-steel products): −4.6 pp in the
   main window (p = 0.024); a small, noisy group that may have absorbed diverted Chinese
   exports.
@@ -64,6 +77,10 @@ of the report.
 - Difference-in-differences: 130 six-digit products on the Department of Finance's surtax
   list vs. 37 products not on it, with month fixed effects, pre-trend and placebo checks,
   and an alternative comparison group of unlisted finished-steel products
+- Product-level panel with product and month fixed effects and standard errors clustered by
+  product, plus a month-by-month event study
+- The same comparison applied to every supplier's share, to trace where China's lost share
+  went
 
 ## Files
 

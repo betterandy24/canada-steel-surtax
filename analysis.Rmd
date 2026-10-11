@@ -37,14 +37,19 @@ in step, which makes this comparison more convincing.
 
 **How sure can we be?** Not very. Only four months passed between the tax and the start
 of a 2025 trade dispute between the United States and Canada, which disrupted steel trade
-again. With so little clean data, the result sits right at the edge of what is usually
-accepted as more than chance: depending on the method, it lands just on one side or the
-other. Several checks point in the same direction, but none settles the question on its
-own.
+again. With so little clean data, the result sits at the edge of what is usually accepted
+as more than chance. Calculations based on month-to-month swings put it just on one side or
+the other of the usual line, and the strictest test, which compares the 167 products one by
+one, finds that it could well be chance. Several checks point in the same direction, but
+none settles the question on its own.
 
-**What it does not show.** It is unclear which countries took China's place. Japan's and
-South Korea's shares grew, but they were already growing before the tax. And a smaller
-Chinese share does not by itself mean the tax was good for Canada.
+**Who gained?** Comparing taxed and untaxed products for every supplier, Japan is the one
+country whose share of taxed products clearly rose, even after allowing for its earlier
+growth. For the United States and the many smaller suppliers, the data are too noisy to
+tell.
+
+**What it does not show.** A smaller Chinese share does not by itself mean the tax was good
+for Canada.
 
 ## 1. The question
 
@@ -204,7 +209,7 @@ shares |>
 Japan's and South Korea's shares were already growing before the tax: Japan's from about
 1.3% in late 2023 to about 3% by October 2024, and South Korea's from about 3.5% in early
 2023 to about 6% to 7% in 2024. So their later gains cannot all be credited to buyers
-switching away from China.
+switching away from China. Section 11 returns to this question with a sharper comparison.
 
 ## 6. Separating the tax from later policies
 
@@ -220,20 +225,32 @@ The import limits were changed again in December 2025 and June 2026, so stage 5 
 uniform, and changes during that stage should be read with care.
 
 ```{r before-after}
-shares |>
-  filter(country != "World") |>
+six_countries <- c("China", "United States", "South Korea", "Japan", "Vietnam", "Taiwan")
+
+stage_shares <- shares |>
+  select(country, month, share_value) |>
+  pivot_wider(names_from = country, values_from = share_value) |>
+  mutate(`Other countries` = 1 - rowSums(across(all_of(six_countries)))) |>
+  select(-World) |>
+  pivot_longer(-month, names_to = "country", values_to = "share_value") |>
   mutate(period = case_when(
     month <= as.Date("2024-07-01") ~ "1. Before",
-    month <= as.Date("2024-10-01") ~ "2. Transition",
-    month <= as.Date("2025-02-01") ~ "3. Surtax only",
-    month <= as.Date("2025-07-01") ~ "4. US tariffs",
-    TRUE                           ~ "5. Quotas"
+    month <= as.Date("2024-10-01") ~ "2. In between",
+    month <= as.Date("2025-02-01") ~ "3. Tax only",
+    month <= as.Date("2025-07-01") ~ "4. U.S.-Canada dispute",
+    TRUE                           ~ "5. Import limits"
   )) |>
   group_by(country, period) |>
-  summarise(avg_share = mean(share_value), .groups = "drop") |>
+  summarise(avg_share = mean(share_value), .groups = "drop")
+
+stage_shares |>
   pivot_wider(names_from = period, values_from = avg_share) |>
+  mutate(country = factor(country, levels = c(six_countries, "Other countries"))) |>
+  arrange(country) |>
   mutate(across(-country, scales::percent, accuracy = 0.1)) |>
-  knitr::kable(caption = "Average share of Canada's steel imports (by value) in each stage")
+  knitr::kable(col.names = c("Country", "1. Before", "2. In between", "3. Tax only",
+                             "4. U.S.-Canada dispute", "5. Import limits"),
+               caption = "Average share of Canada's steel imports (by value) in each stage")
 ```
 
 - **China's share fell as soon as the tax started**, from 5.9% to 3.7%, and stayed around
@@ -249,6 +266,12 @@ shares |>
   Korea or Japan.
 - **Vietnam's share stayed small and steady**, so there is no clear sign of Chinese steel
   being sent to Canada through Vietnam.
+- **Suppliers outside these six kept a steady combined share**, about
+  `r scales::percent(stage_shares$avg_share[stage_shares$country == "Other countries" & stage_shares$period == "1. Before"], accuracy = 0.1)`
+  before the tax and
+  `r scales::percent(stage_shares$avg_share[stage_shares$country == "Other countries" & stage_shares$period == "3. Tax only"], accuracy = 0.1)`
+  in the tax-only stage, so China's lost share did not simply move to countries left out of
+  this table.
 
 ## 7. Is it just the season?
 
@@ -660,9 +683,82 @@ did_nw |>
 With this calculation, the main comparison's p-value falls below 0.05, and the comparison
 through June 2025 is even clearer. This should not be over-read. With only about two years
 of monthly data, this calculation is itself approximate and can be too optimistic, and the
-reshuffling check in Section 9 still could not rule out chance. The fairest summary is that
-the main result sits right at the edge: depending on the method, it falls just on one side
-or the other of the usual 0.05 line.
+reshuffling check in Section 9 still could not rule out chance. So far, the main result sits
+right at the edge: depending on the method, it falls just on one side or the other of the
+usual 0.05 line. The next part applies a stricter test.
+
+### Comparing product by product
+
+The comparisons so far add up all taxed products into one group and all untaxed products
+into another, which leaves only two lines to compare. A stricter test keeps each of the 167
+products separate. It compares China's share in each product before and after the tax,
+allows every product to have its own usual level, and judges uncertainty by how much the
+results vary from product to product rather than from month to month. Larger products
+count for more, in proportion to their imports before the tax, so that the result is
+comparable with the group totals above.
+
+```{r did-panel}
+# One row per product and month: China's share of that product's imports
+panel <- imports_hs |>
+  filter(country %in% c("China", "World")) |>
+  select(hs6, group, month, country, value) |>
+  pivot_wider(names_from = country, values_from = value, values_fill = 0) |>
+  filter(World > 0) |>                       # skip months with no imports of the product
+  mutate(china_share = China / World,
+         covered = as.integer(group == "On surtax list"),
+         post    = as.integer(month >= as.Date("2024-11-01")))
+
+# Weight: each product's average monthly imports before the tax (Jan 2023 - Jul 2024)
+pre_weights <- panel |>
+  filter(month <= as.Date("2024-07-01")) |>
+  group_by(hs6) |>
+  summarise(weight = mean(World), .groups = "drop")
+
+panel <- panel |>
+  inner_join(pre_weights, by = "hs6") |>
+  filter(!(month >= as.Date("2024-08-01") & month <= as.Date("2024-10-01")))
+
+# Product and month fixed effects; standard errors clustered by product
+panel_did <- function(end_month, label, weighted = TRUE) {
+  d <- filter(panel, month <= as.Date(end_month))
+  m <- lm(china_share ~ covered:post + factor(hs6) + factor(month), data = d,
+          weights = if (weighted) weight else NULL)
+  V  <- vcovCL(m, cluster = ~hs6, type = "HC1")
+  ct <- coeftest(m, vcov = V)["covered:post", ]
+  ci <- coefci(m, vcov. = V)["covered:post", ]
+  tibble(window = label, weighted = if_else(weighted, "Yes", "No"),
+         estimate = ct[["Estimate"]], lower = ci[[1]], upper = ci[[2]], p_value = ct[["Pr(>|t|)"]])
+}
+
+panel_results <- bind_rows(
+  map2_dfr(did_windows$end, did_windows$label, ~ panel_did(.x, .y)),
+  map2_dfr(did_windows$end, did_windows$label, ~ panel_did(.x, .y, weighted = FALSE))
+)
+
+panel_results |>
+  mutate(across(c(estimate, lower, upper), ~ 100 * .x)) |>
+  knitr::kable(digits = 3,
+               col.names = c("Months used", "Larger products count more", "Extra drop for taxed products (points)",
+                             "Likely range: low", "Likely range: high", "p-value (across products)"),
+               caption = paste0("Product-by-product comparison (", n_distinct(panel$hs6),
+                                " products, uncertainty measured across products)"))
+```
+
+The product-by-product comparison points the same way as the group comparison: in the
+main period, China's share of taxed products fell by about
+`r round(-100 * panel_results$estimate[2], 1)` points more than its share of untaxed
+products. But once uncertainty is judged across products, the main result could well be
+chance (`r fmt_p(panel_results$p_value[2])`); only the longer comparison through June 2025,
+which overlaps the U.S. dispute, stands out (`r fmt_p(panel_results$p_value[3])`). This is
+the strictest test in the report, and it follows the approach that research on this kind of
+comparison recommends (Bertrand, Duflo and Mullainathan, 2004), so it should be taken
+seriously: the four clean months after the tax are not enough to call the drop clear.
+
+When every product counts equally, whatever its size, the drop disappears in the main
+period (`r sprintf("%+.1f", 100 * panel_results$estimate[5])` points). Most of the 167
+products are small, and China's share of a small product can swing widely from month to
+month, so this version is very noisy. The drop is concentrated in the products Canada
+imports the most of, which are also the ones that matter most for China's overall share.
 
 ### Did the two groups move together before the tax?
 
@@ -718,6 +814,82 @@ apply: with only 19 months, these checks can catch only fairly large differences
 the small downward drift in the gap were real and continued, it would explain part of the
 measured drop.
 
+The product-by-product data allow a month-by-month version of the same check. For each
+month, it estimates how far China's share of taxed products was above or below its share
+of untaxed products, compared with the average gap before the tax. Before the tax, the
+points should hover around zero.
+
+```{r event-study}
+es_data <- panel |>
+  filter(month <= as.Date("2025-06-01")) |>
+  mutate(term = if_else(covered == 1 & month != as.Date("2024-07-01"),
+                        format(month, "%Y-%m"), "none"),
+         term = relevel(factor(term), ref = "none"))
+
+m_es <- lm(china_share ~ term + factor(hs6) + factor(month), data = es_data, weights = weight)
+V_es <- vcovCL(m_es, cluster = ~hs6, type = "HC1")
+
+k  <- grep("^term", names(coef(m_es)))
+b  <- coef(m_es)[k]
+Vk <- V_es[k, k]
+months_k <- as.Date(paste0(str_remove(names(b), "^term"), "-01"))
+
+# Express every month relative to the average before the tax (Jan 2023 - Jul 2024);
+# July 2024 is the month left out of the regression
+pre   <- months_k < as.Date("2024-07-01")
+n_pre <- sum(pre) + 1
+L <- rbind(diag(length(b)), 0) -
+  matrix(as.numeric(pre) / n_pre, nrow = length(b) + 1, ncol = length(b), byrow = TRUE)
+
+event_study <- tibble(
+  month    = c(months_k, as.Date("2024-07-01")),
+  estimate = as.vector(L %*% b),
+  se       = sqrt(diag(L %*% Vk %*% t(L)))
+) |>
+  mutate(lower = estimate - 1.96 * se, upper = estimate + 1.96 * se) |>
+  arrange(month)
+
+# Joint test: were all 19 months before the tax at the same level?
+bp <- b[pre]
+pre_chi2 <- as.numeric(t(bp) %*% solve(Vk[pre, pre], bp))
+pre_p    <- pchisq(pre_chi2, df = length(bp), lower.tail = FALSE)
+es_post  <- event_study |> filter(month >= as.Date("2024-11-01"), month <= as.Date("2025-02-01"))
+
+# Check: let the listed-minus-unlisted gap keep following its own pre-tax linear trend
+gap_trend_data <- did_diff |>
+  filter(month <= as.Date("2025-02-01"), is.finite(diff)) |>
+  mutate(trend = as.numeric(month - min(month)) / 30.44)
+m_gap_trend <- lm(diff ~ post + trend, data = gap_trend_data)
+gap_trend   <- coeftest(m_gap_trend, vcov = nw_vcov(m_gap_trend))["post", ]
+
+event_study |>
+  ggplot(aes(x = month, y = 100 * estimate)) +
+  geom_hline(yintercept = 0, colour = "grey50") +
+  geom_vline(xintercept = as.Date(c("2024-08-26", "2024-10-22")), linetype = "dashed") +
+  geom_vline(xintercept = as.Date("2025-03-12"), linetype = "dotted", colour = "grey40") +
+  annotate("text", x = as.Date("2025-03-12"), y = Inf, label = "U.S.-Canada dispute",
+           angle = 90, hjust = 1.1, vjust = -0.5, size = 3, colour = "grey30") +
+  geom_pointrange(aes(ymin = 100 * lower, ymax = 100 * upper), size = 0.2) +
+  labs(title = "Extra change in China's share for taxed products, month by month",
+       subtitle = "Compared with the average before the tax; bars show the likely range (95%). Dashed lines: tax announced and started",
+       x = NULL, y = "Percentage points")
+```
+
+Before the tax, the monthly points move up and down around zero without a clear pattern,
+and taken together they are consistent with a steady gap (`r fmt_p(pre_p)`). After the tax,
+the drop did not appear at once: in November 2024 the gap was still close to its usual
+level, and it widened in December and especially January 2025 before narrowing again in
+February. One possible reason is that steel ordered before the tax was still arriving in
+the first weeks. From March 2025 the points stay below zero, but those months also include
+the U.S.-Canada dispute.
+
+These checks have a limit. If the gap is allowed to keep following its own small trend from
+before the tax, the drop in the main period shrinks to about
+`r round(-100 * gap_trend[["Estimate"]], 1)` points
+(`r fmt_p(gap_trend[["Pr(>|t|)"]])`; China's row in the last table of this section). That trend is
+small and could itself be chance, but with only four clean months after the tax, the data
+cannot tell a sudden drop apart from a slow drift that simply continued.
+
 ### A closer comparison group: untaxed finished steel
 
 Most untaxed products are raw materials, which may be bought for different reasons than
@@ -771,6 +943,91 @@ exporters may also have shifted some sales toward these similar but untaxed prod
 would make the measured effect too large. So I treat this as a check rather than the main
 result.
 
+### Which countries gained in the taxed products?
+
+Section 5 could not tell which countries took China's place, because Japan's and South
+Korea's shares were already rising for reasons unrelated to the tax. The same comparison of
+taxed and untaxed products can be applied to every supplier. Because the shares of all
+suppliers add up to 100% in each group, the changes across suppliers add up to zero, so
+China's loss must show up as someone's gain. "Other countries" covers everyone outside the
+six suppliers downloaded separately, about 30% of Canada's steel imports. As a check, a
+second version also allows each supplier's gap to follow its own steady trend from before
+the tax.
+
+```{r diversion}
+supplier_gaps <- imports_hs |>
+  group_by(country, group, month) |>
+  summarise(value = sum(value), .groups = "drop") |>
+  pivot_wider(names_from = country, values_from = value, values_fill = 0) |>
+  mutate(`Other countries` = World - rowSums(across(all_of(six_countries)))) |>
+  pivot_longer(c(all_of(six_countries), `Other countries`),
+               names_to = "supplier", values_to = "supplier_value") |>
+  mutate(share = supplier_value / World) |>
+  filter(!(month >= as.Date("2024-08-01") & month <= as.Date("2024-10-01"))) |>
+  mutate(post = as.integer(month >= as.Date("2024-11-01"))) |>
+  select(supplier, group, month, post, share) |>
+  pivot_wider(names_from = group, values_from = share) |>
+  mutate(diff = `On surtax list` - `Not on list`) |>
+  arrange(supplier, month)
+
+# Version 2: also extend each supplier's own steady pre-tax trend in the gap
+nw_did_trend <- function(d, end_month) {
+  d <- filter(d, month <= as.Date(end_month)) |>
+    mutate(trend = as.numeric(month - min(month)) / 30.44)
+  m  <- lm(diff ~ post + trend, data = d)
+  ct <- coeftest(m, vcov = nw_vcov(m))["post", ]
+  tibble(estimate_trend = ct[["Estimate"]], p_trend = ct[["Pr(>|t|)"]])
+}
+
+pre_taxed_share <- imports_hs |>
+  filter(group == "On surtax list", month <= as.Date("2024-07-01")) |>
+  group_by(country) |>
+  summarise(value = sum(value), .groups = "drop") |>
+  pivot_wider(names_from = country, values_from = value) |>
+  mutate(`Other countries` = World - rowSums(across(all_of(six_countries)))) |>
+  pivot_longer(-World, names_to = "supplier", values_to = "value") |>
+  transmute(supplier, pre_share = value / World)
+
+diversion <- supplier_gaps |>
+  group_by(supplier) |>
+  group_modify(~ bind_cols(nw_did(.x, "2025-02-01", "main"), nw_did_trend(.x, "2025-02-01"))) |>
+  ungroup() |>
+  left_join(pre_taxed_share, by = "supplier") |>
+  mutate(supplier = factor(supplier, levels = c(six_countries, "Other countries"))) |>
+  arrange(supplier)
+
+diversion |>
+  transmute(supplier, pre_share = 100 * pre_share, estimate = 100 * estimate,
+            nw_lower = 100 * nw_lower, nw_upper = 100 * nw_upper, nw_p,
+            estimate_trend = 100 * estimate_trend, p_trend) |>
+  knitr::kable(digits = c(0, 2, 2, 2, 2, 3, 2, 3),
+               col.names = c("Supplier", "Share of taxed products before the tax (%)",
+                             "Extra change for taxed products (points)", "Likely range: low",
+                             "Likely range: high", "p-value",
+                             "With each supplier's own trend (points)", "p-value (with trend)"),
+               caption = "Change in each supplier's share of taxed vs. untaxed products, Jan 2023 - Feb 2025")
+```
+
+In taxed products, where China's share fell, the clearest gain went to **Japan**: its share
+of taxed products rose by about `r round(100 * diversion$estimate[diversion$supplier == "Japan"], 1)` points more
+than its share of untaxed products (`r fmt_p(diversion$nw_p[diversion$supplier == "Japan"])`), and the result holds
+when Japan's own earlier growth is extended
+(`r sprintf("%+.1f", 100 * diversion$estimate_trend[diversion$supplier == "Japan"])` points,
+`r fmt_p(diversion$p_trend[diversion$supplier == "Japan"])`). Japan sold almost no untaxed steel products to Canada,
+so this mainly reflects its growing share of taxed products. South Korea's share of taxed
+products also rose, by about `r round(100 * diversion$estimate[diversion$supplier == "South Korea"], 1)` points, but that
+could be chance (`r fmt_p(diversion$nw_p[diversion$supplier == "South Korea"])`), and it disappears once Korea's earlier
+trend is allowed for. The estimates for the United States and other countries are large in
+either direction and far from clear, so the data cannot say whether they gained. Vietnam's
+and Taiwan's shares changed by less than a quarter of a point, which again gives no sign of
+Chinese steel being sent through them.
+
+So Japan is the one supplier for which the evidence of gaining from the tax is fairly clear.
+Most of the uncertainty sits with the United States and other countries, which together
+supplied about
+`r scales::percent(sum(diversion$pre_share[diversion$supplier %in% c("United States", "Other countries")]), accuracy = 1)`
+of taxed products before the tax.
+
 ## 12. Limitations
 
 - **Very little clean data.** Only four months separate the tax from the U.S.-Canada
@@ -780,14 +1037,19 @@ result.
   could be chance once a steady long-term drift is allowed for. Comparing taxed and untaxed
   products avoids this problem only if the two groups would otherwise have moved together.
   The checks found no sign that they would not, but they can catch only fairly large
-  differences.
+  differences, and extending the small pre-tax trend in the gap shrinks the main estimate
+  to about `r round(-100 * diversion$estimate_trend[diversion$supplier == "China"], 1)`
+  points.
 - **Comparison group.** Most untaxed products are raw materials that serve different
   buyers from finished steel. Using only untaxed finished steel gives a larger drop in the
   same direction, but that group is very small and may have picked up some Chinese sales
   diverted from taxed products.
 - **Uncertainty.** Each month's figure is linked to the previous month's. I used
   calculations that allow for this, but with so few months after the tax, all measures of
-  uncertainty are approximate.
+  uncertainty are approximate. The strictest one, which compares products one by one, finds
+  that the main result could be chance.
+- **Size of products.** The drop is concentrated in the products Canada imports the most
+  of. When every product counts equally, it disappears.
 - **Coverage.** The tax also applies to some steel products not studied here, such as
   pipes and tubes.
 - **Country of origin.** Customs records show where goods were made. If Chinese steel was
@@ -829,14 +1091,21 @@ The results fit the basic economic idea that making one supplier more expensive 
 buyers toward others. China's share of Canada's steel imports fell sharply when the tax
 started. The drop also shows up by weight, is not a normal seasonal pattern, and happened
 mainly in the products the tax covered. My best estimate is that the tax reduced China's
-share of taxed products by about 2 percentage points, roughly a third of its earlier share,
-with estimates ranging from about 1 to 3 points depending on the method. The evidence is
+share of taxed products by about 2 percentage points, roughly a third of its earlier share.
+Comparing taxed and untaxed products, the estimates range from about
+`r round(min(-100 * c(did_results$estimate, panel_results$estimate[1:3])), 1)` to
+`r round(max(-100 * c(did_results$estimate, panel_results$estimate[1:3])), 1)` points
+depending on the months and method used. A narrower comparison group gives a larger drop,
+and extending the small trend from before the tax gives a much smaller one. The evidence is
 suggestive rather than conclusive: with only four clean months after the tax, the main
-result sits right at the edge of what is usually accepted as more than chance.
+result sits at the edge of what is usually accepted as more than chance, and the strictest
+test finds that it could be chance.
 
-It is harder to say where China's lost share went. Japan's and South Korea's shares rose,
-but both were already rising before the tax, and later changes in the U.S., South Korean
-and Taiwanese shares line up with the 2025 trade dispute and import limits. Separating the
+Where China's lost share went is only partly clear. Comparing taxed and untaxed products,
+Japan gained clearly, even after allowing for its earlier growth; South Korea's gain could
+be chance, and the United States and smaller suppliers are too noisy to tell. Later changes
+in the U.S., South Korean and Taiwanese shares line up with the 2025 trade dispute and
+import limits. Separating the
 tax from these overlapping trends and policies was the hardest part of this analysis.
 
 ## Technical notes
@@ -851,6 +1120,34 @@ For readers familiar with the methods:
 - **Pre-trend checks (January 2023 to July 2024):** linear trend in the listed-minus-unlisted
   gap of -0.09 points per month (p = 0.30); placebo treatment in January 2024 of -0.5 points
   (p = 0.46).
+- **Product-level panel:** `r n_distinct(panel$hs6)` six-digit products, product and month
+  fixed effects, weighted by average monthly imports before the tax, standard errors
+  clustered by product. Main window: `r round(100 * panel_results$estimate[2], 1)` points
+  (`r fmt_p(panel_results$p_value[2])`); to January 2025:
+  `r round(100 * panel_results$estimate[1], 1)` points (`r fmt_p(panel_results$p_value[1])`);
+  to June 2025: `r round(100 * panel_results$estimate[3], 1)` points
+  (`r fmt_p(panel_results$p_value[3])`). Unweighted, main window:
+  `r sprintf("%+.1f", 100 * panel_results$estimate[5])` points
+  (`r fmt_p(panel_results$p_value[5])`).
+- **Event study** on the same panel, months relative to the pre-tax average: joint test that
+  all `r length(bp) + 1` pre-tax months are equal, chi-squared = `r round(pre_chi2, 1)` with
+  `r length(bp)` degrees of freedom (`r fmt_p(pre_p)`); average November 2024 to February
+  2025: `r round(100 * mean(es_post$estimate), 1)` points.
+- **Gap-specific linear trend** (listed minus unlisted, main window, Newey-West):
+  `r round(100 * diversion$estimate_trend[diversion$supplier == "China"], 1)` points
+  (`r fmt_p(diversion$p_trend[diversion$supplier == "China"])`).
+- **Diversion** (same comparison for each supplier's share, main window, Newey-West; the
+  estimates sum to zero by construction): Japan
+  `r sprintf("%+.1f", 100 * diversion$estimate[diversion$supplier == "Japan"])` points
+  (`r fmt_p(diversion$nw_p[diversion$supplier == "Japan"])`; with its own trend
+  `r sprintf("%+.1f", 100 * diversion$estimate_trend[diversion$supplier == "Japan"])`,
+  `r fmt_p(diversion$p_trend[diversion$supplier == "Japan"])`); South Korea
+  `r sprintf("%+.1f", 100 * diversion$estimate[diversion$supplier == "South Korea"])` points
+  (`r fmt_p(diversion$nw_p[diversion$supplier == "South Korea"])`); United States
+  `r sprintf("%+.1f", 100 * diversion$estimate[diversion$supplier == "United States"])` points
+  (`r fmt_p(diversion$nw_p[diversion$supplier == "United States"])`); other countries
+  `r sprintf("%+.1f", 100 * diversion$estimate[diversion$supplier == "Other countries"])` points
+  (`r fmt_p(diversion$nw_p[diversion$supplier == "Other countries"])`).
 - **Alternative control group** (seven unlisted finished-steel products): -4.6 points in the
   main window (Newey-West p = 0.024).
 - **China-only time series** with calendar-month fixed effects and cumulative policy
