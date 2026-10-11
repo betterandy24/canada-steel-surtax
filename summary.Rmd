@@ -131,7 +131,8 @@ did_data |>
 
 - **China's share fell.** It dropped from `r pct(pre_share)` before the tax to
   `r pct(post_share)` in the four months after it started. The drop also shows up by weight
-  and is not a normal seasonal pattern.
+  and is not a normal seasonal pattern. Imports from China themselves fell by about 39%
+  compared with the same winter a year earlier.
 - **The drop was mainly in taxed products.** Before the tax, China's shares in the two
   groups moved together. Afterwards, its share of taxed products fell to about 2-3%, while
   its share of untaxed products returned to its usual range.
@@ -139,15 +140,15 @@ did_data |>
   fell by about `r pp(-main["est"])` points more than its share of untaxed products,
   roughly a third of its earlier share. Including months up to June 2025 gives a larger
   drop of about `r pp(-long["est"])` points, but that period overlaps with the U.S. dispute.
-- **Who gained.** Comparing taxed and untaxed products for each supplier, Japan's share of
-  taxed products rose clearly, even after allowing for its earlier growth. For the United
-  States and smaller suppliers, the data are too noisy to tell.
+- **Who gained.** Comparing taxed and untaxed products for each supplier, Japan is the most
+  likely gainer, though the evidence is not conclusive. For the United States and smaller
+  suppliers, the data are too noisy to tell.
 
 **How sure can we be?** Only four months separate the tax from the 2025 trade dispute, so
 the clearest result rests on very little data. Depending on how the uncertainty is
 measured, it falls just on one side or the other of the usual line between a real effect
-and chance, and the strictest test, which compares the 167 products one by one, finds that
-it could well be chance. The evidence is suggestive rather than conclusive. A smaller Chinese share
+and chance, and a comparison that keeps the 167 products separate finds that it could well
+be chance. The evidence is suggestive rather than conclusive. A smaller Chinese share
 also does not by itself show that the tax was good for Canada.
 
 *Full report and R code: https://github.com/betterandy24/canada-steel-surtax*

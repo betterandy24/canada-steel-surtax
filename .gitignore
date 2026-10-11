@@ -1,0 +1,10 @@
+.Rhistory
+.RData
+.Rproj.user/
+*.log
+*.aux
+*.tex
+*.knit.md
+analysis.html
+analysis_files/figure-latex/
+summary_files/

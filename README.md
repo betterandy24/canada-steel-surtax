@@ -14,7 +14,8 @@ Canada.
 **China's share of Canada's steel imports fell after the surtax.** It dropped from about 6%
 before the surtax to under 4% in the four months after it took effect. The drop also shows
 up when imports are measured by weight rather than value, and it cannot be explained by the
-usual seasonal pattern.
+usual seasonal pattern. Imports from China themselves fell by about 39% compared with the
+same winter a year earlier.
 
 **The drop was concentrated in the steel products the surtax targeted.** Comparing
 products on and off the surtax list, China's share fell by about 2 percentage points more
@@ -23,34 +24,37 @@ groups of products followed similar trends.
 
 **The evidence is suggestive, not conclusive.** Only four months separate the surtax from
 the 2025 US–Canada tariff dispute, so the cleanest estimate rests on very little data.
-Depending on how the uncertainty is measured, it falls just on one side or the other of
-the usual threshold for statistical significance, and the strictest test, which compares
-the 167 products one by one, finds that it could well be chance.
+Depending on choices in the calculation, it falls just on one side or the other of the
+usual threshold for statistical significance, and a comparison that keeps the 167 products
+separate finds that it could well be chance.
 
-**Japan is the clearest gainer.** Applying the same listed-versus-unlisted comparison to
-every supplier, Japan's share of listed products rose by about 1.6 percentage points more
-than its share of unlisted products, even after allowing for its earlier growth. South
-Korea's gain could be chance, and for the United States and other countries the data are
-too noisy to tell. A lower Chinese share also does not by itself show that the policy
+**Japan is the most likely gainer.** Applying the same listed-versus-unlisted comparison
+to every supplier, Japan's share of listed products rose by about 1.6 percentage points
+more than its share of unlisted products. This holds up after adjusting for testing seven
+suppliers, but not once Japan's earlier growth is also allowed for, so it is suggestive
+rather than conclusive. South Korea's gain could be chance, and for the United States and
+other countries the data are too noisy to tell. A lower Chinese share also does not by itself show that the policy
 benefited Canada overall.
 
 ### Technical details
 
 - Difference-in-differences, 130 listed vs. 37 unlisted six-digit products, month fixed
   effects. Main window (to Feb 2025): −1.9 pp; p = 0.086 (OLS), p = 0.034 (Newey-West,
-  3 lags). Window to Jan 2025: −1.6 pp (Newey-West p = 0.094). Window to Jun 2025, which
+  3 lags); with 0–6 Newey-West lags, p ranges from 0.013 to 0.079. Leaving out one
+  post-surtax month at a time gives −1.4 to −2.9 pp. Window to Jan 2025: −1.6 pp (Newey-West p = 0.094). Window to Jun 2025, which
   overlaps the tariff dispute: −3.1 pp (Newey-West p = 0.001).
 - Product-level panel (167 products, product and month fixed effects, weighted by pre-surtax
   imports, standard errors clustered by product): −1.6 pp in the main window (p = 0.16);
-  −2.6 pp to Jun 2025 (p = 0.005). Unweighted: +0.7 pp in the main window (p = 0.60), so the
-  drop is concentrated in high-volume products.
+  −2.6 pp to Jun 2025 (p = 0.004). Unweighted: +0.7 pp in the main window (p = 0.60); the
+  difference suggests the drop came mainly from high-volume products.
 - Pre-surtax checks (Jan 2023 – Jul 2024): slope of the gap −0.09 pp per month (p = 0.30);
   placebo surtax in Jan 2024: −0.5 pp (p = 0.46); event study, joint test that all 19
-  pre-surtax months are equal, p = 0.27. Extending the small pre-surtax trend in the gap
-  shrinks the main estimate to −0.5 pp (p = 0.64).
+  pre-surtax months are equal, p = 0.29. Adding a linear trend to the gap, fitted over all
+  months used, shrinks the main estimate to −0.5 pp (p = 0.64).
 - Diversion (same comparison for each supplier's share, main window): Japan +1.6 pp
-  (p = 0.003; +2.1 pp, p = 0.010 with its own trend); South Korea +1.5 pp (p = 0.11);
-  United States and other countries noisy (p = 0.34 and 0.51).
+  (p = 0.003, Holm-adjusted for seven suppliers p = 0.019; with its own trend +2.1 pp,
+  Holm-adjusted p = 0.073); South Korea +1.5 pp (p = 0.11); United States and other
+  countries noisy (p = 0.34 and 0.51).
 - Alternative comparison group (seven unlisted finished-steel products): −4.6 pp in the
   main window (p = 0.024); a small, noisy group that may have absorbed diverted Chinese
   exports.
@@ -69,7 +73,7 @@ of the report.
 
 ## Methods
 
-- Import shares by country, in value and in tonnes
+- Import shares by country, in value and in tonnes, and the actual amounts imported
 - Seasonality check: the same winter months one year apart
 - Time-series regression with calendar-month fixed effects, with and without a linear trend
 - Newey-West standard errors and a block bootstrap, which allow for correlation between
@@ -90,6 +94,7 @@ of the report.
 | `analysis.md`, `analysis_files/` | Full report rendered for GitHub, with figures |
 | `analysis.pdf` | Full report as PDF (code hidden) |
 | `summary.Rmd`, `summary.pdf` | One-page summary |
+| `scripts/render.R` | Rebuilds the reports in one step |
 | `total.csv` | Canada's chapter 72 imports from the world |
 | `china.csv`, `us.csv`, `korean_south.csv`, `japan.csv`, `vietnam.csv`, `taiwan.csv` | Canada's chapter 72 imports from each country |
 
@@ -102,8 +107,9 @@ of the report.
    tinytex::install_tinytex()   # only needed for PDF output
    ```
 3. Download or clone this repository, and keep all files in the same folder.
-4. Open `analysis.Rmd` in RStudio and click **Knit**. Choose `github_document` for the
-   Markdown report or `pdf_document` for the PDF. Do the same for `summary.Rmd`.
+4. From the repository folder, run `Rscript scripts/render.R` to rebuild the Markdown report
+   and both PDFs (`Rscript scripts/render.R --markdown-only` skips the PDFs). Alternatively,
+   open `analysis.Rmd` or `summary.Rmd` in RStudio and click **Knit**.
 
 ## Data
 

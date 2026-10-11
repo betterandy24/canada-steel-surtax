@@ -12,7 +12,9 @@ This report asks whether that tax changed where Canada buys its steel.
 **What happened.** China’s share of Canada’s steel imports fell from
 about 6% before the tax to under 4% afterwards. The drop also shows up
 when imports are measured by weight instead of value, and it is not
-explained by the usual ups and downs between seasons.
+explained by the usual ups and downs between seasons. Imports from China
+themselves fell by about 39% compared with the same winter a year
+earlier, so this was not just other countries selling more.
 
 **Was it the tax?** The tax applied only to some steel products. China’s
 share fell more for the taxed products than for the untaxed ones: about
@@ -24,16 +26,17 @@ this comparison more convincing.
 tax and the start of a 2025 trade dispute between the United States and
 Canada, which disrupted steel trade again. With so little clean data,
 the result sits at the edge of what is usually accepted as more than
-chance. Calculations based on month-to-month swings put it just on one
-side or the other of the usual line, and the strictest test, which
-compares the 167 products one by one, finds that it could well be
-chance. Several checks point in the same direction, but none settles the
-question on its own.
+chance. Depending on choices in the calculation, it lands just on one
+side or the other of the usual line, and a comparison that keeps the 167
+products separate finds that it could well be chance. Several checks
+point in the same direction, but none settles the question on its own.
 
 **Who gained?** Comparing taxed and untaxed products for every supplier,
-Japan is the one country whose share of taxed products clearly rose,
-even after allowing for its earlier growth. For the United States and
-the many smaller suppliers, the data are too noisy to tell.
+Japan is the most likely gainer: its share of taxed products rose more
+than its share of untaxed products, and this holds up after allowing for
+testing several countries at once, though not once its earlier growth is
+also allowed for. For the United States and the many smaller suppliers,
+the data are too noisy to tell.
 
 **What it does not show.** A smaller Chinese share does not by itself
 mean the tax was good for Canada.
@@ -100,7 +103,23 @@ imports <- map2_dfr(files, names(files), read_cimt) |>
     month      = as.Date(Period),
     quantity_t = if_else(unit == "Weight in kilograms", quantity / 1000, quantity)
   )
+
+# Stop if a unit is unexpected, a value is missing or negative, a row is duplicated,
+# or a month is missing from any file
+stopifnot(all(imports$unit %in% c("Weight in kilograms", "Weight in metric tonne")),
+          all(is.finite(imports$value)), all(is.finite(imports$quantity_t)),
+          all(imports$value >= 0), all(imports$quantity_t >= 0),
+          !anyDuplicated(imports[c("country", "month", "Commodity")]))
+expected_months <- seq(as.Date("2023-01-01"), as.Date("2026-08-01"), by = "month")
+stopifnot(all(vapply(split(imports$month, imports$country),
+                     function(x) setequal(x, expected_months), logical(1))))
+stopifnot(n_distinct(imports$Commodity[imports$country == "World"]) == 167)
 ```
+
+The code checks the files as it reads them. It stops with an error if a
+month is missing, if a value is missing or negative, if a unit other
+than kilograms or tonnes appears, or if the same product appears twice
+in the same month.
 
 ## 3. Measuring each country’s share
 
@@ -225,12 +244,16 @@ five stages:
 2.  In between: August to October 2024, after the announcement but
     before the tax started
 3.  Tax only: November 2024 to February 2025
-4.  U.S.-Canada dispute: March to July 2025
-5.  Import limits: August 2025 to August 2026
+4.  U.S.-Canada dispute: March to June 2025
+5.  Import limits: July 2025 to August 2026
 
-The import limits were changed again in December 2025 and June 2026, so
-stage 5 is not uniform, and changes during that stage should be read
-with care.
+The import limits did not cover every country at the same time. Limits
+on countries without a trade agreement with Canada, including China and
+Taiwan, began on June 27, 2025, so July 2025 is the first full month
+with limits. On August 1 they were extended to most trade-agreement
+partners, including Japan and South Korea, on different terms. The
+limits were changed again in December 2025 and June 2026, so stage 5
+mixes several settings and should be read with care.
 
 ``` r
 six_countries <- c("China", "United States", "South Korea", "Japan", "Vietnam", "Taiwan")
@@ -245,11 +268,17 @@ stage_shares <- shares |>
     month <= as.Date("2024-07-01") ~ "1. Before",
     month <= as.Date("2024-10-01") ~ "2. In between",
     month <= as.Date("2025-02-01") ~ "3. Tax only",
-    month <= as.Date("2025-07-01") ~ "4. U.S.-Canada dispute",
+    month <= as.Date("2025-06-01") ~ "4. U.S.-Canada dispute",
     TRUE                           ~ "5. Import limits"
   )) |>
   group_by(country, period) |>
   summarise(avg_share = mean(share_value), .groups = "drop")
+
+# Helper for quoting a stage average in the text
+stage_pct <- function(country_name, stage) {
+  scales::percent(stage_shares$avg_share[stage_shares$country == country_name &
+                                           stage_shares$period == stage], accuracy = 0.1)
+}
 
 stage_shares |>
   pivot_wider(names_from = period, values_from = avg_share) |>
@@ -263,31 +292,33 @@ stage_shares |>
 
 | Country         | 1\. Before | 2\. In between | 3\. Tax only | 4\. U.S.-Canada dispute | 5\. Import limits |
 |:----------------|:-----------|:---------------|:-------------|:------------------------|:------------------|
-| China           | 5.9%       | 7.0%           | 3.7%         | 3.4%                    | 3.6%              |
-| United States   | 52.0%      | 48.5%          | 53.2%        | 44.6%                   | 49.9%             |
-| South Korea     | 5.4%       | 5.6%           | 5.7%         | 7.9%                    | 8.2%              |
-| Japan           | 2.2%       | 2.2%           | 3.6%         | 4.4%                    | 3.4%              |
+| China           | 5.9%       | 7.0%           | 3.7%         | 3.7%                    | 3.6%              |
+| United States   | 52.0%      | 48.5%          | 53.2%        | 45.4%                   | 49.3%             |
+| South Korea     | 5.4%       | 5.6%           | 5.7%         | 8.0%                    | 8.1%              |
+| Japan           | 2.2%       | 2.2%           | 3.6%         | 4.1%                    | 3.5%              |
 | Vietnam         | 0.7%       | 0.3%           | 0.5%         | 0.7%                    | 0.7%              |
-| Taiwan          | 3.4%       | 3.5%           | 3.2%         | 4.7%                    | 2.9%              |
-| Other countries | 30.3%      | 32.9%          | 30.1%        | 34.3%                   | 31.3%             |
+| Taiwan          | 3.4%       | 3.5%           | 3.2%         | 4.6%                    | 3.1%              |
+| Other countries | 30.3%      | 32.9%          | 30.1%        | 33.6%                   | 31.7%             |
 
 Average share of Canada’s steel imports (by value) in each stage
 
 - **China’s share fell as soon as the tax started**, from 5.9% to 3.7%,
-  and stayed around 3.5% afterwards. The later policies did not push it
-  much lower.
+  and was 3.7% and 3.6% in the two later stages. The later policies did
+  not push it much lower.
 - **Japan’s share rose from 2.2% to 3.6%** during the tax-only stage,
   roughly matching China’s drop. Because Japan’s share was already
   rising, only part of this is likely to be buyers switching away from
   China.
 - **The U.S. share fell later.** It was unchanged during the tax-only
-  stage (about 53%) and dropped only during the U.S.-Canada dispute
-  (about 45%), before recovering.
+  stage (53.2%) and dropped only during the U.S.-Canada dispute (45.4%),
+  before recovering.
 - **South Korea’s and Taiwan’s shares moved with the 2025 policies.**
   South Korea’s share was flat during the tax-only stage and rose to
-  about 8% from March 2025. Taiwan’s share fell from 4.7% to 2.9% once
-  the import limits applied to it; they did not apply to South Korea or
-  Japan.
+  8.0% in the dispute stage. Taiwan’s share went from 4.6% in the
+  dispute stage to 3.1% once the import limits began. The limits reached
+  Taiwan about a month before Japan and South Korea, and on different
+  terms, which may help explain why these shares moved differently, but
+  these averages cannot separate the policies.
 - **Vietnam’s share stayed small and steady**, so there is no clear sign
   of Chinese steel being sent to Canada through Vietnam.
 - **Suppliers outside these six kept a steady combined share**, about
@@ -367,12 +398,70 @@ costs more per tonne. Because a change in the mix of products can move
 value and weight shares differently, this check makes a pure price
 explanation less likely but cannot rule it out.
 
+### Imports themselves, not just shares
+
+A share can fall because imports from China fell, because imports from
+everyone else rose, or both. This table compares the actual amounts in
+the same four winter months one year apart.
+
+``` r
+absolute_monthly <- monthly |>
+  filter(country %in% c("World", "China")) |>
+  pivot_wider(names_from = country, values_from = c(value, tonnes)) |>
+  transmute(month, value_China, tonnes_China,
+            `value_All other countries` = value_World - value_China,
+            `tonnes_All other countries` = tonnes_World - tonnes_China) |>
+  pivot_longer(-month, names_to = c(".value", "supplier"), names_sep = "_")
+
+absolute_totals <- absolute_monthly |>
+  mutate(window = case_when(
+    month >= as.Date("2023-11-01") & month <= as.Date("2024-02-01") ~ "Before",
+    month >= as.Date("2024-11-01") & month <= as.Date("2025-02-01") ~ "After",
+    TRUE ~ NA_character_)) |>
+  filter(!is.na(window)) |>
+  group_by(supplier, window) |>
+  summarise(value_m = sum(value) / 1e6, tonnes_k = sum(tonnes) / 1000, .groups = "drop") |>
+  pivot_wider(names_from = window, values_from = c(value_m, tonnes_k)) |>
+  mutate(value_change  = 100 * (value_m_After / value_m_Before - 1),
+         tonnes_change = 100 * (tonnes_k_After / tonnes_k_Before - 1))
+
+absolute_totals |>
+  select(supplier, value_m_Before, value_m_After, value_change,
+         tonnes_k_Before, tonnes_k_After, tonnes_change) |>
+  knitr::kable(digits = 1,
+               col.names = c("Supplier", "Value before (C$ million)", "Value after (C$ million)",
+                             "Change in value (%)", "Weight before (1,000 tonnes)",
+                             "Weight after (1,000 tonnes)", "Change in weight (%)"),
+               caption = "Imports in Nov 2023 - Feb 2024 (before) and Nov 2024 - Feb 2025 (after)")
+```
+
+| Supplier            | Value before (C\$ million) | Value after (C\$ million) | Change in value (%) | Weight before (1,000 tonnes) | Weight after (1,000 tonnes) | Change in weight (%) |
+|:--------------------|---------------------------:|--------------------------:|--------------------:|-----------------------------:|----------------------------:|---------------------:|
+| All other countries |                     3544.7 |                    3449.0 |                -2.7 |                       2122.0 |                      2061.0 |                 -2.9 |
+| China               |                      218.2 |                     133.1 |               -39.0 |                        115.1 |                        69.6 |                -39.5 |
+
+Imports in Nov 2023 - Feb 2024 (before) and Nov 2024 - Feb 2025 (after)
+
+``` r
+china_absolute <- filter(absolute_totals, supplier == "China")
+others_absolute <- filter(absolute_totals, supplier == "All other countries")
+```
+
+Imports from China fell by about 39% in value and 39% in weight compared
+with the same winter a year earlier, while imports from all other
+countries changed by -3% in value. So China’s share fell mainly because
+Canada bought less from China, not just because it bought more from
+others. These are observed changes; demand and the mix of products also
+changed between the two winters.
+
 ## 9. Taking seasons and later policies into account together
 
 Here I estimate how much China’s share changed after the tax, after
 removing the usual seasonal pattern and allowing for the later
 U.S.-Canada dispute and import limits. The months between the
-announcement and the start of the tax are left out.
+announcement and the start of the tax are left out. The dispute period
+in this calculation also includes June and July 2025, when the first
+import limits on China and Taiwan began.
 
 The tables report a **p-value** for each estimate. It measures how
 easily ordinary month-to-month swings alone could produce a change as
@@ -815,20 +904,85 @@ over-read. With only about two years of monthly data, this calculation
 is itself approximate and can be too optimistic, and the reshuffling
 check in Section 9 still could not rule out chance. So far, the main
 result sits right at the edge: depending on the method, it falls just on
-one side or the other of the usual 0.05 line. The next part applies a
-stricter test.
+one side or the other of the usual 0.05 line. The next two parts check
+how much this depends on choices in the calculation.
+
+### How much does the result depend on calculation choices?
+
+The calculation that allows for links between months needs a choice: how
+many neighbouring months are allowed to be linked. I used three. The
+first table repeats the calculation with other choices. The second
+leaves out each of the four months after the tax in turn.
+
+``` r
+main_diff <- filter(did_diff, month <= as.Date("2025-02-01"))
+main_gap_model <- lm(diff ~ post, data = main_diff)
+
+lag_results <- map_dfr(c(0, 1, 2, 3, 4, 6), function(k) {
+  v  <- NeweyWest(main_gap_model, lag = k, prewhite = FALSE)
+  ci <- coefci(main_gap_model, vcov. = v)
+  tibble(lags = k, lower = 100 * ci["post", 1], upper = 100 * ci["post", 2],
+         p = coeftest(main_gap_model, vcov = v)["post", 4])
+})
+lag_results |>
+  knitr::kable(digits = 3,
+               col.names = c("Neighbouring months linked", "Likely range: low (points)",
+                             "Likely range: high (points)", "p-value"),
+               caption = "Main comparison with different numbers of linked months")
+```
+
+| Neighbouring months linked | Likely range: low (points) | Likely range: high (points) | p-value |
+|---------------------------:|---------------------------:|----------------------------:|--------:|
+|                          0 |                     -4.005 |                       0.240 |   0.079 |
+|                          1 |                     -3.912 |                       0.147 |   0.067 |
+|                          2 |                     -3.773 |                       0.009 |   0.051 |
+|                          3 |                     -3.604 |                      -0.161 |   0.034 |
+|                          4 |                     -3.481 |                      -0.284 |   0.023 |
+|                          6 |                     -3.317 |                      -0.448 |   0.013 |
+
+Main comparison with different numbers of linked months
+
+``` r
+post_months <- main_diff$month[main_diff$post == 1]
+leave_one_out <- map_dfr(post_months, function(excluded) {
+  m <- lm(diff ~ post, data = filter(main_diff, month != excluded))
+  tibble(omitted_month = format(excluded, "%B %Y"), estimate = 100 * coef(m)[["post"]])
+})
+leave_one_out |>
+  knitr::kable(digits = 2,
+               col.names = c("Month left out", "Extra drop for taxed products (points)"),
+               caption = "Main comparison leaving out one month after the tax")
+```
+
+| Month left out | Extra drop for taxed products (points) |
+|:---------------|---------------------------------------:|
+| November 2024  |                                  -2.95 |
+| December 2024  |                                  -1.59 |
+| January 2025   |                                  -1.37 |
+| February 2025  |                                  -1.63 |
+
+Main comparison leaving out one month after the tax
+
+The answer depends on the choice. With three or more linked months the
+p-value is below 0.05, but with two or fewer it is not (p-values from
+0.013 to 0.079 across the choices). Leaving out one month at a time, the
+estimated drop ranges from about 1.4 to 2.9 points. Its direction does
+not depend on any single month, but its size does: leaving out November
+2024, when the gap had not yet widened, gives the largest drop.
 
 ### Comparing product by product
 
 The comparisons so far add up all taxed products into one group and all
-untaxed products into another, which leaves only two lines to compare. A
-stricter test keeps each of the 167 products separate. It compares
+untaxed products into another, which leaves only two lines to compare.
+Another approach keeps each of the 167 products separate. It compares
 China’s share in each product before and after the tax, allows every
 product to have its own usual level, and judges uncertainty by how much
 the results vary from product to product rather than from month to
-month. Larger products count for more, in proportion to their imports
-before the tax, so that the result is comparable with the group totals
-above.
+month. This allows for links between months within each product, but not
+for shocks that hit all products in the same month, so it is a different
+check rather than a strictly better one. Larger products count for more,
+in proportion to their imports before the tax, so that the result is
+comparable with the group totals above.
 
 ``` r
 # One row per product and month: China's share of that product's imports
@@ -841,11 +995,12 @@ panel <- imports_hs |>
          covered = as.integer(group == "On surtax list"),
          post    = as.integer(month >= as.Date("2024-11-01")))
 
-# Weight: each product's average monthly imports before the tax (Jan 2023 - Jul 2024)
+# Weight: each product's average monthly imports before the tax, over all 19 months from
+# Jan 2023 to Jul 2024 (months with no imports count as zero)
 pre_weights <- panel |>
   filter(month <= as.Date("2024-07-01")) |>
   group_by(hs6) |>
-  summarise(weight = mean(World), .groups = "drop")
+  summarise(weight = sum(World) / 19, .groups = "drop")
 
 panel <- panel |>
   inner_join(pre_weights, by = "hs6") |>
@@ -879,9 +1034,9 @@ panel_results |>
 
 | Months used                | Larger products count more | Extra drop for taxed products (points) | Likely range: low | Likely range: high | p-value (across products) |
 |:---------------------------|:---------------------------|---------------------------------------:|------------------:|-------------------:|--------------------------:|
-| Jan 2023 - Jan 2025        | Yes                        |                                 -1.779 |            -4.243 |              0.686 |                     0.157 |
-| Jan 2023 - Feb 2025 (main) | Yes                        |                                 -1.597 |            -3.814 |              0.620 |                     0.158 |
-| Jan 2023 - Jun 2025        | Yes                        |                                 -2.609 |            -4.422 |             -0.796 |                     0.005 |
+| Jan 2023 - Jan 2025        | Yes                        |                                 -1.783 |            -4.238 |              0.672 |                     0.155 |
+| Jan 2023 - Feb 2025 (main) | Yes                        |                                 -1.612 |            -3.835 |              0.611 |                     0.155 |
+| Jan 2023 - Jun 2025        | Yes                        |                                 -2.642 |            -4.457 |             -0.828 |                     0.004 |
 | Jan 2023 - Jan 2025        | No                         |                                  0.519 |            -2.745 |              3.783 |                     0.755 |
 | Jan 2023 - Feb 2025 (main) | No                         |                                  0.736 |            -1.988 |              3.461 |                     0.596 |
 | Jan 2023 - Jun 2025        | No                         |                                 -2.093 |            -4.444 |              0.257 |                     0.081 |
@@ -893,19 +1048,21 @@ The product-by-product comparison points the same way as the group
 comparison: in the main period, China’s share of taxed products fell by
 about 1.6 points more than its share of untaxed products. But once
 uncertainty is judged across products, the main result could well be
-chance (p = 0.158); only the longer comparison through June 2025, which
-overlaps the U.S. dispute, stands out (p = 0.005). This is the strictest
-test in the report, and it follows the approach that research on this
-kind of comparison recommends (Bertrand, Duflo and Mullainathan, 2004),
-so it should be taken seriously: the four clean months after the tax are
-not enough to call the drop clear.
+chance (p = 0.155); only the longer comparison through June 2025, which
+overlaps the U.S. dispute, stands out (p = 0.004). Research on this kind
+of comparison recommends measuring uncertainty across the units that
+were or were not affected (Bertrand, Duflo and Mullainathan, 2004), so
+this result is a strong reason not to call the drop clear on four months
+of data.
 
 When every product counts equally, whatever its size, the drop
 disappears in the main period (+0.7 points). Most of the 167 products
 are small, and China’s share of a small product can swing widely from
-month to month, so this version is very noisy. The drop is concentrated
-in the products Canada imports the most of, which are also the ones that
-matter most for China’s overall share.
+month to month, so this version is very noisy. The two versions answer
+different questions: the weighted one describes steel imports as a
+whole, while the unweighted one describes the typical product. The gap
+between them suggests that the drop came mainly from the large products,
+although this check alone cannot prove it.
 
 ### Did the two groups move together before the tax?
 
@@ -1040,17 +1197,19 @@ event_study |>
 
 Before the tax, the monthly points move up and down around zero without
 a clear pattern, and taken together they are consistent with a steady
-gap (p = 0.270). After the tax, the drop did not appear at once: in
+gap (p = 0.290). After the tax, the drop did not appear at once: in
 November 2024 the gap was still close to its usual level, and it widened
 in December and especially January 2025 before narrowing again in
 February. One possible reason is that steel ordered before the tax was
-still arriving in the first weeks. From March 2025 the points stay below
-zero, but those months also include the U.S.-Canada dispute.
+still arriving in the first weeks, although the data do not show order
+or delivery dates. From March 2025 the points stay below zero, but those
+months also include the U.S.-Canada dispute.
 
-These checks have a limit. If the gap is allowed to keep following its
-own small trend from before the tax, the drop in the main period shrinks
+These checks have a limit. If the calculation also allows the gap to
+follow a steady straight-line trend, the drop in the main period shrinks
 to about 0.5 points (p = 0.635; China’s row in the last table of this
-section). That trend is small and could itself be chance, but with only
+section). The trend is estimated from all the months used, before and
+after the tax, not only from the months before it. Even so, with only
 four clean months after the tax, the data cannot tell a sudden drop
 apart from a slow drift that simply continued.
 
@@ -1135,7 +1294,10 @@ add up to 100% in each group, the changes across suppliers add up to
 zero, so China’s loss must show up as someone’s gain. “Other countries”
 covers everyone outside the six suppliers downloaded separately, about
 30% of Canada’s steel imports. As a check, a second version also allows
-each supplier’s gap to follow its own steady trend from before the tax.
+each supplier’s gap to follow its own steady trend, estimated over all
+the months used. Because seven suppliers are tested at once, one of them
+could look clear by luck, so the table also adjusts the p-values for the
+number of suppliers tested (Holm’s method).
 
 ``` r
 supplier_gaps <- imports_hs |>
@@ -1153,7 +1315,7 @@ supplier_gaps <- imports_hs |>
   mutate(diff = `On surtax list` - `Not on list`) |>
   arrange(supplier, month)
 
-# Version 2: also extend each supplier's own steady pre-tax trend in the gap
+# Version 2: also let each supplier's gap follow its own straight-line trend
 nw_did_trend <- function(d, end_month) {
   d <- filter(d, month <= as.Date(end_month)) |>
     mutate(trend = as.numeric(month - min(month)) / 30.44)
@@ -1175,53 +1337,57 @@ diversion <- supplier_gaps |>
   group_by(supplier) |>
   group_modify(~ bind_cols(nw_did(.x, "2025-02-01", "main"), nw_did_trend(.x, "2025-02-01"))) |>
   ungroup() |>
+  mutate(p_holm       = p.adjust(nw_p, method = "holm"),       # adjusted for 7 suppliers
+         p_trend_holm = p.adjust(p_trend, method = "holm")) |>
   left_join(pre_taxed_share, by = "supplier") |>
   mutate(supplier = factor(supplier, levels = c(six_countries, "Other countries"))) |>
   arrange(supplier)
 
 diversion |>
   transmute(supplier, pre_share = 100 * pre_share, estimate = 100 * estimate,
-            nw_lower = 100 * nw_lower, nw_upper = 100 * nw_upper, nw_p,
-            estimate_trend = 100 * estimate_trend, p_trend) |>
-  knitr::kable(digits = c(0, 2, 2, 2, 2, 3, 2, 3),
+            nw_p, p_holm, estimate_trend = 100 * estimate_trend, p_trend_holm) |>
+  knitr::kable(digits = c(0, 2, 2, 3, 3, 2, 3),
                col.names = c("Supplier", "Share of taxed products before the tax (%)",
-                             "Extra change for taxed products (points)", "Likely range: low",
-                             "Likely range: high", "p-value",
-                             "With each supplier's own trend (points)", "p-value (with trend)"),
+                             "Extra change for taxed products (points)", "p-value",
+                             "p-value adjusted for 7 suppliers",
+                             "With each supplier's own trend (points)",
+                             "Adjusted p-value (with trend)"),
                caption = "Change in each supplier's share of taxed vs. untaxed products, Jan 2023 - Feb 2025")
 ```
 
-| Supplier        | Share of taxed products before the tax (%) | Extra change for taxed products (points) | Likely range: low | Likely range: high | p-value | With each supplier’s own trend (points) | p-value (with trend) |
-|:----------------|-------------------------------------------:|-----------------------------------------:|------------------:|-------------------:|--------:|----------------------------------------:|---------------------:|
-| China           |                                       6.04 |                                    -1.88 |             -3.60 |              -0.16 |   0.034 |                                   -0.48 |                0.635 |
-| United States   |                                      52.11 |                                    -3.40 |            -10.62 |               3.81 |   0.338 |                                    2.77 |                0.738 |
-| South Korea     |                                       5.73 |                                     1.54 |             -0.39 |               3.47 |   0.111 |                                   -1.61 |                0.073 |
-| Japan           |                                       2.38 |                                     1.56 |              0.60 |               2.51 |   0.003 |                                    2.09 |                0.010 |
-| Vietnam         |                                       0.76 |                                    -0.19 |             -0.37 |              -0.01 |   0.042 |                                    0.08 |                0.756 |
-| Taiwan          |                                       3.68 |                                    -0.01 |             -0.47 |               0.45 |   0.971 |                                   -0.08 |                0.816 |
-| Other countries |                                      29.29 |                                     2.38 |             -5.03 |               9.79 |   0.511 |                                   -2.77 |                0.748 |
+| Supplier        | Share of taxed products before the tax (%) | Extra change for taxed products (points) | p-value | p-value adjusted for 7 suppliers | With each supplier’s own trend (points) | Adjusted p-value (with trend) |
+|:----------------|-------------------------------------------:|-----------------------------------------:|--------:|---------------------------------:|----------------------------------------:|------------------------------:|
+| China           |                                       6.04 |                                    -1.88 |   0.034 |                            0.202 |                                   -0.48 |                         1.000 |
+| United States   |                                      52.11 |                                    -3.40 |   0.338 |                            1.000 |                                    2.77 |                         1.000 |
+| South Korea     |                                       5.73 |                                     1.54 |   0.111 |                            0.445 |                                   -1.61 |                         0.440 |
+| Japan           |                                       2.38 |                                     1.56 |   0.003 |                            0.019 |                                    2.09 |                         0.073 |
+| Vietnam         |                                       0.76 |                                    -0.19 |   0.042 |                            0.208 |                                    0.08 |                         1.000 |
+| Taiwan          |                                       3.68 |                                    -0.01 |   0.971 |                            1.000 |                                   -0.08 |                         1.000 |
+| Other countries |                                      29.29 |                                     2.38 |   0.511 |                            1.000 |                                   -2.77 |                         1.000 |
 
 Change in each supplier’s share of taxed vs. untaxed products, Jan
 2023 - Feb 2025
 
 In taxed products, where China’s share fell, the clearest gain went to
 **Japan**: its share of taxed products rose by about 1.6 points more
-than its share of untaxed products (p = 0.003), and the result holds
-when Japan’s own earlier growth is extended (+2.1 points, p = 0.010).
-Japan sold almost no untaxed steel products to Canada, so this mainly
-reflects its growing share of taxed products. South Korea’s share of
-taxed products also rose, by about 1.5 points, but that could be chance
-(p = 0.111), and it disappears once Korea’s earlier trend is allowed
-for. The estimates for the United States and other countries are large
-in either direction and far from clear, so the data cannot say whether
-they gained. Vietnam’s and Taiwan’s shares changed by less than a
-quarter of a point, which again gives no sign of Chinese steel being
-sent through them.
+than its share of untaxed products. This stays clear after adjusting for
+testing seven suppliers (adjusted p = 0.019). With its own trend added,
+the gain is still about 2.1 points, but after the adjustment it is no
+longer clear (adjusted p = 0.073). Japan sold almost no untaxed steel
+products to Canada, so this mainly reflects its growing share of taxed
+products. South Korea’s share of taxed products also rose, by about 1.5
+points, but that could be chance (p = 0.111), and it disappears once
+Korea’s earlier trend is allowed for. The estimates for the United
+States and other countries are large in either direction and far from
+clear, so the data cannot say whether they gained. Vietnam’s and
+Taiwan’s shares changed by less than a quarter of a point, which again
+gives no sign of Chinese steel being sent through them.
 
-So Japan is the one supplier for which the evidence of gaining from the
-tax is fairly clear. Most of the uncertainty sits with the United States
-and other countries, which together supplied about 81% of taxed products
-before the tax.
+So Japan is the most likely gainer, but even its result is not
+conclusive, and it does not show that the buyers who stopped buying from
+China switched to Japan. Most of the uncertainty sits with the United
+States and other countries, which together supplied about 81% of taxed
+products before the tax.
 
 ## 12. Limitations
 
@@ -1233,8 +1399,8 @@ before the tax.
   drift is allowed for. Comparing taxed and untaxed products avoids this
   problem only if the two groups would otherwise have moved together.
   The checks found no sign that they would not, but they can catch only
-  fairly large differences, and extending the small pre-tax trend in the
-  gap shrinks the main estimate to about 0.5 points.
+  fairly large differences, and allowing the gap to follow a steady
+  straight-line trend shrinks the main estimate to about 0.5 points.
 - **Comparison group.** Most untaxed products are raw materials that
   serve different buyers from finished steel. Using only untaxed
   finished steel gives a larger drop in the same direction, but that
@@ -1243,10 +1409,12 @@ before the tax.
 - **Uncertainty.** Each month’s figure is linked to the previous
   month’s. I used calculations that allow for this, but with so few
   months after the tax, all measures of uncertainty are approximate. The
-  strictest one, which compares products one by one, finds that the main
-  result could be chance.
-- **Size of products.** The drop is concentrated in the products Canada
-  imports the most of. When every product counts equally, it disappears.
+  result also depends on how many neighbouring months are allowed to be
+  linked, and the comparison that keeps products separate finds that the
+  main result could be chance.
+- **Size of products.** The drop appears when larger products count for
+  more, as they do in China’s overall share, but not when every product
+  counts equally.
 - **Coverage.** The tax also applies to some steel products not studied
   here, such as pipes and tubes.
 - **Country of origin.** Customs records show where goods were made. If
@@ -1300,19 +1468,19 @@ China’s share of taxed products by about 2 percentage points, roughly a
 third of its earlier share. Comparing taxed and untaxed products, the
 estimates range from about 1.6 to 3.1 points depending on the months and
 method used. A narrower comparison group gives a larger drop, and
-extending the small trend from before the tax gives a much smaller one.
-The evidence is suggestive rather than conclusive: with only four clean
+allowing for a steady trend in the gap gives a much smaller one. The
+evidence is suggestive rather than conclusive: with only four clean
 months after the tax, the main result sits at the edge of what is
-usually accepted as more than chance, and the strictest test finds that
-it could be chance.
+usually accepted as more than chance, and some calculations, including
+the product-by-product comparison, find that it could be chance.
 
 Where China’s lost share went is only partly clear. Comparing taxed and
-untaxed products, Japan gained clearly, even after allowing for its
-earlier growth; South Korea’s gain could be chance, and the United
-States and smaller suppliers are too noisy to tell. Later changes in the
-U.S., South Korean and Taiwanese shares line up with the 2025 trade
-dispute and import limits. Separating the tax from these overlapping
-trends and policies was the hardest part of this analysis.
+untaxed products, Japan is the most likely gainer, though not
+conclusively; South Korea’s gain could be chance, and the United States
+and smaller suppliers are too noisy to tell. Later changes in the U.S.,
+South Korean and Taiwanese shares line up with the 2025 trade dispute
+and import limits. Separating the tax from these overlapping trends and
+policies was the hardest part of this analysis.
 
 ## Technical notes
 
@@ -1325,23 +1493,32 @@ For readers familiar with the methods:
   standard errors (3 lags). Window ending January 2025: -1.6 points
   (Newey-West p = 0.094). Window ending June 2025: -3.1 points
   (Newey-West p = 0.001).
+- **Sensitivity of the main window:** Newey-West p-values with 0, 1, 2,
+  3, 4 and 6 lags: 0.079, 0.067, 0.051, 0.034, 0.023, 0.013. Leaving out
+  one post-tax month at a time: -2.9 to -1.4 points.
+- **Absolute imports**, November-February one year apart: imports from
+  China -39.0% in value and -39.5% in weight; all other countries -2.7%
+  in value.
 - **Pre-trend checks (January 2023 to July 2024):** linear trend in the
   listed-minus-unlisted gap of -0.09 points per month (p = 0.30);
   placebo treatment in January 2024 of -0.5 points (p = 0.46).
 - **Product-level panel:** 167 six-digit products, product and month
-  fixed effects, weighted by average monthly imports before the tax,
-  standard errors clustered by product. Main window: -1.6 points (p =
-  0.158); to January 2025: -1.8 points (p = 0.157); to June 2025: -2.6
-  points (p = 0.005). Unweighted, main window: +0.7 points (p = 0.596).
+  fixed effects, weighted by average monthly imports over the 19 pre-tax
+  months, standard errors clustered by product. Main window: -1.6 points
+  (p = 0.155); to January 2025: -1.8 points (p = 0.155); to June 2025:
+  -2.6 points (p = 0.004). Unweighted, main window: +0.7 points (p =
+  0.596).
 - **Event study** on the same panel, months relative to the pre-tax
   average: joint test that all 19 pre-tax months are equal, chi-squared
-  = 21.2 with 18 degrees of freedom (p = 0.270); average November 2024
+  = 20.8 with 18 degrees of freedom (p = 0.290); average November 2024
   to February 2025: -1.6 points.
-- **Gap-specific linear trend** (listed minus unlisted, main window,
-  Newey-West): -0.5 points (p = 0.635).
+- **Gap-specific linear trend**, fitted jointly over pre- and post-tax
+  months (listed minus unlisted, main window, Newey-West): -0.5 points
+  (p = 0.635).
 - **Diversion** (same comparison for each supplier’s share, main window,
   Newey-West; the estimates sum to zero by construction): Japan +1.6
-  points (p = 0.003; with its own trend +2.1, p = 0.010); South Korea
+  points (p = 0.003, Holm-adjusted for seven suppliers p = 0.019; with
+  its own trend +2.1, p = 0.010, Holm-adjusted p = 0.073); South Korea
   +1.5 points (p = 0.111); United States -3.4 points (p = 0.338); other
   countries +2.4 points (p = 0.511).
 - **Alternative control group** (seven unlisted finished-steel
@@ -1352,7 +1529,9 @@ For readers familiar with the methods:
   (Newey-West p = 0.22). Moving block bootstrap (block length 4) 95%
   interval: -4.6 to +0.3 points.
 - **Other checks:** same-season comparison, tonnage shares, and a ratio
-  estimator compared with the mean of monthly shares.
+  estimator compared with the mean of monthly shares. The input files
+  are checked for missing months, missing or negative values, unexpected
+  units and duplicate rows.
 
 ## Data sources
 
@@ -1365,6 +1544,10 @@ For readers familiar with the methods:
 - Department of Finance Canada (2025). Canada responds to unjustified
   U.S. tariffs on Canadian steel and aluminum products; Tariff-rate
   quotas on imports of steel mill products.
+- Department of Finance Canada (2025). Support for the Canadian steel
+  sector (July 2025 measures, including the extension of import limits
+  on August 1).
+  <https://www.canada.ca/en/department-finance/news/2025/07/support-for-the-canadian-steel-sector.html>
 - Global Affairs Canada (2026). Consultations on the tariff-rate quotas
   on certain steel goods (amendment dates).
   <https://international.canada.ca/en/global-affairs/consultations/trade/2026-07-09-steel-goods>
