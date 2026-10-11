@@ -45,6 +45,15 @@ that the policy benefited Canada overall.
   with a linear trend −1.1 pp (Newey-West p = 0.22). Block bootstrap 95% CI (no trend):
   −4.6 to +0.3 pp.
 
+## Related research
+
+The results are consistent with studies finding that tariffs on one supplier shift
+purchases toward other countries (Flaaen, Hortaçsu and Tintelnot, 2020; Fajgelbaum and
+others, 2024), that targeted exporters redirect sales elsewhere (Bown and Crowley, 2007),
+and that the cost of tariffs falls largely on buyers in the country imposing them (Amiti,
+Redding and Weinstein, 2019; Fajgelbaum and others, 2020). Full references are at the end
+of the report.
+
 ## Methods
 
 - Import shares by country, in value and in tonnes

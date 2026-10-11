@@ -799,7 +799,31 @@ result.
 - **Complete records, not a sample.** Customs data cover every import rather than a survey
   sample, so the uncertainty comes from month-to-month swings, not from sampling.
 
-## 13. Conclusion
+## 13. Related research
+
+Other studies of tariffs point in the same direction as these results:
+
+- **Buyers switch to other suppliers.** After the United States put duties on washing
+  machines from South Korea and later China, production moved to other exporting countries
+  (Flaaen, Hortaçsu and Tintelnot, 2020). During the 2018-2019 U.S.-China trade war, many
+  countries that were not part of the dispute increased their exports of the targeted
+  products (Fajgelbaum and others, 2024).
+- **The taxed country sells elsewhere.** A U.S. duty on Japanese products raised Japan's
+  exports of those products to other countries (Bown and Crowley, 2007). This supports the
+  caution in Section 11 that Chinese exporters may have shifted sales toward similar
+  untaxed products.
+- **A falling import share is not the same as a gain.** Studies of the 2018 U.S. tariffs
+  found that buyers in the United States bore most of the cost through higher prices
+  (Amiti, Redding and Weinstein, 2019; Fajgelbaum and others, 2020). This is why a smaller
+  Chinese share should not be read as proof that Canada gained overall.
+- **Why I was careful about certainty.** Comparisons like the one in Section 11 can
+  overstate how certain the results are when monthly figures are linked over time
+  (Bertrand, Duflo and Mullainathan, 2004), which is why I also used calculations that allow
+  for these links. Checks of whether two groups moved together before a policy often miss
+  real differences (Roth, 2022), which is why I treat those checks as reassuring but not
+  decisive.
+
+## 14. Conclusion
 
 The results fit the basic economic idea that making one supplier more expensive pushes
 buyers toward others. China's share of Canada's steel imports fell sharply when the tax
@@ -848,3 +872,22 @@ For readers familiar with the methods:
 - Global Affairs Canada (2026). Consultations on the tariff-rate quotas on certain steel goods
   (amendment dates).
   https://international.canada.ca/en/global-affairs/consultations/trade/2026-07-09-steel-goods
+
+## References
+
+- Amiti, M., Redding, S. J., & Weinstein, D. E. (2019). The impact of the 2018 tariffs on
+  prices and welfare. *Journal of Economic Perspectives*, 33(4), 187-210.
+- Bertrand, M., Duflo, E., & Mullainathan, S. (2004). How much should we trust
+  differences-in-differences estimates? *Quarterly Journal of Economics*, 119(1), 249-275.
+- Bown, C. P., & Crowley, M. A. (2007). Trade deflection and trade depression. *Journal of
+  International Economics*, 72(1), 176-201.
+- Fajgelbaum, P. D., Goldberg, P. K., Kennedy, P. J., & Khandelwal, A. K. (2020). The return
+  to protectionism. *Quarterly Journal of Economics*, 135(1), 1-55.
+- Fajgelbaum, P., Goldberg, P., Kennedy, P., Khandelwal, A., & Taglioni, D. (2024). The
+  US-China trade war and global reallocations. *American Economic Review: Insights*, 6(2),
+  295-312.
+- Flaaen, A., Hortaçsu, A., & Tintelnot, F. (2020). The production relocation and price
+  effects of US trade policy: The case of washing machines. *American Economic Review*,
+  110(7), 2103-2127.
+- Roth, J. (2022). Pretest with caution: Event-study estimates after testing for parallel
+  trends. *American Economic Review: Insights*, 4(3), 305-322.
