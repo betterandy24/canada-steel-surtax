@@ -25,8 +25,10 @@ groups of products followed similar trends.
 the 2025 US–Canada tariff dispute, so the cleanest estimate rests on very little data.
 Depending on choices in the calculation, it falls just on one side or the other of the
 usual threshold for statistical significance, and in a comparison that keeps the 167
-products separate its likely range includes zero. The main estimate is consistent with a
-surtax effect, but sensitive to modelling choices.
+products separate its likely range includes zero. If a slow drift in the gap between the two
+groups before the surtax is assumed to have continued, most of the estimated effect
+disappears. The main estimate is consistent with a surtax effect, but sensitive to modelling
+choices.
 
 **Japan is the most likely gainer.** Applying the same listed-versus-unlisted comparison
 to every supplier, Japan's share of listed products rose by about 1.6 percentage points
@@ -40,27 +42,18 @@ benefited Canada overall.
 
 - Difference-in-differences, 130 listed vs. 37 unlisted six-digit products, month fixed
   effects. Main window (to Feb 2025): −1.9 pp; p = 0.086 (OLS), p = 0.034 (Newey-West,
-  3 lags); with 0–6 Newey-West lags, p ranges from 0.013 to 0.079. Leaving out one
-  post-surtax month at a time gives −1.4 to −2.9 pp. Window to Jan 2025: −1.6 pp (Newey-West p = 0.094). Window to Jun 2025, which
+  3 lags). Window to Jan 2025: −1.6 pp (Newey-West p = 0.094). Window to Jun 2025, which
   overlaps the tariff dispute: −3.1 pp (Newey-West p = 0.001).
 - Product-level panel (167 products, product and month fixed effects, weighted by pre-surtax
   imports, standard errors clustered by product): −1.6 pp in the main window (p = 0.16);
-  −2.6 pp to Jun 2025 (p = 0.004). Unweighted: +0.7 pp in the main window (p = 0.60); the
-  difference suggests the drop came mainly from high-volume products.
-- Pre-surtax checks (Jan 2023 – Jul 2024): slope of the gap −0.09 pp per month (p = 0.30);
-  placebo surtax in Jan 2024: −0.5 pp (p = 0.46); event study, joint test that all 19
-  pre-surtax months are equal, p = 0.29. Adding a linear trend to the gap, fitted over all
-  months used, shrinks the main estimate to −0.5 pp (p = 0.64).
+  −2.6 pp to Jun 2025 (p = 0.004).
+- Pre-surtax check: event study on the panel, joint test that all 19 pre-surtax months are
+  equal, p = 0.29. Adding a linear trend to the gap, fitted over all months used, shrinks the
+  main estimate to −0.5 pp (p = 0.64).
 - Diversion (same comparison for each supplier's share, main window): Japan +1.6 pp
   (p = 0.003, Holm-adjusted for seven suppliers p = 0.019; with its own trend +2.1 pp,
   Holm-adjusted p = 0.073); South Korea +1.5 pp (p = 0.11); United States and other
   countries noisy (p = 0.34 and 0.51).
-- Alternative comparison group (seven unlisted finished-steel products): −4.6 pp in the
-  main window (p = 0.024); a small, noisy group that may have absorbed diverted Chinese
-  exports.
-- China-only time series with calendar-month effects: −2.4 pp (Newey-West p = 0.002);
-  with a linear trend −1.3 pp (Newey-West p = 0.10). Block bootstrap 95% CI (no trend):
-  −4.5 to +0.4 pp.
 
 ## Related research
 
@@ -75,14 +68,11 @@ of the report.
 
 - Import shares by country, in value and in tonnes, and the actual amounts imported
 - Seasonality check: the same winter months one year apart
-- Time-series regression with calendar-month fixed effects, with and without a linear trend
-- Newey-West standard errors and a block bootstrap, which allow for correlation between
-  months; a ratio estimator
 - Difference-in-differences: 130 six-digit products on the Department of Finance's surtax
-  list vs. 37 products not on it, with month fixed effects, pre-trend and placebo checks,
-  and an alternative comparison group of unlisted finished-steel products
+  list vs. 37 products not on it, with month fixed effects and Newey-West standard errors,
+  which allow for correlation between months
 - Product-level panel with product and month fixed effects and standard errors clustered by
-  product, plus a month-by-month event study
+  product, plus a month-by-month event study to check the months before the surtax
 - The same comparison applied to every supplier's share, to trace where China's lost share
   went
 

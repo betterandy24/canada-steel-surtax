@@ -131,8 +131,7 @@ did_data |>
 
 - **China's share fell.** It dropped from `r pct(pre_share)` before the tax to
   `r pct(post_share)` in the four months after it started. The drop also shows up by weight and
-  remains when comparing the same winter months a year apart. Imports from China themselves fell by about 39%
-  compared with the same winter a year earlier.
+  remains when comparing the same winter months a year apart. Imports from China themselves fell by about 39%.
 - **The drop was mainly in taxed products.** Before the tax, China's shares in the two
   groups moved together. Afterwards, its share of taxed products fell to about 2-3%, while
   its share of untaxed products returned to its usual range.
@@ -145,10 +144,10 @@ did_data |>
   suppliers, the data are too noisy to tell.
 
 **How sure can we be?** Only four months separate the tax from the 2025 trade dispute, so
-the clearest result rests on very little data. Depending on how the uncertainty is
-measured, it falls just on one side or the other of the usual line for statistical
-significance, and in a comparison that keeps the 167 products separate its likely range
-includes zero. The evidence is suggestive rather than conclusive. A smaller Chinese share
-also does not by itself show that the tax was good for Canada.
+the result rests on very little data. Whether it clears the usual bar for statistical
+significance depends on how uncertainty is measured; in a product-by-product comparison its
+likely range includes zero, and if a slow drift in the gap before the tax is assumed to have
+continued, most of the effect disappears. The evidence is suggestive rather than conclusive,
+and a smaller Chinese share does not by itself show that the tax was good for Canada.
 
 *Full report and R code: https://github.com/betterandy24/canada-steel-surtax*
