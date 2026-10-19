@@ -2,7 +2,7 @@
 #   Rscript scripts/render.R                  # Markdown report and both PDFs
 #   Rscript scripts/render.R --markdown-only  # Markdown report only (no LaTeX needed)
 args <- commandArgs(trailingOnly = TRUE)
-stopifnot(file.exists("analysis.Rmd"), file.exists("total.csv"))
+stopifnot(file.exists("analysis.Rmd"), file.exists("data/total.csv"))
 
 required <- c("tidyverse", "sandwich", "lmtest", "rmarkdown")
 missing <- required[!vapply(required, requireNamespace, logical(1), quietly = TRUE)]

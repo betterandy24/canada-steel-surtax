@@ -9,6 +9,10 @@ Canada.
 - **One-page summary:** [summary.pdf](summary.pdf)
 - **Full report:** [analysis.md](analysis.md) (readable on GitHub) or [analysis.pdf](analysis.pdf)
 
+![China's share of Canada's steel imports for products on and off the surtax list, 2023–2025](analysis_files/figure-gfm/did-analysis-1.png)
+
+*China's share of Canada's steel imports, for products on the surtax list (taxed) and off it (untaxed). Dashed lines mark when the surtax was announced and when it took effect. Before the surtax the two groups followed similar paths; afterwards, China's share of taxed products fell further.*
+
 ## Main findings
 
 **China's share of Canada's steel imports fell after the surtax.** It dropped from about 6%
@@ -85,8 +89,8 @@ of the report.
 | `analysis.pdf` | Full report as PDF (code hidden) |
 | `summary.Rmd`, `summary.pdf` | One-page summary |
 | `scripts/render.R` | Rebuilds the reports in one step |
-| `total.csv` | Canada's chapter 72 imports from the world |
-| `china.csv`, `us.csv`, `korean_south.csv`, `japan.csv`, `vietnam.csv`, `taiwan.csv` | Canada's chapter 72 imports from each country |
+| `data/total.csv` | Canada's chapter 72 imports from the world |
+| `data/` (`china.csv`, `us.csv`, `korean_south.csv`, `japan.csv`, `vietnam.csv`, `taiwan.csv`) | Canada's chapter 72 imports from each country |
 
 ## How to run
 
@@ -96,7 +100,7 @@ of the report.
    install.packages(c("tidyverse", "sandwich", "lmtest", "rmarkdown", "tinytex"))
    tinytex::install_tinytex()   # only needed for PDF output
    ```
-3. Download or clone this repository, and keep all files in the same folder.
+3. Download or clone this repository, keeping the folder structure (the data files are in `data/`).
 4. From the repository folder, run `Rscript scripts/render.R` to rebuild the Markdown report
    and both PDFs (`Rscript scripts/render.R --markdown-only` skips the PDFs). Alternatively,
    open `analysis.Rmd` or `summary.Rmd` in RStudio and click **Knit**.

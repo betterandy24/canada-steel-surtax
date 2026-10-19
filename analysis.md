@@ -82,7 +82,7 @@ South Korea, Japan, Vietnam and Taiwan.
 
 ``` r
 read_cimt <- function(file, country_name) {
-  read_csv(file, skip = 1, show_col_types = FALSE) |>
+  read_csv(file.path("data", file), skip = 1, show_col_types = FALSE) |>
     filter(str_detect(Period, "^\\d{4}-\\d{2}-\\d{2}$")) |>
     mutate(country = country_name)
 }
