@@ -1,12 +1,11 @@
 ---
 title: "Did Canada's 2024 Tariff on Chinese Steel Change Where Canada Buys Its Steel?"
-author: "Xiang Zheng, University of Toronto"
-date: "October 2026"
+author: "Xiang Zheng, University of Toronto, October 2026"
 output:
   pdf_document:
     fig_width: 6.5
-    fig_height: 2.0
-geometry: margin=0.75in
+    fig_height: 1.8
+geometry: margin=0.65in
 fontsize: 10pt
 ---
 
@@ -105,9 +104,8 @@ long-term trends or the trade dispute with the United States that began in 2025?
 products from January 2023 to August 2026. The tax covered 130 of these products and not
 the other 37. The key test compares how China's share changed for taxed products with how
 it changed for untaxed products over the same months: if the tax was responsible, the drop
-should show up mainly in the taxed group. I also compared the same season one year apart,
-measured imports by weight as well as value, and checked whether the two groups were
-already moving apart before the tax.
+should show up mainly in the taxed group. I also checked the same season a year apart,
+imports by weight, and whether the two groups were already moving apart before the tax.
 
 ```{r did-plot}
 did_data |>
@@ -149,5 +147,11 @@ significance depends on how uncertainty is measured; in a product-by-product com
 likely range includes zero, and if a slow drift in the gap before the tax is assumed to have
 continued, most of the effect disappears. The evidence is suggestive rather than conclusive,
 and a smaller Chinese share does not by itself show that the tax was good for Canada.
+
+**What this means for decision-makers.** For *importers and buyers*: the clearest sign of where the
+business went is Japan, and tracking supplier shares product by product, comparing taxed
+with untaxed products, can reveal such shifts within months. For *policymakers*: the tax appears to have cut China's share of covered products
+by about a third, but four months of clean data cannot show its full effect, and the costs to
+Canadian buyers are not measured.
 
 *Full report and R code: https://github.com/betterandy24/canada-steel-surtax*
