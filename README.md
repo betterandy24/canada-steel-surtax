@@ -89,18 +89,21 @@ of the report.
 | `analysis.pdf` | Full report as PDF (code hidden) |
 | `summary.Rmd`, `summary.pdf` | One-page summary |
 | `scripts/render.R` | Rebuilds the reports in one step |
+| `renv.lock`, `renv/`, `.Rprofile` | Records the exact R package versions (renv) |
 | `data/total.csv` | Canada's chapter 72 imports from the world |
 | `data/` (`china.csv`, `us.csv`, `korean_south.csv`, `japan.csv`, `vietnam.csv`, `taiwan.csv`) | Canada's chapter 72 imports from each country |
 
 ## How to run
 
-1. Install R (4.1 or later) and RStudio.
-2. Install the packages:
+1. Install R (4.4 recommended, matching `renv.lock`) and RStudio.
+2. Download or clone this repository, keeping the folder structure (the data files are in `data/`),
+   and open the repository folder as an RStudio project.
+3. Install the exact package versions used for the analysis, recorded in `renv.lock`:
    ```r
-   install.packages(c("tidyverse", "sandwich", "lmtest", "rmarkdown", "tinytex"))
+   install.packages("renv")
+   renv::restore()
    tinytex::install_tinytex()   # only needed for PDF output
    ```
-3. Download or clone this repository, keeping the folder structure (the data files are in `data/`).
 4. From the repository folder, run `Rscript scripts/render.R` to rebuild the Markdown report
    and both PDFs (`Rscript scripts/render.R --markdown-only` skips the PDFs). Alternatively,
    open `analysis.Rmd` or `summary.Rmd` in RStudio and click **Knit**.
