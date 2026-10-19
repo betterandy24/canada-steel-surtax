@@ -42,6 +42,22 @@ rather than conclusive. South Korea's estimated gain is imprecise, and for the U
 other countries the data are too noisy to tell. A lower Chinese share also does not by itself show that the policy
 benefited Canada overall.
 
+## What this means for decision-makers
+
+- **Steel buyers and procurement teams.** A tariff on one supplier appears to move purchases
+  to other suppliers rather than stop them; here, Japan is the most likely replacement. When
+  a tariff on one country is announced, the practical question is which other suppliers can
+  take over that volume.
+- **Policymakers.** Looking only at the targeted country's share overstates what a tariff
+  achieves. Running the same comparison for every supplier shows where the lost share went,
+  which is what is needed to judge whether a policy reduced reliance on imports or only
+  changed where they come from. These data cannot show whether the surtax raised prices for
+  Canadian buyers.
+- **Anyone judging a change from early data.** Four months before a second shock was enough
+  to see a pattern but not to confirm it. In that situation the useful answer is a range of
+  estimates and a clear statement of what would change the conclusion, not a single number.
+  The same applies to an early read on a new product, price change or campaign.
+
 ### Technical details
 
 - Difference-in-differences, 130 listed vs. 37 unlisted six-digit products, month fixed
